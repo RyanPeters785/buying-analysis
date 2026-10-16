@@ -9,7 +9,6 @@ import hashlib
 from datetime import date
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -74,15 +73,16 @@ def wide(prices: pd.DataFrame, col: str) -> pd.DataFrame:
 
 
 def total_return_index(prices: pd.DataFrame) -> pd.DataFrame:
-    """Close-to-close total-return index from CRSP ``ret`` (dividends reinvested), 1.0 on each first day."""
+    """Close-to-close total-return index from CRSP ``ret`` (dividends reinvested), 1.0 on each first day.
+
+    NaN on sessions where the permno has no row (before listing, after delisting). The listing day has a
+    row but no ret, so it starts the index at 1.0.
+    """
     r = wide(prices, "ret")
-    first = wide(prices, "prc").apply(
-        pd.Series.first_valid_index
-    )  # listing day has a price but no ret
+    listed = prices.assign(_on=True).pivot(index="session", columns="permno", values="_on")
+    listed = listed.reindex_like(r).notna()
     idx = (1.0 + r.fillna(0.0)).cumprod()
-    for p, d in first.items():  # undefined before listing
-        idx.loc[idx.index < d, p] = np.nan
-    return idx
+    return idx.where(listed)
 
 
 def tickers(prices: pd.DataFrame) -> pd.Series:

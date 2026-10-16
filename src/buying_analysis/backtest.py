@@ -60,7 +60,7 @@ class MarketData:
         status = p.pivot(index="session", columns="permno", values="tradingstatusflg").reindex_like(
             close
         )
-        tradable = close.notna() & status.ne("D")
+        tradable = close.notna() & status.astype(object).ne("D").fillna(True).astype(bool)
         etf = (
             p.groupby("permno")["securitytype"]
             .agg(lambda s: (s == "FUND").any())
@@ -79,7 +79,7 @@ class MarketData:
             close_idx=close.to_numpy()[mask],
             open_idx=open_idx.to_numpy()[mask],
             open_px=w("open").fillna(w("prc")).to_numpy()[mask],
-            tradable=tradable.to_numpy()[mask],
+            tradable=tradable.to_numpy(bool)[mask],
             is_etf=etf.fillna(False).to_numpy(bool),
             rf=rf.reindex(idx).to_numpy(float),
             days=days,

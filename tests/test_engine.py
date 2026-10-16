@@ -168,3 +168,17 @@ def test_metrics_run(panel):
     res = run(p, LumpSum(A))
     m = summarize(res)
     assert m["final_value"] > 1000 and m["max_drawdown"] == pytest.approx(0, abs=1e-12)
+
+
+def test_delisted_position_converts_to_cash(panel):
+    p = panel({A: list(np.linspace(100, 110, 20)), B: [100.0] * 20})
+    p = p[
+        ~((p["permno"] == A) & (p["session"] > p["session"].unique()[9]))
+    ]  # A delists after day 9
+    md = MarketData.load(prices=p)
+    assert not md.tradable[10:, md.col(A)].any()
+    res = Engine(md, costs=ZERO).run(LumpSum(A), contribution_schedule(md.sessions, 1000.0, "once"))
+    d = res.daily
+    assert d["invested"].iloc[-1] == 0
+    assert d["cash"].iloc[-1] == pytest.approx(d["equity"].iloc[9])
+    assert (res.trades["side"] == "delist").sum() == 1
