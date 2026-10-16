@@ -76,7 +76,9 @@ def wide(prices: pd.DataFrame, col: str) -> pd.DataFrame:
 def total_return_index(prices: pd.DataFrame) -> pd.DataFrame:
     """Close-to-close total-return index from CRSP ``ret`` (dividends reinvested), 1.0 on each first day."""
     r = wide(prices, "ret")
-    first = r.apply(pd.Series.first_valid_index)
+    first = wide(prices, "prc").apply(
+        pd.Series.first_valid_index
+    )  # listing day has a price but no ret
     idx = (1.0 + r.fillna(0.0)).cumprod()
     for p, d in first.items():  # undefined before listing
         idx.loc[idx.index < d, p] = np.nan

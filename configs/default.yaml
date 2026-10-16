@@ -1,0 +1,31 @@
+# All results are HYPOTHETICAL. Real Roth limits were $2k-$7k/yr over 1993-2025.
+
+contributions:
+  amount: 5000          # USD per deposit
+  frequency: annual     # annual | monthly | weekly | once (all on day 1)
+  # Deposits land on the first trading day of each period and settle immediately.
+
+costs:
+  commission: 0.0               # USD per trade
+  spread_bps_etf: 2.0           # per side
+  spread_bps_stock: 5.0         # per side
+  spread_multiplier: 1.0        # 0 / 1 / 2 for the cost sensitivity runs
+  sec_fee_rate: 0.0000278       # SEC Section 31, fraction of sell notional
+  finra_taf_per_share: 0.000166 # FINRA TAF on sells
+  finra_taf_cap: 8.30           # USD per trade
+  mmf_expense: 0.0010           # money-market fund drag on the T-bill rate (yield floored at 0)
+
+execution:
+  fractional_shares: true
+  settlement_days: 1            # IRA cash account, T+1: buys use settled cash only
+  min_trade_usd: 1.0            # ignore smaller trades
+
+dates:
+  start: 1993-02-01
+  dev_end: 2022-12-31           # tuning / reporting window
+  lockbox_start: 2023-01-01     # 2023-2025 evaluated once, at the end (--lockbox)
+  end: 2025-12-31
+
+assets:
+  benchmark: 84398    # SPY
+  bonds: 89469        # IEF
