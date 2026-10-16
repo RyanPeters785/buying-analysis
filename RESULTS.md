@@ -110,6 +110,31 @@ Single-stock results are illustrative only (hindsight-chosen list).
 
 ![Annual return vs lump sum across tickers](outputs/deployment_vs_lump.png)
 
+## Follow-up: does the weekday or time of a weekly DCA purchase matter?
+
+Weekly DCA of $96 into SPY, bought every week at one of 10 slots (Monday–Friday × open 9:30 / close
+16:00 ET; a holiday moves the purchase to the next session). Run with `scripts/day_of_week.py`. This was
+added after the lockbox, so 2023–2025 is descriptive only.
+
+| Slot | Ending value 1993–2022 | vs best | Avg price vs that week's 10-slot average |
+|---|---|---|---|
+| Mon open | $704,273 | — | −8.8 bps (95% CI −14.8 to −2.8) |
+| Mon close | $704,188 | −0.01% | −9.0 bps |
+| Tue open / close | $703,774 / $703,709 | −0.07% / −0.08% | −2.3 / −2.5 bps |
+| Wed open / close | $703,527 / $703,330 | −0.11% / −0.13% | +0.3 / +2.3 bps |
+| Thu open / close | $703,142 / $703,280 | −0.16% / −0.14% | +3.1 / +4.2 bps |
+| Fri open / close | $703,221 / $703,263 | −0.15% / −0.14% | +7.1 / +5.6 bps |
+
+The best slot beat the worst by about $1,100 on $704,000 over 30 years, roughly 0.005% a year. Average
+prices rise steadily from Monday to Friday by about 16 bps. That is SPY's normal upward drift over four
+sessions, so Monday "wins" only because the money is invested a few days sooner, which is the same reason
+lump sum beats DCA. Single weeks are noise (±1–2% either way), and Monday open was the cheapest slot in
+only 21% of weeks. Open and close on the same day are within about 2 bps. 2023–2025 showed the same
+ordering, with a $76 gap. **Practical rule: buy when the money arrives, at whatever slot is convenient.**
+Pre-market and intraday times were not testable (daily open and close data only).
+
+![Price paid vs the week's average, by slot](outputs/day_of_week.png)
+
 ## Strategies that did not beat SPY after costs
 
 On ending value over their full development window: monthly and weekly DCA; all 12 buy-the-dip

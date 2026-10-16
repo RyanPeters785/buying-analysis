@@ -98,13 +98,17 @@ def line_chart(series: dict[str, pd.Series], title: str, ylabel: str, path: Path
 
 
 def hist_panels(values: dict[str, np.ndarray], markers: dict[str, float], title: str, xlabel: str,
-                path: Path, ncols: int = 3, marker_label: str = "strategy") -> Path:  # fmt: skip
+                path: Path, ncols: int = 3, marker_label: str = "strategy",
+                xlim: tuple[float, float] | None = None) -> Path:  # fmt: skip
     """Small multiples: one histogram per panel (single neutral fill) with the strategy's value marked."""
     n = len(values)
     nrows = int(np.ceil(n / ncols))
-    fig, axes = plt.subplots(nrows, ncols, figsize=(3.6 * ncols, 2.6 * nrows), squeeze=False)
+    fig, axes = plt.subplots(nrows, ncols, figsize=(3.6 * ncols, 2.6 * nrows), squeeze=False,
+                             sharex=xlim is not None)  # fmt: skip
+    bins = np.linspace(*xlim, 41) if xlim else 30
     for ax, (name, v) in zip(axes.flat, values.items()):
-        ax.hist(v, bins=30, color="#c3c2b7", edgecolor=SURFACE, linewidth=1)
+        v = np.clip(v, *xlim) if xlim else v  # tails beyond the range pile into the edge bins
+        ax.hist(v, bins=bins, color="#c3c2b7", edgecolor=SURFACE, linewidth=1)
         if name in markers and np.isfinite(markers[name]):
             ax.axvline(markers[name], color=SERIES[0], lw=2)
             pct = (np.asarray(v) < markers[name]).mean() * 100
