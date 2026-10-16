@@ -9,6 +9,7 @@ import hashlib
 from datetime import date
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -115,7 +116,7 @@ def write_manifest(sources: dict[str, str]) -> Path:
     ]
     for f in sorted(RAW_DIR.glob("*.parquet")):
         df = pd.read_parquet(f)
-        dcol = "session" if "session" in df else "observation_date"
+        dcol = next(c for c in ("session", "observation_date", "date") if c in df)
         rng = f"{df[dcol].min():%Y-%m-%d} → {df[dcol].max():%Y-%m-%d}"
         src, when = sources.get(f.name), date.today().isoformat()
         if src is None:
@@ -134,3 +135,22 @@ def _manifest_sources() -> dict[str, tuple[str, str]]:
         if len(cells) == 6 and cells[0].endswith(".parquet"):
             out[cells[0]] = (cells[1], cells[2])
     return out
+
+
+KF_FILE = "ff_factors_daily.parquet"
+KF_MARKET = 1  # synthetic permno for the Ken French US market portfolio
+
+
+def load_ken_french_panel() -> pd.DataFrame:
+    """Ken French value-weighted US market (1926+) as an engine panel.
+
+    No opens exist, so ``open`` is NaN and the engine fills at that day's close (signal at t's close, fill at
+    t+1's close). ``rf`` is the daily T-bill return annualized (x 252). Treated as a 2 bps-spread fund.
+    """
+    kf = pd.read_parquet(RAW_DIR / KF_FILE).sort_values("date")
+    px = (1 + kf["mkt"]).cumprod().to_numpy()
+    return pd.DataFrame({
+        "permno": KF_MARKET, "session": kf["date"].to_numpy(), "ticker": "MKT", "prc": px, "close": px,
+        "open": np.nan, "ret": np.r_[np.nan, kf["mkt"].to_numpy()[1:]], "securitytype": "FUND",
+        "tradingstatusflg": "A", "rf": kf["rf"].to_numpy() * 252,
+    })  # fmt: skip

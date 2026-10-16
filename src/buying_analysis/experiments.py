@@ -27,7 +27,10 @@ TRIALS = ROOT / "outputs" / "trials.csv"
 LOCKBOX_START = pd.Timestamp("2023-01-01")
 
 
-def check_dev_window(end) -> None:
+def check_dev_window(end, phase: str = "dev") -> None:
+    """Dev runs must end before the lockbox; lockbox runs only come from ``run_all.py --lockbox``."""
+    if phase == "lockbox":
+        return
     if pd.Timestamp(end) >= LOCKBOX_START:
         raise RuntimeError(
             "development runs must end before 2023-01-01 (lockbox); use the lockbox runner"
@@ -74,13 +77,21 @@ def evaluate_timing(
     n_random: int = 100,
     costs=None,
     log: bool = True,
+    phase: str = "dev",
+    res=None,
 ) -> dict:
-    """Strategy vs B1, N1 (exposure-matched) and N2 (random timing) on the same window and deposits."""
-    check_dev_window(end)
+    """Strategy vs B1, N1 (exposure-matched) and N2 (random timing) on the same window and deposits.
+
+    Returns summary metrics plus ``_res`` / ``_b1`` (engine results) and ``_n2`` (null summaries) for
+    statistics and plots; underscore keys are not written to trials.csv.
+    """
+    check_dev_window(end, phase)
     eng = Engine(md) if costs is None else Engine(md, costs=costs)
-    res = run_one(eng, strategy, start, end, amount, frequency)
+    if res is None:
+        res = run_one(eng, strategy, start, end, amount, frequency)
     m = summarize(res)
-    b1 = summarize(run_one(eng, spy_buy_and_hold(), start, end, amount, frequency))
+    b1_res = run_one(eng, spy_buy_and_hold(), start, end, amount, frequency)
+    b1 = summarize(b1_res)
     w = (
         res.weights.get(SPY, pd.Series(0.0, index=res.daily.index))
         .reindex(res.daily.index)
@@ -124,8 +135,8 @@ def evaluate_timing(
         "trades_after_suspect_spy_dates": len(suspect),
     }
     if log:
-        log_trials([{"kind": "timing", **out}])
-    return out
+        log_trials([{"kind": "timing", **out}], phase)
+    return {**out, "_res": res, "_b1": b1_res, "_n2": n2}
 
 
 def _next_sessions(md: MarketData, dates) -> list[pd.Timestamp]:
@@ -162,22 +173,85 @@ def _run_deployment(args):
 
 
 def evaluate_deployment(md: MarketData, assets, end, *, warmup_days: int = 365, amount=5000.0,
-                        frequency="annual", costs=None, log=True) -> pd.DataFrame:  # fmt: skip
+                        frequency="annual", costs=None, log=True, phase="dev", start=None) -> pd.DataFrame:  # fmt: skip
     """Every deployment strategy on every asset, from one year after listing (or the data start) to ``end``.
 
     Each asset's window also gets a SPY buy-and-hold (B1) run with the same deposits.
     """
-    check_dev_window(end)
+    check_dev_window(end, phase)
     eng = Engine(md) if costs is None else Engine(md, costs=costs)
     jobs = []
     for a in assets:
         first = md.first_session([a, SPY])
-        start = md.sessions[md.sessions >= first + pd.Timedelta(days=warmup_days)][0]
-        jobs.append((a, start, end, amount, frequency))
+        s0 = first + pd.Timedelta(days=warmup_days)
+        if start is not None:
+            s0 = max(s0, pd.Timestamp(start))
+        live = md.sessions[(md.sessions >= s0) & (md.sessions <= pd.Timestamp(end))]
+        if len(live) < 2 or not md.tradable[md.sessions.get_loc(live[0]), md.col(a)]:
+            continue
+        jobs.append((a, live[0], end, amount, frequency))
     with ProcessPoolExecutor(min(len(jobs), os.cpu_count() or 1), initializer=_init,
                              initargs=(md, eng.costs, None, None, amount, frequency)) as ex:  # fmt: skip
         rows = [r for chunk in ex.map(_run_deployment, jobs) for r in chunk]
     df = pd.DataFrame(rows)
     if log:
-        log_trials([{"kind": "deployment", **r} for r in rows])
+        log_trials([{"kind": "deployment", **r} for r in rows], phase)
     return df
+
+
+# --- rolling start dates --------------------------------------------------------------------------------
+
+
+def _run_window(args):
+    strategy, start, end = args
+    eng = Engine(_G["md"], costs=_G["costs"])
+    m = summarize(run_one(eng, strategy, start, end, _G["amount"], _G["frequency"]))
+    return {"window_start": start, "window_end": end, **m}
+
+
+def rolling_windows(md: MarketData, strategies: list[Strategy], years: int, end, *, step_months: int = 1,
+                    warmup_days: int = 400, amount=5000.0, frequency="annual", costs=None,
+                    benchmark: Strategy | None = None) -> pd.DataFrame:  # fmt: skip
+    """Fresh portfolios started on the first session of every ``step_months`` month, each run ``years`` years.
+
+    Each strategy only gets windows that start ``warmup_days`` after all its assets trade; every window also
+    runs the benchmark (default SPY buy-and-hold) so results are paired by start date.
+    """
+    bench = spy_buy_and_hold() if benchmark is None else benchmark
+    check_dev_window(end)
+    end = pd.Timestamp(end)
+    eng = Engine(md) if costs is None else Engine(md, costs=costs)
+    months = pd.date_range(md.sessions[0], end, freq=f"{step_months}MS")
+    jobs = []
+    for s in [bench, *strategies]:
+        ok_from = md.first_session(s.assets) + pd.Timedelta(days=warmup_days)
+        for m in months:
+            st = md.sessions[md.sessions.searchsorted(m)]
+            w_end = st + pd.DateOffset(years=years) - pd.Timedelta(days=1)
+            if st >= ok_from and w_end <= end:
+                jobs.append((s, st, w_end))
+    with ProcessPoolExecutor(os.cpu_count() or 1, initializer=_init,
+                             initargs=(md, eng.costs, None, None, amount, frequency)) as ex:  # fmt: skip
+        rows = list(ex.map(_run_window, jobs, chunksize=8))
+    df = pd.DataFrame(rows)
+    b1 = df[df["strategy"] == bench.name].set_index("window_start")
+    df["b1_final"] = df["window_start"].map(b1["final_value"])
+    df["b1_xirr"] = df["window_start"].map(b1["xirr"])
+    df["final_vs_b1"] = df["final_value"] / df["b1_final"] - 1
+    df["years_window"] = years
+    return df
+
+
+def _run_full(args):
+    strategy, start, end = args
+    return run_one(
+        Engine(_G["md"], costs=_G["costs"]), strategy, start, end, _G["amount"], _G["frequency"]
+    )
+
+
+def run_parallel(md: MarketData, jobs: list[tuple], costs=None, amount=5000.0, frequency="annual"):
+    """Run [(strategy, start, end)] in parallel; returns engine Results in order."""
+    costs = Engine(md).costs if costs is None else costs
+    with ProcessPoolExecutor(min(len(jobs), os.cpu_count() or 1), initializer=_init,
+                             initargs=(md, costs, None, None, amount, frequency)) as ex:  # fmt: skip
+        return list(ex.map(_run_full, jobs))

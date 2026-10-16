@@ -182,3 +182,12 @@ def test_delisted_position_converts_to_cash(panel):
     assert d["invested"].iloc[-1] == 0
     assert d["cash"].iloc[-1] == pytest.approx(d["equity"].iloc[9])
     assert (res.trades["side"] == "delist").sum() == 1
+
+
+def test_large_balances_do_not_leave_negative_cash(panel):
+    rng = np.random.default_rng(4)
+    c = 100 * np.cumprod(1 + rng.normal(0.0004, 0.012, 600))
+    md = MarketData.load(prices=panel({A: c}))
+    dep = contribution_schedule(md.sessions, 7_777_777.77, "monthly")
+    res = Engine(md).run(LumpSum(A), dep)
+    assert (res.daily["cash"] >= 0).all()

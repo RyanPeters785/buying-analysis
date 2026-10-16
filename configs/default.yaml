@@ -29,3 +29,20 @@ dates:
 assets:
   benchmark: 84398    # SPY
   bonds: 89469        # IEF
+
+# Pre-registered lockbox list (approved 2026-10-16, before any 2023-2025 result was computed).
+# Defaults for every strategy, plus the best dev (1993-2022) setting of each tuned family.
+# Evaluated exactly once: uv run scripts/run_all.py --lockbox
+lockbox:
+  strategies:
+    - {type: b1}
+    - {type: sixty_forty, frequency: monthly}
+    - {type: dca, frequency: monthly}
+    - {type: dip, dip: 0.05, wait: 3}          # best of 12 dip settings on 1994-2022
+    - {type: trend}
+    - {type: sma_cross}
+    - {type: vol_target}
+    - {type: rsi2}
+    - {type: sector}
+    - {type: dual_momentum}
+    - {type: swing, k: 21, threshold: 0.50, C: 0.1}   # best of 12 swing settings on 1997-2022

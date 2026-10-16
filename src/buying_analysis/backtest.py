@@ -338,7 +338,8 @@ class Engine:
                 trades.append(self._trade(i, c, "sell", val, c_cost))
         buy = np.flatnonzero((delta > self.min_trade) & md.tradable[i])
         need = sum(delta[c] * (1 + spread[c]) + cm.commission for c in buy)
-        scale = 1.0 if need <= port.settled + 1e-9 else max(port.settled, 0.0) / need
+        tol = 1e-9 * max(1.0, need)  # float noise on large balances
+        scale = 1.0 if need <= port.settled + tol else max(port.settled, 0.0) / need
         for c in buy:
             val = delta[c] * scale
             if not self.fractional:
@@ -351,6 +352,8 @@ class Engine:
             port.settled -= val + c_cost
             cost += c_cost
             trades.append(self._trade(i, c, "buy", val, c_cost))
+        if -tol < port.settled < 0:
+            port.settled = 0.0
         done = scale >= 1.0 - 1e-9
         return cost, done, trades
 
