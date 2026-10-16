@@ -124,7 +124,32 @@ Three came out ahead, none convincingly:
 
 ## Lockbox 2023–2025
 
-*Pending.* The pre-registered list is evaluated exactly once; results will appear here unchanged.
+This is the pre-registered list (committed in `44b1bc0` before any 2023–2025 result was computed),
+evaluated once on 2026-10-16 at 00:25. It is reported unchanged. Three deposits of $5,000 (January 2023,
+2024 and 2025), valued at 2025-12-31.
+
+| Strategy | Ending value | vs SPY | XIRR | Sharpe | Worst drawdown | Random-timing percentile (value) |
+|---|---|---|---|---|---|---|
+| SPY buy-and-hold | $22,554 | — | 21.9% | 1.11 | −19% | |
+| ML swing k=21 (best on dev) | $22,231 | −1.4% | 21.1% | 1.09 | −19% | 18th |
+| Buy the dip 5%, 3-month wait (best on dev) | $22,097 | −2.0% | 20.7% | 1.07 | −17% | |
+| Dual momentum | $21,461 | −4.8% | 19.1% | 0.90 | −19% | 35th |
+| Sector rotation | $21,340 | −5.4% | 18.7% | 0.88 | −15% | 76th |
+| Monthly DCA | $20,730 | −8.1% | 17.1% | 1.01 | −15% | |
+| Volatility target | $20,640 | −8.5% | 16.9% | 1.04 | −16% | 0th |
+| Trend: 10-month average | $20,157 | −10.6% | 15.6% | 0.85 | −10% | 3rd |
+| RSI(2) | $19,479 | −13.6% | 13.7% | 0.76 | −9% | 98th |
+| 60/40 | $19,780 | −12.3% | 14.5% | 0.98 | −11% | |
+| 50/200-day cross | $18,996 | −15.8% | 12.3% | 0.70 | −19% | 0th |
+
+**Every strategy trailed SPY in the lockbox.** The two settings chosen as best on 1993–2022 (dip 5% and
+swing k=21) came closest, but both still lost, by 2.0% and 1.4%. Trend-following and the 50/200-day cross
+did worst relative to random timing (0–3rd percentile). The April 2025 sell-off (−19% to April 8) was a
+quick V-shaped recovery. The 50/200-day cross sold after the drop (17 April) and bought back after the
+rebound (30 June). The 10-month trend sold just before the worst days (2 April) but stayed out until
+3 June, missing the rebound. It had also sat out November 2023, right as a rally began. With only three years and one
+short sell-off, none of these differences is statistically significant (Holm p = 1.0), but the
+direction agrees with the development results.
 
 ## Caveats
 
