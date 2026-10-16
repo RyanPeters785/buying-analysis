@@ -144,6 +144,10 @@ class Context:
         """Total-return index history of ``permno`` through t (NaN before listing)."""
         return self._md.close_idx[: self.i + 1, self._md.col(permno)]
 
+    def open(self, permno: int) -> np.ndarray:
+        """Open-price total-return index through t (today's open is known at today's close)."""
+        return self._md.open_idx[: self.i + 1, self._md.col(permno)]
+
     def rf(self) -> np.ndarray:
         return self._md.rf[: self.i + 1]
 

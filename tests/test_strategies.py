@@ -87,6 +87,7 @@ def real_md():
         VolTarget,
         RSI2,
         lambda: BuyTheDip(SPY, 0.1, 6),
+        lambda: __import__("buying_analysis.strategies.learned", fromlist=["x"]).SwingModel(),
     ],
 )
 def test_truncating_the_future_changes_nothing(real_md, make):
@@ -101,3 +102,30 @@ def test_truncating_the_future_changes_nothing(real_md, make):
     pd.testing.assert_frame_equal(a, b)
     ta = r_long.trades[r_long.trades["session"] <= cut].reset_index(drop=True)
     pd.testing.assert_frame_equal(ta, r_short.trades.reset_index(drop=True))
+
+
+# --- learned model ---------------------------------------------------------------------------------------
+
+
+def test_features_use_only_the_past():
+    from buying_analysis.strategies.learned import LOOKBACK, features
+
+    rng = np.random.default_rng(3)
+    x = 100 * np.cumprod(1 + rng.normal(0, 0.01, 800))
+    full = features(x)
+    y = x.copy()
+    y[500:] *= 1.5  # change the future
+    assert full.iloc[:500].equals(features(y).iloc[:500])
+    # a trailing window gives the same row as the full history
+    tail = features(x[400 - LOOKBACK + 1 : 401]).iloc[-1]
+    pd.testing.assert_series_equal(tail, full.iloc[400], check_names=False)
+
+
+def test_labels_and_purge():
+    from buying_analysis.strategies.learned import labels, training_rows
+
+    o = np.array([10.0, 11, 12, 11, 13, 14])
+    y = labels(o, k=2)  # y[t] = open[t+3] > open[t+1]
+    assert list(y[:3]) == [0.0, 1.0, 1.0] and np.isnan(y[3:]).all()
+    # with 6 sessions known (last index 5), samples t <= 2 have open[t+3] observed
+    assert training_rows(6, 2) == 3
