@@ -54,6 +54,7 @@ so they use pre-declared settings, report full grids, and treat 2023-2025 as des
 | `scripts/valuation_scatter.py` | Trailing P/E and CAPE at purchase vs next-10-year return |
 | `scripts/single_stock_trend.py` | 200-day / 10-month trend rules on each Dow stock |
 | `scripts/value_profitability.py` | Cheap + profitable stocks (Ken French 5x5 BM x OP portfolios, 1964-2022) |
+| `scripts/stock_momentum.py` | 12-1 month momentum winners vs the market (Ken French, 1927-2022) |
 
 ## Assumptions
 

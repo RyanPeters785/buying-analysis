@@ -84,6 +84,40 @@ def fetch_25() -> pd.DataFrame:
     return out[out["date"] <= "2025-12-31"].sort_values(["date", "bm", "op"]).reset_index(drop=True)
 
 
+URL_MOM10 = BASE + "10_Portfolios_Prior_12_2_CSV.zip"
+OUT_MOM10 = "ff_10_momentum_monthly.parquet"
+URL_MOM6 = BASE + "6_Portfolios_ME_Prior_12_2_CSV.zip"
+OUT_MOM6 = "ff_6_size_momentum_monthly.parquet"
+
+
+def fetch_blocks(url: str, blocks: dict[str, str]) -> pd.DataFrame:
+    """Generic reader for Ken French monthly block files: {block title: field} -> long frame
+    (date, cell, col_index (1-based, file order), fields...). Returns are converted to decimal."""
+    lines = _csv_text(url)
+    frames = []
+    for title, field in blocks.items():
+        start = next(i for i, ln in enumerate(lines) if ln.strip() == title) + 1
+        cols = [c.strip() for c in lines[start].split(",")[1:]]
+        rows = []
+        for ln in lines[start + 1 :]:
+            parts = [p.strip() for p in ln.split(",")]
+            if len(parts) < len(cols) + 1 or not parts[0].isdigit() or len(parts[0]) != 6:
+                break
+            rows.append(parts[: len(cols) + 1])
+        df = pd.DataFrame(rows, columns=["yyyymm", *cols])
+        df["date"] = pd.to_datetime(df["yyyymm"], format="%Y%m") + pd.offsets.MonthEnd(0)
+        long = df.drop(columns="yyyymm").melt(id_vars="date", var_name="cell", value_name=field)
+        long[field] = long[field].astype(float)
+        if (long[field] <= -99).any():
+            raise SystemExit(f"missing values in {title}")
+        if field == "ret":
+            long[field] /= 100
+        long["col"] = long["cell"].map({c: i + 1 for i, c in enumerate(cols)})
+        frames.append(long.set_index(["date", "cell", "col"]))
+    out = pd.concat(frames, axis=1).reset_index()
+    return out[out["date"] <= "2025-12-31"].sort_values(["date", "col"]).reset_index(drop=True)
+
+
 def main() -> None:
     lines = _csv_text(URL)
     start = next(i for i, ln in enumerate(lines) if ln.strip().startswith(",Mkt-RF"))
@@ -106,12 +140,36 @@ def main() -> None:
     print(
         f"6 portfolios: {len(six):,} days {six['date'].min():%Y-%m-%d} → {six['date'].max():%Y-%m-%d}"
     )
+    mom10 = fetch_blocks(
+        URL_MOM10,
+        {
+            "Value Weight Returns -- Monthly": "ret",
+            "Number of Firms in Portfolios": "n_firms",
+            "Average Firm Size": "avg_size",
+        },
+    )
+    mom10.to_parquet(RAW_DIR / OUT_MOM10, index=False)
+    mom6 = fetch_blocks(
+        URL_MOM6,
+        {
+            "Average Value Weighted Returns -- Monthly": "ret",
+            "Number of Firms in Portfolios": "n_firms",
+            "Average Firm Size": "avg_size",
+        },
+    )
+    mom6.to_parquet(RAW_DIR / OUT_MOM6, index=False)
+    print(
+        f"momentum: 10 deciles {mom10['date'].min():%Y-%m} → {mom10['date'].max():%Y-%m}; "
+        f"6 size x momentum {mom6['date'].min():%Y-%m} → {mom6['date'].max():%Y-%m}"
+    )
     p25 = fetch_25()
     p25.to_parquet(RAW_DIR / OUT25, index=False)
     print(
         f"25 BM x OP portfolios: {p25['date'].nunique()} months {p25['date'].min():%Y-%m} → {p25['date'].max():%Y-%m}"
     )
-    write_manifest({OUT25: f"Ken French Data Library ({URL25.rsplit('/', 1)[-1]}, value-weighted, monthly)",
+    write_manifest({OUT_MOM10: f"Ken French Data Library ({URL_MOM10.rsplit('/', 1)[-1]}, value-weighted, monthly)",
+                    OUT_MOM6: f"Ken French Data Library ({URL_MOM6.rsplit('/', 1)[-1]}, value-weighted, monthly)",
+                    OUT25: f"Ken French Data Library ({URL25.rsplit('/', 1)[-1]}, value-weighted, monthly)",
                     OUT: f"Ken French Data Library ({URL.rsplit('/', 1)[-1]})",
                     OUT6: f"Ken French Data Library ({URL6.rsplit('/', 1)[-1]}, value-weighted)"})  # fmt: skip
 

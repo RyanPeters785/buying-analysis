@@ -34,6 +34,7 @@ expensive part; signals were often real but rarely paid enough to cover it.
 | Rotate between countries, or US vs international? | Momentum beat random picks but not plain US stocks; the US lead is narrowing (+10.4 to +5.2 pts/yr). |
 | Hold small-cap / value instead? | **The only large long-run edge** (small value beat the market in 96% of 20-year windows since 1927), but it has lagged since 2007. |
 | Cheap **and** profitable stocks? | Nearly doubled the value edge (13.2% vs 10.5%/yr since 1964); cheap-but-unprofitable only matched the market; lagged 2007–2022. |
+| Buy last year's winners (momentum)? | **Strongest long-run effect** (top 10%: 15.5% vs 10.5%/yr since 1927, t = 5.4), but flat vs the market since about 2000; losers lost money over 95 years. |
 | What does today's valuation imply? | CAPE 31 (Sept 2023) historically meant about 4.5%/yr over the next decade, with a wide range (−4% to +8%). |
 
 **Practical reading.** Invest each contribution as soon as it arrives in a low-cost broad index fund and
@@ -466,6 +467,42 @@ after assumed fees of 0.25%/yr (market 0.03%) (`scripts/value_profitability.py`,
 - **The extreme corner holds about 25 stocks** and fell 89% at its worst.
 - **These are paper portfolios.** Real funds that screen on value and profitability charge 0.15–0.25% and
   will not match exactly.
+
+## Follow-up: stock momentum (buy last year's winners)
+
+This uses Ken French value-weighted momentum portfolios. Stocks are ranked monthly on their return from 12
+months ago to 2 months ago (skipping the latest month, which tends to reverse). The test runs 1927–2022
+with $5,000 each January. Turnover is high, so after-cost drag is assumed at 0.5%, 1% (headline) and 2% a
+year (`scripts/stock_momentum.py`, `outputs/stock_momentum/report.md`).
+
+| Portfolio | Firms | XIRR (mkt 10.5%) | At 0.5% / 2% cost | Worst drawdown (mkt −84%) | 20-yr windows beating market | t-stat |
+|---|---|---|---|---|---|---|
+| Top 10% | ~340 | 15.5% | 16.1% / 14.4% | −77% | 98% (worst −17%) | 5.4 |
+| Top 20% | ~615 | 13.7% | 14.2% / 12.6% | −76% | 96% | 5.4 |
+| Big-company winners (top 30% of large caps) | ~230 | 12.5% | 13.1% / 11.4% | −78% | 92% | 4.7 |
+| Losers (bottom 10%) | ~430 | −1.0% | | −99% | 0% | −3.4 |
+
+| Top 10% vs market (after 1% drag) | 1927–63 | 1964–93 | 1994–2022 | 2007–2022 |
+|---|---|---|---|---|
+| Top 10% | 15.4% | 18.9% | 11.0% | 8.3% |
+| Market | 9.2% | 10.6% | 9.6% | 8.7% |
+
+![Momentum portfolios relative to the market](outputs/stock_momentum/relative_to_market.png)
+
+**Results.**
+- **This is the strongest long-run effect in the project:** about 6.6 points a year gross for the top
+  10%, with t = 5.4. It survives a 2% cost assumption.
+- **Losers are as informative as winners.** The bottom 10% lost money over 95 years and trailed the market
+  in every 20-year window.
+- **The edge has faded.** Relative wealth rose steadily until about 2000 and has been flat since.
+  Momentum was published in 1993; after 2007 it was roughly zero after costs.
+- **It crashes when the market reverses sharply.** In 1932 the winners rose 25% while the market rose
+  78%. In 2000–01 the top 10% fell 42% against the market's 16%, and in 2021–22 it trailed by 29%.
+- **2023–2025 (descriptive)** was mixed: the top 10% returned 24.8% and the top 20% 15.3%, against
+  23.2% for the market.
+
+**Caveat.** Real momentum funds face higher turnover costs than this estimate, and since 2013 they have
+tracked the market more closely than these paper portfolios.
 
 ## Strategies that did not beat SPY after costs
 
