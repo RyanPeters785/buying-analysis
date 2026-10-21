@@ -179,3 +179,12 @@ def load_ken_french_portfolios(fees: dict[str, float] | None = None) -> pd.DataF
         px = np.cumprod(1 + np.nan_to_num(r))
         frames.append(mkt.assign(permno=permno, ticker=name, ret=r, prc=px, close=px))
     return pd.concat(frames, ignore_index=True)
+
+
+COUNTRY_FILE = "country_etfs.parquet"  # scripts/fetch_country_etfs.py
+
+
+def load_country_etfs() -> pd.DataFrame:
+    """US-listed country / region ETFs (CRSP), 1996-2025, same columns as the main panel."""
+    df = pd.read_parquet(RAW_DIR / COUNTRY_FILE)
+    return df[df["session"] <= END].sort_values(["permno", "session"]).reset_index(drop=True)

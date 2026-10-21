@@ -58,13 +58,14 @@ def fetch_crsp(username: str, permnos: list[int]) -> pd.DataFrame:
         db.close()
 
 
-def tidy(raw: pd.DataFrame, template: pd.DataFrame) -> pd.DataFrame:
+def tidy(raw: pd.DataFrame, template: pd.DataFrame, cal_start: str = START,
+         cal_end: str = OVERLAP_END) -> pd.DataFrame:  # fmt: skip
     """Match the processed 2010+ panel: renamed columns, abs prices, available_at = session close (UTC)."""
     df = raw.rename(columns=RENAME)
     df["session"] = pd.to_datetime(df["session"]).dt.normalize()
     for col in ("open", "high", "low", "close", "prc"):
         df[col] = pd.to_numeric(df[col], errors="coerce").abs()
-    sched = mcal.get_calendar("NYSE").schedule(START, OVERLAP_END)
+    sched = mcal.get_calendar("NYSE").schedule(cal_start, cal_end)
     closes = sched["market_close"].dt.tz_convert("UTC")
     closes.index = pd.DatetimeIndex(sched.index).normalize()
     df["available_at"] = df["session"].map(closes)

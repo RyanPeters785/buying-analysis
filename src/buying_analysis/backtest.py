@@ -42,9 +42,18 @@ class MarketData:
 
     @classmethod
     def load(
-        cls, permnos=None, start=None, end=None, prices: pd.DataFrame | None = None
+        cls,
+        permnos=None,
+        start=None,
+        end=None,
+        prices: pd.DataFrame | None = None,
+        extra: pd.DataFrame | None = None,
     ) -> MarketData:
+        """CRSP panel (or a synthetic ``prices`` panel); ``extra`` CRSP rows (e.g. country ETFs) are appended
+        to the main panel and keep the point-in-time T-bill yield."""
         p = data.load_prices() if prices is None else prices
+        if extra is not None and prices is None:
+            p = pd.concat([p, extra[p.columns]], ignore_index=True)
         if permnos is not None:
             p = p[p["permno"].isin(list(permnos))]
         sessions_all = pd.DatetimeIndex(sorted(p["session"].unique()))

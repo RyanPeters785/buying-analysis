@@ -224,6 +224,37 @@ clear recommendation:
 A modest tilt has long-run evidence behind it, but it has also had a long losing streak recently. A
 total-market or S&P 500 fund remains the simpler default.
 
+## Follow-up: country momentum and US vs. international
+
+These use 23 US-listed country ETFs (iShares, from CRSP 1996–2025) with SPY standing in for the US.
+Strategies are always invested, with settings fixed in advance (`scripts/country_momentum.py`,
+`outputs/countries/report.md`). The UK fund changed CRSP PERMNO in 2014 and is chained across the
+switch. Against yfinance, total returns agree within 0.2 points a year for most funds, but CRSP is up to
+0.5 points a year lower for Italy and France because of early-2000s distributions.
+
+| Strategy | Window | Ending value | XIRR | Worst drawdown | Beats random |
+|---|---|---|---|---|---|
+| Top 3 countries by 12-1 month momentum | 1997–2022 | $345k | 6.6% (5.9% at 5× costs) | −69% | 85% |
+| Equal weight, 23 countries | 1997–2022 | $302k | 5.8% | −63% | |
+| SPY | 1997–2022 | $474k | 8.6% | −55% | |
+| Hold SPY or EFA, whichever had the higher 12-month return | 2002–2022 | $303k | 8.9% | −57% | 91% |
+| 50/50 SPY/EFA | 2002–2022 | $247k | 7.3% | −58% | |
+| EFA (developed ex-US) | 2002–2022 | $175k | 4.4% | −61% | |
+| SPY | 2002–2022 | $344k | 9.9% | −55% | |
+
+Both signals are real, since each beat 85–91% of random alternatives. Neither beat simply holding the US.
+Country leadership changed slowly, and the switching rule moved late each time: it held EFA for 93
+months over 9 switches, catching part of international's 2002–07 lead but trailing SPY overall.
+
+**Has the trajectory changed?** The US's rolling 10-year lead over the average other country went from
+−8 points a year (2010) to +10.4 (peak, September 2020). Since then it has narrowed: +8.7 at the end of
+2022, +8.1 at the end of 2024, and +5.2 at the end of 2025, with the 5-year lead falling from +10.1 to
++4.0 in 2025 alone. The lead is shrinking but still large. The tests above show that reacting to a change
+in leadership after it appears has not paid, so this is not a reason to expect VXUS to beat VOO. It is the
+usual argument for holding some of both rather than betting on either.
+
+![US minus other markets, rolling 10 years](outputs/countries/rolling_10y_gap.png)
+
 ## Strategies that did not beat SPY after costs
 
 On ending value over their full development window: monthly and weekly DCA; all 12 buy-the-dip
