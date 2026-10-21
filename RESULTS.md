@@ -315,6 +315,40 @@ did not avoid the big crashes either. The latest real-time CAPE in the data (Sep
 88th percentile of its history. That points to below-average returns over the next decade, not to a
 reason to sell.
 
+## Follow-up: seasonality (when in the year is the market strong or weak?)
+
+This uses US market returns above T-bills (Ken French daily data, 1927–2022), split into 1927–1974 and
+1975–2022 to check stability, with SPY 1994–2022 as a third check (`scripts/seasonality.py`,
+`outputs/seasonality/report.md`).
+
+![Average daily return above T-bills by calendar day](outputs/seasonality/daily_returns.png)
+
+- **Strongest stretch: late December into early January.** The smoothed average peaks near Dec 31 at
+  about +14 bp a day, against a typical +2.5 bp, and all three periods agree.
+- **Weakest stretch: early September to mid-October,** centred around Sep 17 at −9 bp a day. It is the
+  only stretch where the confidence band sits mostly below zero, and it appears in all three periods.
+  September is the only month with a negative average excess return (−1.1%, up in 47% of years).
+- **Detrended path:** the market typically sits 2–3% below its normal trend in late September or October
+  (Oct 29, Oct 27 and Sep 30 in the three periods) and recovers through November and December.
+- **Everything else is noise.** Single days swing ±30 bp. After adjusting for testing 12 months, only
+  December stays significant on its own (p = 0.01). Other mid-year dips and bumps changed sign between the
+  two halves.
+
+![Average path through the year relative to normal growth](outputs/seasonality/year_path.png)
+
+**"Sell in May" (stocks Nov–Apr, T-bills May–Oct), $5,000 each January, 1927–2022:**
+
+| Strategy | vs buy-and-hold | XIRR | Worst drawdown |
+|---|---|---|---|
+| Buy and hold | — | 10.5% | −84% |
+| Stocks Nov–Apr only | −63% | 9.2% | −57% |
+| Stocks May–Oct only | −99% | 4.6% | −70% |
+
+Winter did beat summer by about 0.6 points a month, in 66% of years. Summer still beat T-bills,
+though, so sitting out half the year cost more than the weak months saved. In 2023–2025 (descriptive)
+the rule earned 7.9% a year against 23.3%. The seasonal pattern is real but small. It is not a reason
+to sell; at most it makes the fall a slightly better-than-average time to add extra money.
+
 ## Strategies that did not beat SPY after costs
 
 On ending value over their full development window: monthly and weekly DCA; all 12 buy-the-dip

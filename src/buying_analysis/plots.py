@@ -71,7 +71,8 @@ def _colors(names, bench: str | None) -> dict[str, str]:
 
 
 def line_chart(series: dict[str, pd.Series], title: str, ylabel: str, path: Path, bench: str | None = None,
-               log: bool = False, fmt=None, zero_line: bool = False) -> Path:  # fmt: skip
+               log: bool = False, fmt=None, zero_line: bool = False, end_labels: bool = True,
+               month_axis: bool = False) -> Path:  # fmt: skip
     if len([n for n in series if n != bench]) > 4:
         raise ValueError("at most four strategies per chart (plus the benchmark)")
     fig, ax = plt.subplots(figsize=(9, 4.8))
@@ -90,8 +91,12 @@ def line_chart(series: dict[str, pd.Series], title: str, ylabel: str, path: Path
     ax.set_title(title)
     ax.set_ylabel(ylabel)
     ax.legend(loc="upper left", ncol=min(len(series), 3), fontsize=9)
-    fig.subplots_adjust(right=0.78)
-    _end_labels(ax, series, colors, fmt)
+    if month_axis:  # x is a dummy year: label months only
+        ax.xaxis.set_major_locator(matplotlib.dates.MonthLocator())
+        ax.xaxis.set_major_formatter(matplotlib.dates.DateFormatter("%b"))
+    if end_labels:
+        fig.subplots_adjust(right=0.78)
+        _end_labels(ax, series, colors, fmt)
     fig.savefig(path, dpi=150, bbox_inches="tight")
     plt.close(fig)
     return path
@@ -144,3 +149,87 @@ def strip_chart(df: pd.DataFrame, x: str, y: str, title: str, xlabel: str, path:
     fig.savefig(path, dpi=150, bbox_inches="tight")
     plt.close(fig)
     return path
+
+
+def grouped_bars(df: pd.DataFrame, err: pd.DataFrame | None, title: str, ylabel: str, path: Path,
+                 fmt=None) -> Path:  # fmt: skip
+    """Grouped bars: rows = categories (x axis), columns = series (<= 4, fixed palette order), optional
+    95% CI half-widths in ``err`` (same shape). Zero baseline; one y-axis."""
+    if df.shape[1] > 4:
+        raise ValueError("at most four series")
+    n, k = df.shape
+    width = 0.8 / k
+    x = np.arange(n)
+    fig, ax = plt.subplots(figsize=(10, 4.8))
+    for j, col in enumerate(df.columns):
+        pos = x - 0.4 + width * (j + 0.5)
+        ax.bar(pos, df[col].to_numpy(), width=width * 0.92, color=SERIES[j], label=col, zorder=2)
+        if err is not None:
+            ax.errorbar(pos, df[col].to_numpy(), yerr=err[col].to_numpy(), fmt="none", ecolor=INK,
+                        elinewidth=1, capsize=2, zorder=3)  # fmt: skip
+    ax.axhline(0, color=MUTED, lw=1, zorder=1)
+    ax.set_xticks(x, df.index)
+    ax.grid(axis="x", visible=False)
+    if fmt is not None:
+        ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: fmt(v)))
+    ax.set_title(title)
+    ax.set_ylabel(ylabel)
+    if k > 1:
+        ax.legend(loc="upper left", ncol=k, fontsize=9)
+    fig.savefig(path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    return path
+
+
+def _month_bands(ax) -> None:
+    """Alternate light bands per month on a dummy-year (2001) date axis, month names centred."""
+    for m in range(1, 13):
+        a = pd.Timestamp(2001, m, 1)
+        b = a + pd.offsets.MonthBegin(1)
+        if m % 2 == 0:
+            ax.axvspan(a, b, color=GRID, alpha=0.45, lw=0, zorder=0)
+    ax.set_xlim(pd.Timestamp(2001, 1, 1), pd.Timestamp(2002, 1, 1))
+    ax.xaxis.set_major_locator(matplotlib.dates.MonthLocator(bymonthday=15))
+    ax.xaxis.set_major_formatter(matplotlib.dates.DateFormatter("%b"))
+    ax.xaxis.set_minor_locator(matplotlib.dates.MonthLocator())
+    ax.tick_params(axis="x", which="major", length=0)
+    ax.grid(axis="x", visible=False)
+
+
+def daily_seasonal(points: pd.Series | None, lines: dict[str, pd.Series], bands: dict[str, pd.Series],
+                   title: str, ylabel: str, path: Path, fmt=None) -> Path:  # fmt: skip
+    """365-day view on a dummy year: optional grey dots (one per calendar day), up to four smoothed lines
+    with optional +/- band half-widths, alternating month shading."""
+    fig, ax = plt.subplots(figsize=(12, 5))
+    _month_bands(ax)
+    if points is not None:
+        ax.scatter(
+            points.index,
+            points.values,
+            s=9,
+            color="#b0afa8",
+            lw=0,
+            zorder=1,
+            label="single calendar day",
+        )
+    for k, (name, s) in enumerate(lines.items()):
+        c = SERIES[k]
+        if name in bands:
+            ax.fill_between(
+                s.index, s - bands[name], s + bands[name], color=c, alpha=0.15, lw=0, zorder=2
+            )
+        ax.plot(s.index, s.values, color=c, lw=2.2, label=name, zorder=3)
+    ax.axhline(0, color=MUTED, lw=1, zorder=1)
+    if fmt is not None:
+        ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: fmt(v)))
+    ax.set_title(title)
+    ax.set_ylabel(ylabel)
+    ax.legend(loc="upper left", ncol=len(lines) + 1, fontsize=9)
+    fig.savefig(path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    return path
+
+
+def daily_path(lines: dict[str, pd.Series], title: str, ylabel: str, path: Path, fmt=None) -> Path:
+    """Detrended path through the year (dummy-year dates) with month shading."""
+    return daily_seasonal(None, lines, {}, title, ylabel, path, fmt)

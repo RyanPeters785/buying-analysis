@@ -42,7 +42,16 @@ def log_trials(rows: list[dict], phase: str = "dev") -> None:
     TRIALS.parent.mkdir(exist_ok=True)
     stamp = datetime.now().isoformat(timespec="seconds")
     new = pd.DataFrame([{"logged_at": stamp, "phase": phase, **r} for r in rows])
-    old = pd.read_csv(TRIALS) if TRIALS.exists() else None
+    old = pd.read_csv(TRIALS, low_memory=False) if TRIALS.exists() else None
+    if old is not None:  # a rerun of an identical configuration (same results) is not a new trial
+        key = [
+            c
+            for c in ("phase", "kind", "strategy", "permno", "start", "end", "final_value")
+            if c in new
+        ]
+        both = old.reindex(columns=key).astype(str).apply("|".join, axis=1)
+        mask = ~new[key].astype(str).apply("|".join, axis=1).isin(set(both))
+        new = new[mask.to_numpy()]
     pd.concat([old, new], ignore_index=True).to_csv(TRIALS, index=False)
 
 
