@@ -52,6 +52,7 @@ so they use pre-declared settings, report full grids, and treat 2023-2025 as des
 | `scripts/cape_timing.py` | Sell when CAPE is expensive (real-time percentile thresholds) |
 | `scripts/seasonality.py` | Returns by calendar day / month, Sell in May |
 | `scripts/valuation_scatter.py` | Trailing P/E and CAPE at purchase vs next-10-year return |
+| `scripts/single_stock_trend.py` | 200-day / 10-month trend rules on each Dow stock |
 
 ## Assumptions
 

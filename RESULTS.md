@@ -28,6 +28,7 @@ expensive part; signals were often real but rarely paid enough to cover it.
 | Swing-trade assets that mean-revert? | The pattern held out of sample, but long-only swing trading lost to holding every asset. |
 | Rotate into last month's losing sectors? | Worse than random sector picks. |
 | Daily X-day moving-average rule (out to T-bills)? | 150–250 days roughly halves drawdowns but usually ends with less money; 20–50 days just loses. |
+| Trend rules on single stocks? | Much worse than on the index: median −60% vs holding, small drawdown cut, often worse than random. |
 | Sell when the market is expensive (CAPE)? | CAPE predicts 10-year returns (R² 0.44) but every timing rule lost to buy-and-hold. |
 | "Sell in May" / seasonality? | Sep–Oct is reliably weak, but selling half the year cost 63% of ending value. |
 | Rotate between countries, or US vs international? | Momentum beat random picks but not plain US stocks; the US lead is narrowing (+10.4 to +5.2 pts/yr). |
@@ -398,6 +399,36 @@ estimates) has no free long history, so trailing P/E is the closest available me
   above showed that acting on this signal lost money. It is useful for setting expectations, not for
   timing. International valuations were not testable with free data. Lower US valuations elsewhere support
   holding a meaningful international slice, not abandoning the S&P 500.
+
+## Follow-up: trend rules on single stocks
+
+This tests the 200-day (daily) and 10-month (monthly) rules, out to T-bills, on each of 43 Dow stocks. Each
+stock gets $5,000 a year from one year after listing (or 1994) to 2022, with 5 bps spreads; the 200-day rule
+is also compared with 100 random-timing runs per stock (`scripts/single_stock_trend.py`,
+`outputs/single_stock_trend/report.md`). The list is today's Dow members, chosen with hindsight, so the
+results are illustrative.
+
+| Rule | Stocks beating buy-and-hold | Median ending value vs holding | Median drawdown cut | Median random-timing percentile |
+|---|---|---|---|---|
+| 200-day | 16% | −60% | 12 pts | 25th |
+| 10-month | 21% | −49% | 17 pts | — |
+
+| Buy-and-hold outcome | Stocks | 200-day vs hold (median, share beating) | 10-month vs hold |
+|---|---|---|---|
+| Beat SPY (MSFT, UNH, WMT, JNJ…) | 23 | −68%, 0 of 23 | −62% |
+| Lagged SPY (IBM, VZ, KO, T…) | 10 | −42%, 2 of 10 | −35% |
+| Drawdown −80% or worse (GE, INTC, BAC, CSCO, NVDA, AMZN…) | 10 | +8%, 5 of 10 | +34% |
+
+![200-day rule vs buy-and-hold, single stocks](outputs/single_stock_trend/sma200_vs_hold.png)
+
+Trend rules did much worse on single stocks than on the index. On SPY the 200-day rule gave up about 25%
+of ending value and halved the drawdown; here it gave up about 60% and cut drawdowns by only 12 points.
+Individual stocks cross their averages far more often, so the rule is whipsawed and usually does worse than
+random timing. Its protection is also unreliable: JPM's worst drawdown was deeper with the rule (−82%)
+than without (−74%). On the true blowups it helped about half the time (GE +160%, HPQ +61%) and hurt the
+other half (BAC −24%, HWM −16%, INTC −9%). For single-stock blowup risk, diversifying across many stocks
+works far better than a trend rule. Survivorship bias here favors buy-and-hold; a real stock picker
+would also hold failures, where the rule would look better.
 
 ## Strategies that did not beat SPY after costs
 
