@@ -349,6 +349,36 @@ though, so sitting out half the year cost more than the weak months saved. In 20
 the rule earned 7.9% a year against 23.3%. The seasonal pattern is real but small. It is not a reason
 to sell; at most it makes the fall a slightly better-than-average time to add extra money.
 
+## Follow-up: valuation at purchase vs. the next 10 years
+
+These scatter plots use Shiller monthly S&P data. Each dot is one starting month (trailing P/E from 1871,
+CAPE from 1881, through 2013), plotted against the next 120 months' annualized total return with
+dividends reinvested. Earnings are lagged 4 months so only reported figures are used
+(`scripts/valuation_scatter.py`, `outputs/valuation_scatter/report.md`). A true forward P/E (analyst
+estimates) has no free long history, so trailing P/E is the closest available measure.
+
+![S&P 500 valuation at purchase vs next-10-year return](outputs/valuation_scatter/valuation_vs_10y_return.png)
+
+| CAPE at purchase (fifth of history) | Avg next-10-year return | Worst–best |
+|---|---|---|
+| 4.6–11.1 (cheapest) | 13.5% | −0.3% to 21.2% |
+| 11.1–14.4 | 11.0% | 3.2% to 19.0% |
+| 14.4–17.4 | 8.8% | 0.7% to 19.3% |
+| 17.4–21.2 | 8.1% | −1.4% to 18.0% |
+| 21.2–44.7 (most expensive) | 5.6% | −4.0% to 15.6% |
+
+- **Higher valuations have meant lower 10-year returns.** CAPE explains 29% of the variation (R²) and
+  trailing P/E 18%. Trailing P/E is distorted when earnings collapse: the 2009 points at P/E 50–140 were
+  followed by strong returns.
+- **Latest values (September 2023): trailing P/E 25, CAPE 31.** The CAPE trend points to about 4.5% a
+  year over the next decade. Months with CAPE within 10% of today's level went on to earn −4% to +8% a
+  year.
+- **Caveats.** Neighbouring dots share most of their 10-year windows, so the evidence amounts to about 14
+  independent decades. The spread at any given valuation is 10–15 points a year, and the CAPE timing test
+  above showed that acting on this signal lost money. It is useful for setting expectations, not for
+  timing. International valuations were not testable with free data. Lower US valuations elsewhere support
+  holding a meaningful international slice, not abandoning the S&P 500.
+
 ## Strategies that did not beat SPY after costs
 
 On ending value over their full development window: monthly and weekly DCA; all 12 buy-the-dip

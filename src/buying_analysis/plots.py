@@ -233,3 +233,38 @@ def daily_seasonal(points: pd.Series | None, lines: dict[str, pd.Series], bands:
 def daily_path(lines: dict[str, pd.Series], title: str, ylabel: str, path: Path, fmt=None) -> Path:
     """Detrended path through the year (dummy-year dates) with month shading."""
     return daily_seasonal(None, lines, {}, title, ylabel, path, fmt)
+
+
+def valuation_scatter(panels: dict[str, pd.DataFrame], latest: dict[str, float], title: str, ylabel: str,
+                      path: Path) -> Path:  # fmt: skip
+    """Side-by-side scatter panels (shared y). Each panel frame has columns x, y, group (<= 4 groups, fixed
+    palette order) and fit (fitted y, sorted by x). ``latest`` marks today's x with a vertical line."""
+    fig, axes = plt.subplots(
+        1, len(panels), figsize=(6.2 * len(panels), 5.2), sharey=True, squeeze=False
+    )
+    groups = list(dict.fromkeys(g for df in panels.values() for g in df["group"]))
+    for ax, (name, df) in zip(axes.flat, panels.items()):
+        for k, g in enumerate(groups):
+            d = df[df["group"] == g]
+            ax.scatter(d["x"], d["y"], s=10, color=SERIES[k], alpha=0.55, lw=0, label=g, zorder=2)
+        f = df.sort_values("x")
+        ax.plot(f["x"], f["fit"], color=INK, lw=2, zorder=3, label="trend")
+        ax.set_xscale("log")
+        ax.xaxis.set_major_locator(matplotlib.ticker.LogLocator(base=10, subs=(1, 2, 3, 5)))
+        ax.xaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:g}"))
+        ax.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
+        ax.axhline(0, color=MUTED, lw=1)
+        if name in latest:
+            ax.axvline(latest[name], color=INK, lw=1.5, ls=(0, (4, 2)), zorder=1)
+            ax.annotate(f"latest {latest[name]:.0f}", (latest[name], 1.0), xycoords=("data", "axes fraction"),
+                        xytext=(4, -12), textcoords="offset points", fontsize=9, color=INK)  # fmt: skip
+        ax.set_title(name, fontsize=11)
+        ax.set_xlabel(name.split(" (")[0])
+        ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:.0f}%"))
+    axes.flat[0].set_ylabel(ylabel)
+    axes.flat[0].legend(loc="lower left", fontsize=8, ncol=1)
+    fig.suptitle(title, x=0.01, ha="left", fontweight="bold")
+    fig.tight_layout()
+    fig.savefig(path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    return path
