@@ -197,6 +197,7 @@ annual fund costs are deducted: market 0.03%, large-value 0.10%, small-cap 0.15�
 | 70% market + 30% large value | +96% | 11.3% | −86% | 92% (worst −14%) |
 | Small value | +3,927% | 15.2% | −89% | 96% |
 | Large value | +584% | 12.9% | −89% | 89% |
+| Small blend (all small-caps) | +931% | 13.4% | −87% | 91% |
 | Small growth | −64% | 9.1% | −90% | 33% |
 | Large growth | −23% | 10.1% | −83% | 29% |
 
@@ -205,6 +206,9 @@ annual fund costs are deducted: market 0.03%, large-value 0.10%, small-cap 0.15�
 | Market | 8.0% | 10.6% | 9.6% | 8.7% | 22.3% |
 | Small value | 10.8% | 18.1% | 12.1% | **6.7%** | 11.0% |
 | Large value | 9.7% | 14.4% | 10.2% | **6.6%** | 25.0% |
+| Small blend | 9.6% | 15.6% | 11.7% | 8.1% | 11.7% |
+| Small growth | 7.6% | 8.5% | 6.8% | 7.6% | 13.0% |
+| Large growth | 7.9% | 9.7% | 10.1% | **10.6%** | 25.8% |
 
 This is the only result in the study with a large, consistent long-run edge: small value beat the market
 in 96% of 20-year windows, by about 4.7 points a year before fees. Three caveats keep it from being a
@@ -214,6 +218,8 @@ clear recommendation:
 2. **Paper portfolios include hard-to-trade microcaps.** Real small-value funds have tracked them
    imperfectly, so 0.25% is probably an optimistic estimate of the real drag.
 3. **A premium can shrink once it is widely known and traded.**
+
+**Small-cap vs. large growth (roughly the S&P 500 Growth).** Over 1927–2022, small-caps as a whole (13.4% a year) beat large growth (10.1%), and small value beat it by about 5 points a year. Small growth was the weakest of the six portfolios (9.1%), so small-caps won only through their value side. Since 2007 the ranking flipped: large growth led every group at 10.6% a year, while small-caps lagged. Leadership has switched for decade-long stretches, so the long-run average says little about the next 10–20 years.
 
 A modest tilt has long-run evidence behind it, but it has also had a long losing streak recently. A
 total-market or S&P 500 fund remains the simpler default.
