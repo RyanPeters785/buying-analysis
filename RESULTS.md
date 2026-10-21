@@ -281,6 +281,40 @@ All six settings, X = 20, 50, 100, 150, 200 and 250, are reported; none was sele
   same setting lost 30% on SPY 1994–2022.
 - **2023–2025 (descriptive):** every setting trailed buy-and-hold, with 12–20% a year against 22%.
 
+## Follow-up: valuation timing with Shiller CAPE
+
+**Rule.** Hold stocks when the market is cheap and T-bills (or 50% stocks) when it is expensive.
+"Expensive" means real-time CAPE above its own historical 70th, 80th or 90th percentile *up to that
+month*, using earnings lagged 4 months for reporting. The CAPE signal comes from Shiller's data;
+returns and T-bills come from Ken French month-end data. The test runs 1927–2022 with $5,000 each
+January (`scripts/cape_timing.py`, `outputs/cape/report.md`). All six rules are reported.
+
+| Starting CAPE (fifth of history) | Next-10-year return, per year | Next-1-year return |
+|---|---|---|
+| Cheapest | 15.0% | 21.2% |
+| Middle | 10.0% | 5.2% |
+| Most expensive | 6.1% | 5.7% |
+
+CAPE predicts the next 10 years well (R² = 0.44) but the next year poorly (R² = 0.07).
+
+| Rule | vs buy-and-hold | XIRR (B&H 10.5%) | Worst drawdown (B&H −84%) | 20-yr windows beating B&H | Beats random timing |
+|---|---|---|---|---|---|
+| 70th pct, all T-bills | −86% | 8.0% | −72% | 24% | 80% |
+| 70th pct, half out | −59% | 9.4% | −77% | 25% | 82% |
+| 80th pct, all T-bills | −81% | 8.4% | −76% | 13% | 68% |
+| 80th pct, half out | −53% | 9.5% | −78% | 14% | 67% |
+| 90th pct, all T-bills | −40% | 9.9% | −84% | 5%* | 48% |
+| 90th pct, half out | −21% | 10.2% | −84% | 5%* | 51% |
+
+\*The 90th-percentile rules never triggered in most windows, so those windows are ties.
+
+Every rule lost, even though the signal is informative. Expensive markets still returned about 6% a year,
+which is more than T-bills, and the market stayed "expensive" for most of 1995–2022. In that period the
+80th-percentile rule was out of stocks 66–100% of each decade and earned 3.7% a year against 10.0%. It
+did not avoid the big crashes either. The latest real-time CAPE in the data (September 2023) is 31.0, the
+88th percentile of its history. That points to below-average returns over the next decade, not to a
+reason to sell.
+
 ## Strategies that did not beat SPY after costs
 
 On ending value over their full development window: monthly and weekly DCA; all 12 buy-the-dip

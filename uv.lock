@@ -42,6 +42,7 @@ dependencies = [
     { name = "pyyaml" },
     { name = "scikit-learn" },
     { name = "tabulate" },
+    { name = "xlrd" },
     { name = "yfinance" },
 ]
 
@@ -64,6 +65,7 @@ requires-dist = [
     { name = "pyyaml", specifier = ">=6" },
     { name = "scikit-learn", specifier = ">=1.4" },
     { name = "tabulate", specifier = ">=0.10.0" },
+    { name = "xlrd", specifier = ">=2.0.2" },
     { name = "yfinance", specifier = ">=0.2.40" },
 ]
 
@@ -1075,6 +1077,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/e2/f3/0e3baedf7ad4dbdca68766f24b107cca939474c43eccd048a1f1aa154dab/wrds-3.5.0.tar.gz", hash = "sha256:1c6f63a9e370e216b6d6f31da23d9fdb3b9cf4a93e7870449e11c4c597f3825f", size = 20274, upload-time = "2026-02-10T22:43:10.764Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/54/65/5ee72a4d1dba095b1068c7c8d5872d3d8c27bc7e8b7c3001ad6d09307838/wrds-3.5.0-py3-none-any.whl", hash = "sha256:e5da209e8f84e75800b0c38237569a0ae0deb670707fabfb7036a9625392ced9", size = 16106, upload-time = "2026-02-10T22:43:09.288Z" },
+]
+
+[[package]]
+name = "xlrd"
+version = "2.0.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/07/5a/377161c2d3538d1990d7af382c79f3b2372e880b65de21b01b1a2b78691e/xlrd-2.0.2.tar.gz", hash = "sha256:08b5e25de58f21ce71dc7db3b3b8106c1fa776f3024c54e45b45b374e89234c9", size = 100167, upload-time = "2025-06-14T08:46:39.039Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1a/62/c8d562e7766786ba6587d09c5a8ba9f718ed3fa8af7f4553e8f91c36f302/xlrd-2.0.2-py2.py3-none-any.whl", hash = "sha256:ea762c3d29f4cca48d82df517b6d89fbce4db3107f9d78713e48cd321d5c9aa9", size = 96555, upload-time = "2025-06-14T08:46:37.766Z" },
 ]
 
 [[package]]

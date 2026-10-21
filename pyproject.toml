@@ -13,6 +13,7 @@ dependencies = [
     "yfinance>=0.2.40",
     "pandas-market-calendars>=4.4",
     "tabulate>=0.10.0",
+    "xlrd>=2.0.2",
 ]
 
 [dependency-groups]
