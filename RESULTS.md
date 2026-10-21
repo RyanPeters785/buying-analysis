@@ -166,6 +166,58 @@ from mean reversion you need to short the highs or lever up at the lows, and a l
 neither. Even on the 1993–2007 selection period the rule beat holding on return for only one of the five
 (WMT).
 
+## Follow-up: always-invested sector reversal
+
+This keeps the dip-buying idea but drops the cash drag. Each month it holds the 3 sector ETFs with the
+**worst** recent return, so it is always fully invested. The settings were fixed up front with no tuning,
+run over 2000–2022 (`scripts/sector_reversal.py`, `outputs/sector_reversal/report.md`).
+
+| Strategy | Ending value | XIRR | Sharpe | Beats random sector picks (value) |
+|---|---|---|---|---|
+| Worst 3 sectors, 1-month lookback | $287k | 7.0% | 0.29 | 31% |
+| Worst 3 sectors, 3-month lookback | $252k | 6.1% | 0.25 | 12% |
+| Best 3 sectors, 12-1 month momentum | $386k | 9.1% | 0.40 | 78% |
+| Equal weight, all sectors | $395k | 9.3% | 0.41 | |
+| SPY | $380k | 9.0% | 0.33 | |
+
+Reversal across sectors failed: it did worse than picking sectors at random. Across sectors the effect
+runs the other way, as momentum, but even that only tied SPY. Equal-weighting the sectors matched SPY,
+and all of its edge came from 2000–2010 (4.1% vs 0.6% a year), when it held less tech during the bust.
+
+## Follow-up: small-cap and value tilts (what to hold, not when)
+
+These use the Ken French value-weighted size × book-to-market portfolios, 1927–2022, with each January
+deposit invested immediately (`scripts/factor_tilts.py`, `outputs/factor_tilts/report.md`). Assumed
+annual fund costs are deducted: market 0.03%, large-value 0.10%, small-cap 0.15–0.25%.
+
+| Holding | Ending value vs market | XIRR | Worst drawdown | 20-year windows beating market |
+|---|---|---|---|---|
+| Market | — | 10.5% | −84% | — |
+| 70% market + 30% small value | +254% | 12.1% | −85% | 96% (worst −11%) |
+| 70% market + 30% large value | +96% | 11.3% | −86% | 92% (worst −14%) |
+| Small value | +3,927% | 15.2% | −89% | 96% |
+| Large value | +584% | 12.9% | −89% | 89% |
+| Small growth | −64% | 9.1% | −90% | 33% |
+| Large growth | −23% | 10.1% | −83% | 29% |
+
+| Annualized | 1927–63 | 1964–2006 | 1993–2022 | 2007–22 | 2023–25 (descriptive) |
+|---|---|---|---|---|---|
+| Market | 8.0% | 10.6% | 9.6% | 8.7% | 22.3% |
+| Small value | 10.8% | 18.1% | 12.1% | **6.7%** | 11.0% |
+| Large value | 9.7% | 14.4% | 10.2% | **6.6%** | 25.0% |
+
+This is the only result in the study with a large, consistent long-run edge: small value beat the market
+in 96% of 20-year windows, by about 4.7 points a year before fees. Three caveats keep it from being a
+clear recommendation:
+1. **All of the post-publication edge came from 1993–2006.** Small and large value have trailed the
+   market since 2007, a stretch of roughly 19 years.
+2. **Paper portfolios include hard-to-trade microcaps.** Real small-value funds have tracked them
+   imperfectly, so 0.25% is probably an optimistic estimate of the real drag.
+3. **A premium can shrink once it is widely known and traded.**
+
+A modest tilt has long-run evidence behind it, but it has also had a long losing streak recently. A
+total-market or S&P 500 fund remains the simpler default.
+
 ## Strategies that did not beat SPY after costs
 
 On ending value over their full development window: monthly and weekly DCA; all 12 buy-the-dip

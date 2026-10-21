@@ -140,14 +140,19 @@ class DualMomentum(Allocator):
 
 
 class SectorRotation(Allocator):
-    """Monthly: equal weight the top ``k`` sector ETFs by 12-1 month return (only ETFs that existed then)."""
+    """Monthly: equal weight the top ``k`` sector ETFs by 12-1 month return (only ETFs that existed then).
+
+    ``reversal=True`` holds the ``k`` worst performers instead (short-term reversal), always fully invested.
+    """
 
     frequency = "monthly"
 
-    def __init__(self, k: int = 3, lookback: int = 12, skip: int = 1, universe=SECTORS):
-        self.k, self.lookback, self.skip = k, lookback, skip
+    def __init__(self, k: int = 3, lookback: int = 12, skip: int = 1, universe=SECTORS,
+                 reversal: bool = False):  # fmt: skip
+        self.k, self.lookback, self.skip, self.reversal = k, lookback, skip, reversal
         self.assets = tuple(universe)
-        self.name = f"sector_top{k}_{lookback}-{skip}"
+        side = "bottom" if reversal else "top"
+        self.name = f"sector_{side}{k}_{lookback}-{skip}"
 
     def scores(self, ctx) -> dict[int, float]:
         me = month_end_positions(ctx)
@@ -165,7 +170,7 @@ class SectorRotation(Allocator):
         sc = self.scores(ctx)
         if len(sc) < self.k:
             return None
-        top = sorted(sc, key=sc.get, reverse=True)[: self.k]
+        top = sorted(sc, key=sc.get, reverse=not self.reversal)[: self.k]
         return {p: 1.0 / self.k for p in top}
 
 

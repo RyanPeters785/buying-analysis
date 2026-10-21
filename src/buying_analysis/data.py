@@ -154,3 +154,28 @@ def load_ken_french_panel() -> pd.DataFrame:
         "open": np.nan, "ret": np.r_[np.nan, kf["mkt"].to_numpy()[1:]], "securitytype": "FUND",
         "tradingstatusflg": "A", "rf": kf["rf"].to_numpy() * 252,
     })  # fmt: skip
+
+
+KF6_FILE = "ff_6_portfolios_daily.parquet"
+KF6 = {  # synthetic permnos for the Ken French size x value portfolios (value-weighted)
+    "small_growth": 2, "small_blend": 3, "small_value": 4, "big_growth": 5, "big_blend": 6, "big_value": 7,
+}  # fmt: skip
+
+
+def load_ken_french_portfolios(fees: dict[str, float] | None = None) -> pd.DataFrame:
+    """Market (permno 1) + the six size/value portfolios (permnos 2-7) as one engine panel.
+
+    Paper portfolios carry no fund costs; ``fees`` (annual, decimal, keyed by name incl. 'market') are
+    deducted daily (fee / 252) to approximate an index fund's expense ratio and trading costs.
+    """
+    fees = fees or {}
+    mkt = load_ken_french_panel()
+    six = pd.read_parquet(RAW_DIR / KF6_FILE).sort_values("date").reset_index(drop=True)
+    frames = []
+    for name, permno in {"market": KF_MARKET, **KF6}.items():
+        r = mkt["ret"].to_numpy() if name == "market" else np.r_[np.nan, six[name].to_numpy()[1:]]
+        r = r - fees.get(name, 0.0) / 252
+        r[0] = np.nan
+        px = np.cumprod(1 + np.nan_to_num(r))
+        frames.append(mkt.assign(permno=permno, ticker=name, ret=r, prc=px, close=px))
+    return pd.concat(frames, ignore_index=True)

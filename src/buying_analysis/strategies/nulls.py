@@ -73,8 +73,10 @@ class RandomTiming(Allocator):
 class RandomSectors(SectorRotation):
     """Null for sector rotation: k random sector ETFs (among those eligible) each month."""
 
-    def __init__(self, k: int = 3, seed: int = 0, universe=SECTORS):
-        super().__init__(k=k, universe=universe)
+    def __init__(
+        self, k: int = 3, seed: int = 0, universe=SECTORS, lookback: int = 12, skip: int = 1
+    ):
+        super().__init__(k=k, lookback=lookback, skip=skip, universe=universe)
         self.seed = seed
         self.name = f"N2_random_sectors_{seed}"
 

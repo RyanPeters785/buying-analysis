@@ -107,7 +107,10 @@ def evaluate_timing(
 
     seeds = range(n_random)
     if isinstance(strategy, SectorRotation):
-        nulls = [RandomSectors(strategy.k, s, strategy.assets) for s in seeds]
+        nulls = [
+            RandomSectors(strategy.k, s, strategy.assets, strategy.lookback, strategy.skip)
+            for s in seeds
+        ]
     else:
         spells, n_in, n = in_market_spells(w)
         sess = res.daily.index
