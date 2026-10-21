@@ -17,6 +17,12 @@ URL = BASE + "F-F_Research_Data_Factors_daily_CSV.zip"
 OUT = "ff_factors_daily.parquet"
 URL6 = BASE + "6_Portfolios_2x3_daily_CSV.zip"
 OUT6 = "ff_6_portfolios_daily.parquet"  # value-weighted size x book-to-market portfolios
+URL25 = BASE + "25_Portfolios_BEME_OP_5x5_CSV.zip"
+OUT25 = (
+    "ff_25_bm_op_monthly.parquet"  # value-weighted returns, firm counts, average market cap (long)
+)
+BLOCKS25 = {"Average Value Weighted Returns -- Monthly": "ret", "Number of Firms in Portfolios": "n_firms",
+            "Average Market Cap": "avg_cap"}  # fmt: skip
 PORTFOLIOS = ["small_growth", "small_blend", "small_value", "big_growth", "big_blend", "big_value"]
 
 
@@ -46,6 +52,38 @@ def fetch_six() -> pd.DataFrame:
     return df[df["date"] <= "2025-12-31"]
 
 
+def fetch_25() -> pd.DataFrame:
+    """5x5 book-to-market x operating-profitability portfolios (monthly, from 1963-07), long format:
+    date, bm (1 = lowest/growth .. 5 = highest/value), op (1 = least .. 5 = most profitable), and the
+    requested blocks (returns in decimal)."""
+    lines = _csv_text(URL25)
+    frames = []
+    for title, field in BLOCKS25.items():
+        start = next(i for i, ln in enumerate(lines) if ln.strip() == title) + 1
+        cols = [c.strip() for c in lines[start].split(",")[1:]]
+        rows = []
+        for ln in lines[start + 1 :]:
+            parts = [p.strip() for p in ln.split(",")]
+            if len(parts) < 26 or not parts[0].isdigit():
+                break
+            rows.append(parts[:26])
+        df = pd.DataFrame(rows, columns=["yyyymm", *cols])
+        df["date"] = pd.to_datetime(df["yyyymm"], format="%Y%m") + pd.offsets.MonthEnd(0)
+        long = df.drop(columns="yyyymm").melt(id_vars="date", var_name="cell", value_name=field)
+        long[field] = long[field].astype(float)
+        if (long[field] <= -99).any():
+            raise SystemExit(f"missing values in {title}")
+        if field == "ret":
+            long[field] /= 100
+        frames.append(long.set_index(["date", "cell"]))
+    out = pd.concat(frames, axis=1).reset_index()
+    order = list(dict.fromkeys(out["cell"]))  # file order: BM1 OP1..OP5, BM2 OP1.., ..
+    pos = {c: i for i, c in enumerate(order)}
+    out["bm"] = out["cell"].map(lambda c: pos[c] // 5 + 1)
+    out["op"] = out["cell"].map(lambda c: pos[c] % 5 + 1)
+    return out[out["date"] <= "2025-12-31"].sort_values(["date", "bm", "op"]).reset_index(drop=True)
+
+
 def main() -> None:
     lines = _csv_text(URL)
     start = next(i for i, ln in enumerate(lines) if ln.strip().startswith(",Mkt-RF"))
@@ -68,7 +106,13 @@ def main() -> None:
     print(
         f"6 portfolios: {len(six):,} days {six['date'].min():%Y-%m-%d} → {six['date'].max():%Y-%m-%d}"
     )
-    write_manifest({OUT: f"Ken French Data Library ({URL.rsplit('/', 1)[-1]})",
+    p25 = fetch_25()
+    p25.to_parquet(RAW_DIR / OUT25, index=False)
+    print(
+        f"25 BM x OP portfolios: {p25['date'].nunique()} months {p25['date'].min():%Y-%m} → {p25['date'].max():%Y-%m}"
+    )
+    write_manifest({OUT25: f"Ken French Data Library ({URL25.rsplit('/', 1)[-1]}, value-weighted, monthly)",
+                    OUT: f"Ken French Data Library ({URL.rsplit('/', 1)[-1]})",
                     OUT6: f"Ken French Data Library ({URL6.rsplit('/', 1)[-1]}, value-weighted)"})  # fmt: skip
 
 

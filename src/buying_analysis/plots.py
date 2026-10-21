@@ -268,3 +268,40 @@ def valuation_scatter(panels: dict[str, pd.DataFrame], latest: dict[str, float],
     fig.savefig(path, dpi=150, bbox_inches="tight")
     plt.close(fig)
     return path
+
+
+def heatmap(grid: pd.DataFrame, title: str, xlabel: str, ylabel: str, path: Path, fmt=None,
+            cbar_label: str = "") -> Path:  # fmt: skip
+    """Annotated grid with a diverging map (red = negative, neutral grey at 0, blue = positive)."""
+    from matplotlib.colors import LinearSegmentedColormap, TwoSlopeNorm
+
+    cmap = LinearSegmentedColormap.from_list("div", ["#e34948", "#f0efec", "#2a78d6"])
+    v = np.nanmax(np.abs(grid.to_numpy()))
+    fig, ax = plt.subplots(figsize=(7.2, 5.6))
+    im = ax.imshow(grid.to_numpy(), cmap=cmap, norm=TwoSlopeNorm(0, -v, v), origin="lower")
+    for i in range(grid.shape[0]):
+        for j in range(grid.shape[1]):
+            val = grid.iat[i, j]
+            ax.text(
+                j,
+                i,
+                fmt(val) if fmt else f"{val:.1f}",
+                ha="center",
+                va="center",
+                fontsize=10,
+                color=INK,
+            )
+    ax.set_xticks(range(grid.shape[1]), grid.columns)
+    ax.set_yticks(range(grid.shape[0]), grid.index)
+    ax.grid(False)
+    for s in ax.spines.values():
+        s.set_visible(False)
+    ax.set_xlabel(xlabel)
+    ax.set_ylabel(ylabel)
+    ax.set_title(title)
+    cb = fig.colorbar(im, ax=ax, shrink=0.8)
+    cb.set_label(cbar_label)
+    cb.outline.set_visible(False)
+    fig.savefig(path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    return path

@@ -1,0 +1,2815 @@
+,start,strategy,vs_market
+0,1964-01-31,cheap + most profitable (corner),0.4019755081855272
+1,1964-01-31,cheap + profitable (top 2 x top 2),0.5798324156729382
+2,1964-01-31,value trap: cheap + unprofitable,0.7157483706928895
+3,1964-01-31,cheap (any profitability),0.7842258474401067
+4,1964-01-31,profitable (any price),-0.05079372183930375
+5,1964-01-31,junk growth: expensive + unprofitable,-0.4249747978394095
+6,1964-02-29,cheap + most profitable (corner),0.6009868057165983
+7,1964-02-29,cheap + profitable (top 2 x top 2),0.665273429924564
+8,1964-02-29,value trap: cheap + unprofitable,0.7109013061899707
+9,1964-02-29,cheap (any profitability),0.8376018105464955
+10,1964-02-29,profitable (any price),-0.054372069555470026
+11,1964-02-29,junk growth: expensive + unprofitable,-0.4331948826663008
+12,1964-03-31,cheap + most profitable (corner),0.6996188627210456
+13,1964-03-31,cheap + profitable (top 2 x top 2),0.7295398128143589
+14,1964-03-31,value trap: cheap + unprofitable,0.7156478103766644
+15,1964-03-31,cheap (any profitability),0.8680977025459629
+16,1964-03-31,profitable (any price),-0.04929283618535718
+17,1964-03-31,junk growth: expensive + unprofitable,-0.44468055689453123
+18,1964-04-30,cheap + most profitable (corner),0.7320049718990875
+19,1964-04-30,cheap + profitable (top 2 x top 2),0.7301751662429645
+20,1964-04-30,value trap: cheap + unprofitable,0.7269306373764635
+21,1964-04-30,cheap (any profitability),0.8569532086786067
+22,1964-04-30,profitable (any price),-0.050042649632527914
+23,1964-04-30,junk growth: expensive + unprofitable,-0.44249538235074926
+24,1964-05-31,cheap + most profitable (corner),0.7734330640576506
+25,1964-05-31,cheap + profitable (top 2 x top 2),0.7578169288282788
+26,1964-05-31,value trap: cheap + unprofitable,0.6941284518394053
+27,1964-05-31,cheap (any profitability),0.8659609042663337
+28,1964-05-31,profitable (any price),-0.04234941379611745
+29,1964-05-31,junk growth: expensive + unprofitable,-0.4623472263854218
+30,1964-06-30,cheap + most profitable (corner),0.7298697580225062
+31,1964-06-30,cheap + profitable (top 2 x top 2),0.7802570570751177
+32,1964-06-30,value trap: cheap + unprofitable,0.6782335823606969
+33,1964-06-30,cheap (any profitability),0.8634144158865469
+34,1964-06-30,profitable (any price),-0.033621021397266415
+35,1964-06-30,junk growth: expensive + unprofitable,-0.4615525401132561
+36,1964-07-31,cheap + most profitable (corner),0.616541011390445
+37,1964-07-31,cheap + profitable (top 2 x top 2),0.7153307118720202
+38,1964-07-31,value trap: cheap + unprofitable,0.6373238865265622
+39,1964-07-31,cheap (any profitability),0.8322304501168065
+40,1964-07-31,profitable (any price),-0.028715940834794118
+41,1964-07-31,junk growth: expensive + unprofitable,-0.45814560677154414
+42,1964-08-31,cheap + most profitable (corner),0.6469202866031742
+43,1964-08-31,cheap + profitable (top 2 x top 2),0.7016083538039719
+44,1964-08-31,value trap: cheap + unprofitable,0.6162641969986995
+45,1964-08-31,cheap (any profitability),0.8150863796278471
+46,1964-08-31,profitable (any price),-0.021752602617800765
+47,1964-08-31,junk growth: expensive + unprofitable,-0.47743204260720695
+48,1964-09-30,cheap + most profitable (corner),0.6690588436448741
+49,1964-09-30,cheap + profitable (top 2 x top 2),0.7205519738276345
+50,1964-09-30,value trap: cheap + unprofitable,0.6300742593834143
+51,1964-09-30,cheap (any profitability),0.8186529689226787
+52,1964-09-30,profitable (any price),-0.022797348895863934
+53,1964-09-30,junk growth: expensive + unprofitable,-0.46721537519231604
+54,1964-10-31,cheap + most profitable (corner),0.7291392039923599
+55,1964-10-31,cheap + profitable (top 2 x top 2),0.7742973518481295
+56,1964-10-31,value trap: cheap + unprofitable,0.6440692589461059
+57,1964-10-31,cheap (any profitability),0.8569336137722625
+58,1964-10-31,profitable (any price),-0.024971204998488705
+59,1964-10-31,junk growth: expensive + unprofitable,-0.48509516638859385
+60,1964-11-30,cheap + most profitable (corner),0.7359931247643265
+61,1964-11-30,cheap + profitable (top 2 x top 2),0.7608349567026571
+62,1964-11-30,value trap: cheap + unprofitable,0.6496715869745722
+63,1964-11-30,cheap (any profitability),0.8446414817751144
+64,1964-11-30,profitable (any price),-0.018708516109909312
+65,1964-11-30,junk growth: expensive + unprofitable,-0.4942186401748324
+66,1964-12-31,cheap + most profitable (corner),0.783843764879691
+67,1964-12-31,cheap + profitable (top 2 x top 2),0.7768989886776567
+68,1964-12-31,value trap: cheap + unprofitable,0.6817724175186832
+69,1964-12-31,cheap (any profitability),0.8768857900762665
+70,1964-12-31,profitable (any price),-0.024133905599233674
+71,1964-12-31,junk growth: expensive + unprofitable,-0.5064738031315597
+72,1965-01-31,cheap + most profitable (corner),0.9038961990209302
+73,1965-01-31,cheap + profitable (top 2 x top 2),0.7648615398388665
+74,1965-01-31,value trap: cheap + unprofitable,0.6357415212777509
+75,1965-01-31,cheap (any profitability),0.8309887002481018
+76,1965-01-31,profitable (any price),-0.0249401187884718
+77,1965-01-31,junk growth: expensive + unprofitable,-0.48801043978853476
+78,1965-02-28,cheap + most profitable (corner),0.8728944673902086
+79,1965-02-28,cheap + profitable (top 2 x top 2),0.7190281033716222
+80,1965-02-28,value trap: cheap + unprofitable,0.6108660017108041
+81,1965-02-28,cheap (any profitability),0.7779290358272395
+82,1965-02-28,profitable (any price),-0.024586878528970346
+83,1965-02-28,junk growth: expensive + unprofitable,-0.46086045132627707
+84,1965-03-31,cheap + most profitable (corner),0.8846870041310471
+85,1965-03-31,cheap + profitable (top 2 x top 2),0.7321395437602713
+86,1965-03-31,value trap: cheap + unprofitable,0.6083091275480916
+87,1965-03-31,cheap (any profitability),0.7861033637290211
+88,1965-03-31,profitable (any price),-0.01996713362265279
+89,1965-03-31,junk growth: expensive + unprofitable,-0.47398086484646773
+90,1965-04-30,cheap + most profitable (corner),0.7831317677878598
+91,1965-04-30,cheap + profitable (top 2 x top 2),0.7628826987493313
+92,1965-04-30,value trap: cheap + unprofitable,0.6226718998559777
+93,1965-04-30,cheap (any profitability),0.8149134521846075
+94,1965-04-30,profitable (any price),-0.021241723467325446
+95,1965-04-30,junk growth: expensive + unprofitable,-0.49311117381871894
+96,1965-05-31,cheap + most profitable (corner),0.8574570811545801
+97,1965-05-31,cheap + profitable (top 2 x top 2),0.8103467646583988
+98,1965-05-31,value trap: cheap + unprofitable,0.630834241734824
+99,1965-05-31,cheap (any profitability),0.8492215716998717
+100,1965-05-31,profitable (any price),-0.02489673064771314
+101,1965-05-31,junk growth: expensive + unprofitable,-0.5032922080021877
+102,1965-06-30,cheap + most profitable (corner),0.8135356687426767
+103,1965-06-30,cheap + profitable (top 2 x top 2),0.7944757696203313
+104,1965-06-30,value trap: cheap + unprofitable,0.6194312701867586
+105,1965-06-30,cheap (any profitability),0.835231306194026
+106,1965-06-30,profitable (any price),-0.022453060514304735
+107,1965-06-30,junk growth: expensive + unprofitable,-0.5170494461493426
+108,1965-07-31,cheap + most profitable (corner),0.7547416358085202
+109,1965-07-31,cheap + profitable (top 2 x top 2),0.7743670678735828
+110,1965-07-31,value trap: cheap + unprofitable,0.6250009297995043
+111,1965-07-31,cheap (any profitability),0.8359486455905483
+112,1965-07-31,profitable (any price),-0.025828135620144188
+113,1965-07-31,junk growth: expensive + unprofitable,-0.5222582337463806
+114,1965-08-31,cheap + most profitable (corner),0.7079687108390118
+115,1965-08-31,cheap + profitable (top 2 x top 2),0.7422764568171536
+116,1965-08-31,value trap: cheap + unprofitable,0.6145771952519572
+117,1965-08-31,cheap (any profitability),0.8080055917090216
+118,1965-08-31,profitable (any price),-0.02856783968552623
+119,1965-08-31,junk growth: expensive + unprofitable,-0.5129702027468275
+120,1965-09-30,cheap + most profitable (corner),0.7036014205719996
+121,1965-09-30,cheap + profitable (top 2 x top 2),0.7645388726542752
+122,1965-09-30,value trap: cheap + unprofitable,0.6237220010043514
+123,1965-09-30,cheap (any profitability),0.8260503207283854
+124,1965-09-30,profitable (any price),-0.029852362541171296
+125,1965-09-30,junk growth: expensive + unprofitable,-0.5151899162567452
+126,1965-10-31,cheap + most profitable (corner),0.717140935502018
+127,1965-10-31,cheap + profitable (top 2 x top 2),0.7867510895660561
+128,1965-10-31,value trap: cheap + unprofitable,0.5993983249543811
+129,1965-10-31,cheap (any profitability),0.8223176619271007
+130,1965-10-31,profitable (any price),-0.026221740767527812
+131,1965-10-31,junk growth: expensive + unprofitable,-0.518391899686727
+132,1965-11-30,cheap + most profitable (corner),0.8091048296000811
+133,1965-11-30,cheap + profitable (top 2 x top 2),0.8162185592526272
+134,1965-11-30,value trap: cheap + unprofitable,0.5862159145040853
+135,1965-11-30,cheap (any profitability),0.8304573433303108
+136,1965-11-30,profitable (any price),-0.027691546926394972
+137,1965-11-30,junk growth: expensive + unprofitable,-0.516670438469728
+138,1965-12-31,cheap + most profitable (corner),0.8241669187772882
+139,1965-12-31,cheap + profitable (top 2 x top 2),0.7430706690904767
+140,1965-12-31,value trap: cheap + unprofitable,0.5645869784702289
+141,1965-12-31,cheap (any profitability),0.7888024184951523
+142,1965-12-31,profitable (any price),-0.030188870962114422
+143,1965-12-31,junk growth: expensive + unprofitable,-0.5106505103084044
+144,1966-01-31,cheap + most profitable (corner),0.9270684782623384
+145,1966-01-31,cheap + profitable (top 2 x top 2),0.6812706293742066
+146,1966-01-31,value trap: cheap + unprofitable,0.5295218212743993
+147,1966-01-31,cheap (any profitability),0.7384521651684086
+148,1966-01-31,profitable (any price),-0.029155712031398218
+149,1966-01-31,junk growth: expensive + unprofitable,-0.49581597406159494
+150,1966-02-28,cheap + most profitable (corner),0.8937913574298499
+151,1966-02-28,cheap + profitable (top 2 x top 2),0.6216143827837617
+152,1966-02-28,value trap: cheap + unprofitable,0.5361818203535482
+153,1966-02-28,cheap (any profitability),0.7113712089484721
+154,1966-02-28,profitable (any price),-0.03576386557642486
+155,1966-02-28,junk growth: expensive + unprofitable,-0.47346622861322185
+156,1966-03-31,cheap + most profitable (corner),1.0068555022276513
+157,1966-03-31,cheap + profitable (top 2 x top 2),0.5999023705043216
+158,1966-03-31,value trap: cheap + unprofitable,0.531529882767007
+159,1966-03-31,cheap (any profitability),0.6970928422024447
+160,1966-03-31,profitable (any price),-0.03589582930113233
+161,1966-03-31,junk growth: expensive + unprofitable,-0.4729763700467523
+162,1966-04-30,cheap + most profitable (corner),1.020509378252945
+163,1966-04-30,cheap + profitable (top 2 x top 2),0.5949339163418266
+164,1966-04-30,value trap: cheap + unprofitable,0.5240439231886784
+165,1966-04-30,cheap (any profitability),0.6873561568135782
+166,1966-04-30,profitable (any price),-0.02945968305746216
+167,1966-04-30,junk growth: expensive + unprofitable,-0.47826551443091914
+168,1966-05-31,cheap + most profitable (corner),0.9542046083297069
+169,1966-05-31,cheap + profitable (top 2 x top 2),0.6011111087498144
+170,1966-05-31,value trap: cheap + unprofitable,0.4656929408990109
+171,1966-05-31,cheap (any profitability),0.6593323487393747
+172,1966-05-31,profitable (any price),-0.019083575354264304
+173,1966-05-31,junk growth: expensive + unprofitable,-0.4740551195637691
+174,1966-06-30,cheap + most profitable (corner),0.9315020600543948
+175,1966-06-30,cheap + profitable (top 2 x top 2),0.6244462199196512
+176,1966-06-30,value trap: cheap + unprofitable,0.4604913618870101
+177,1966-06-30,cheap (any profitability),0.6723241934514763
+178,1966-06-30,profitable (any price),-0.01363658475444185
+179,1966-06-30,junk growth: expensive + unprofitable,-0.4823230570279725
+180,1966-07-31,cheap + most profitable (corner),0.9106876008260143
+181,1966-07-31,cheap + profitable (top 2 x top 2),0.6269868269586378
+182,1966-07-31,value trap: cheap + unprofitable,0.44754222206659344
+183,1966-07-31,cheap (any profitability),0.6756481666332066
+184,1966-07-31,profitable (any price),-0.00986314508210595
+185,1966-07-31,junk growth: expensive + unprofitable,-0.48631248161333784
+186,1966-08-31,cheap + most profitable (corner),0.9347016307912941
+187,1966-08-31,cheap + profitable (top 2 x top 2),0.6709586004189778
+188,1966-08-31,value trap: cheap + unprofitable,0.45923816320265365
+189,1966-08-31,cheap (any profitability),0.7273419122603981
+190,1966-08-31,profitable (any price),-0.01576351003139631
+191,1966-08-31,junk growth: expensive + unprofitable,-0.4928032048891534
+192,1966-09-30,cheap + most profitable (corner),1.0401538068805278
+193,1966-09-30,cheap + profitable (top 2 x top 2),0.7500259196133072
+194,1966-09-30,value trap: cheap + unprofitable,0.4914334794834696
+195,1966-09-30,cheap (any profitability),0.7836772492009336
+196,1966-09-30,profitable (any price),-0.01826755314313744
+197,1966-09-30,junk growth: expensive + unprofitable,-0.4982026629060694
+198,1966-10-31,cheap + most profitable (corner),1.15114228447856
+199,1966-10-31,cheap + profitable (top 2 x top 2),0.7968326848152809
+200,1966-10-31,value trap: cheap + unprofitable,0.5239276518129858
+201,1966-10-31,cheap (any profitability),0.8121826005538169
+202,1966-10-31,profitable (any price),-0.019988402263538596
+203,1966-10-31,junk growth: expensive + unprofitable,-0.5120852723222066
+204,1966-11-30,cheap + most profitable (corner),1.1248009699122004
+205,1966-11-30,cheap + profitable (top 2 x top 2),0.7794118837208273
+206,1966-11-30,value trap: cheap + unprofitable,0.5285745096056933
+207,1966-11-30,cheap (any profitability),0.8043927788684753
+208,1966-11-30,profitable (any price),-0.01901369855598556
+209,1966-11-30,junk growth: expensive + unprofitable,-0.5087287819067761
+210,1966-12-31,cheap + most profitable (corner),1.1447601576404578
+211,1966-12-31,cheap + profitable (top 2 x top 2),0.794871615397843
+212,1966-12-31,value trap: cheap + unprofitable,0.5279025640190778
+213,1966-12-31,cheap (any profitability),0.8077208373239457
+214,1966-12-31,profitable (any price),-0.019306868084558615
+215,1966-12-31,junk growth: expensive + unprofitable,-0.5133000982579867
+216,1967-01-31,cheap + most profitable (corner),1.3216661968880699
+217,1967-01-31,cheap + profitable (top 2 x top 2),0.7449574820209597
+218,1967-01-31,value trap: cheap + unprofitable,0.4874442437543771
+219,1967-01-31,cheap (any profitability),0.7643956641459551
+220,1967-01-31,profitable (any price),-0.01991971742495846
+221,1967-01-31,junk growth: expensive + unprofitable,-0.4938278040575492
+222,1967-02-28,cheap + most profitable (corner),1.3484382079951258
+223,1967-02-28,cheap + profitable (top 2 x top 2),0.714759579838735
+224,1967-02-28,value trap: cheap + unprofitable,0.4619016446559274
+225,1967-02-28,cheap (any profitability),0.7315083940795424
+226,1967-02-28,profitable (any price),-0.021426586935984426
+227,1967-02-28,junk growth: expensive + unprofitable,-0.47438788303161306
+228,1967-03-31,cheap + most profitable (corner),1.2430648655129253
+229,1967-03-31,cheap + profitable (top 2 x top 2),0.6206345362869143
+230,1967-03-31,value trap: cheap + unprofitable,0.4409547991972411
+231,1967-03-31,cheap (any profitability),0.6638743987383071
+232,1967-03-31,profitable (any price),-0.026463975020945996
+233,1967-03-31,junk growth: expensive + unprofitable,-0.4510784664010813
+234,1967-04-30,cheap + most profitable (corner),1.4182223542581767
+235,1967-04-30,cheap + profitable (top 2 x top 2),0.6661657997883323
+236,1967-04-30,value trap: cheap + unprofitable,0.43977700195139247
+237,1967-04-30,cheap (any profitability),0.6787542295006705
+238,1967-04-30,profitable (any price),-0.018346468942322836
+239,1967-04-30,junk growth: expensive + unprofitable,-0.4558046494011704
+240,1967-05-31,cheap + most profitable (corner),1.4881228265116229
+241,1967-05-31,cheap + profitable (top 2 x top 2),0.6937238903443022
+242,1967-05-31,value trap: cheap + unprofitable,0.4428897495033486
+243,1967-05-31,cheap (any profitability),0.6883001149728993
+244,1967-05-31,profitable (any price),-0.016482387090214767
+245,1967-05-31,junk growth: expensive + unprofitable,-0.45381080538695917
+246,1967-06-30,cheap + most profitable (corner),1.5213112721060686
+247,1967-06-30,cheap + profitable (top 2 x top 2),0.7065544499569596
+248,1967-06-30,value trap: cheap + unprofitable,0.43857967739686154
+249,1967-06-30,cheap (any profitability),0.6894736013580394
+250,1967-06-30,profitable (any price),-0.014688284783766825
+251,1967-06-30,junk growth: expensive + unprofitable,-0.46158903409038265
+252,1967-07-31,cheap + most profitable (corner),1.5986764733151952
+253,1967-07-31,cheap + profitable (top 2 x top 2),0.7210939546482327
+254,1967-07-31,value trap: cheap + unprofitable,0.4321713774090399
+255,1967-07-31,cheap (any profitability),0.6930152147024533
+256,1967-07-31,profitable (any price),-0.004518453970348113
+257,1967-07-31,junk growth: expensive + unprofitable,-0.47406407730415245
+258,1967-08-31,cheap + most profitable (corner),1.585091845153007
+259,1967-08-31,cheap + profitable (top 2 x top 2),0.6856718956043057
+260,1967-08-31,value trap: cheap + unprofitable,0.43549373894711674
+261,1967-08-31,cheap (any profitability),0.6729402348562863
+262,1967-08-31,profitable (any price),-0.004124250578834809
+263,1967-08-31,junk growth: expensive + unprofitable,-0.4848534785572679
+264,1967-09-30,cheap + most profitable (corner),1.5953395964358497
+265,1967-09-30,cheap + profitable (top 2 x top 2),0.7040423009647108
+266,1967-09-30,value trap: cheap + unprofitable,0.40747424386611053
+267,1967-09-30,cheap (any profitability),0.6611219826567114
+268,1967-09-30,profitable (any price),0.0005705378358251689
+269,1967-09-30,junk growth: expensive + unprofitable,-0.4851935802726981
+270,1967-10-31,cheap + most profitable (corner),1.4751982790297475
+271,1967-10-31,cheap + profitable (top 2 x top 2),0.7083507542897847
+272,1967-10-31,value trap: cheap + unprofitable,0.41688821711550017
+273,1967-10-31,cheap (any profitability),0.6633258324875857
+274,1967-10-31,profitable (any price),-0.00602428555687462
+275,1967-10-31,junk growth: expensive + unprofitable,-0.4853748171009036
+276,1967-11-30,cheap + most profitable (corner),1.4563583427765794
+277,1967-11-30,cheap + profitable (top 2 x top 2),0.8604745797798792
+278,1967-11-30,value trap: cheap + unprofitable,0.418709213671679
+279,1967-11-30,cheap (any profitability),0.7462786750422208
+280,1967-11-30,profitable (any price),0.0007967923566558621
+281,1967-11-30,junk growth: expensive + unprofitable,-0.5184098313981162
+282,1967-12-31,cheap + most profitable (corner),1.4902592407345558
+283,1967-12-31,cheap + profitable (top 2 x top 2),0.8644951716253353
+284,1967-12-31,value trap: cheap + unprofitable,0.45742620730212846
+285,1967-12-31,cheap (any profitability),0.7688881350413252
+286,1967-12-31,profitable (any price),-0.006602476682974423
+287,1967-12-31,junk growth: expensive + unprofitable,-0.5178506442540869
+288,1968-01-31,cheap + most profitable (corner),1.5430809272144002
+289,1968-01-31,cheap + profitable (top 2 x top 2),0.759733727700111
+290,1968-01-31,value trap: cheap + unprofitable,0.39284107172976257
+291,1968-01-31,cheap (any profitability),0.6879435929273163
+292,1968-01-31,profitable (any price),-0.004325557953600234
+293,1968-01-31,junk growth: expensive + unprofitable,-0.496965210530944
+294,1968-02-29,cheap + most profitable (corner),1.6812119305671818
+295,1968-02-29,cheap + profitable (top 2 x top 2),0.8490522290623732
+296,1968-02-29,value trap: cheap + unprofitable,0.3962190498475344
+297,1968-02-29,cheap (any profitability),0.7329002356614454
+298,1968-02-29,profitable (any price),-0.0018926665287307687
+299,1968-02-29,junk growth: expensive + unprofitable,-0.49058048847075264
+300,1968-03-31,cheap + most profitable (corner),1.7070825238764464
+301,1968-03-31,cheap + profitable (top 2 x top 2),0.8005645028156623
+302,1968-03-31,value trap: cheap + unprofitable,0.3851615872973262
+303,1968-03-31,cheap (any profitability),0.7074036553419096
+304,1968-03-31,profitable (any price),0.0002431564011602383
+305,1968-03-31,junk growth: expensive + unprofitable,-0.4914484610800164
+306,1968-04-30,cheap + most profitable (corner),1.7079630390164606
+307,1968-04-30,cheap + profitable (top 2 x top 2),0.7733861564268769
+308,1968-04-30,value trap: cheap + unprofitable,0.4126159611115481
+309,1968-04-30,cheap (any profitability),0.7206913981867349
+310,1968-04-30,profitable (any price),-0.008766300871390853
+311,1968-04-30,junk growth: expensive + unprofitable,-0.48191159829428787
+312,1968-05-31,cheap + most profitable (corner),1.905041146218899
+313,1968-05-31,cheap + profitable (top 2 x top 2),0.7843695914202877
+314,1968-05-31,value trap: cheap + unprofitable,0.4018717475717293
+315,1968-05-31,cheap (any profitability),0.7294580615707862
+316,1968-05-31,profitable (any price),-0.014218681369896458
+317,1968-05-31,junk growth: expensive + unprofitable,-0.48437872149997674
+318,1968-06-30,cheap + most profitable (corner),1.9727648866425511
+319,1968-06-30,cheap + profitable (top 2 x top 2),0.8450118899166279
+320,1968-06-30,value trap: cheap + unprofitable,0.4183635670652852
+321,1968-06-30,cheap (any profitability),0.7580732997097175
+322,1968-06-30,profitable (any price),-0.012522440776701838
+323,1968-06-30,junk growth: expensive + unprofitable,-0.4851202685596814
+324,1968-07-31,cheap + most profitable (corner),2.0820623452800584
+325,1968-07-31,cheap + profitable (top 2 x top 2),0.8433756822701954
+326,1968-07-31,value trap: cheap + unprofitable,0.40161770172797784
+327,1968-07-31,cheap (any profitability),0.7355122939256276
+328,1968-07-31,profitable (any price),-0.006230748303385547
+329,1968-07-31,junk growth: expensive + unprofitable,-0.48547601481321456
+330,1968-08-31,cheap + most profitable (corner),2.0703823762907865
+331,1968-08-31,cheap + profitable (top 2 x top 2),0.8536193113677681
+332,1968-08-31,value trap: cheap + unprofitable,0.41402710249525887
+333,1968-08-31,cheap (any profitability),0.7477174044414836
+334,1968-08-31,profitable (any price),-0.008470682339096647
+335,1968-08-31,junk growth: expensive + unprofitable,-0.4888489881785978
+336,1968-09-30,cheap + most profitable (corner),2.141430310546864
+337,1968-09-30,cheap + profitable (top 2 x top 2),0.877447220323649
+338,1968-09-30,value trap: cheap + unprofitable,0.4457454473747158
+339,1968-09-30,cheap (any profitability),0.7700386679585649
+340,1968-09-30,profitable (any price),-0.011045535715889843
+341,1968-09-30,junk growth: expensive + unprofitable,-0.49223628218254345
+342,1968-10-31,cheap + most profitable (corner),2.183849201410869
+343,1968-10-31,cheap + profitable (top 2 x top 2),0.8873126854153675
+344,1968-10-31,value trap: cheap + unprofitable,0.4331258856195157
+345,1968-10-31,cheap (any profitability),0.7599327858899307
+346,1968-10-31,profitable (any price),0.0004303838747226063
+347,1968-10-31,junk growth: expensive + unprofitable,-0.4979024229135358
+348,1968-11-30,cheap + most profitable (corner),2.117782884397887
+349,1968-11-30,cheap + profitable (top 2 x top 2),0.8849801787380618
+350,1968-11-30,value trap: cheap + unprofitable,0.423081312856211
+351,1968-11-30,cheap (any profitability),0.7659214818517286
+352,1968-11-30,profitable (any price),0.003312471606372158
+353,1968-11-30,junk growth: expensive + unprofitable,-0.5122107388763992
+354,1968-12-31,cheap + most profitable (corner),2.167912755640487
+355,1968-12-31,cheap + profitable (top 2 x top 2),0.9046026996858971
+356,1968-12-31,value trap: cheap + unprofitable,0.4236263949933121
+357,1968-12-31,cheap (any profitability),0.7806025645529673
+358,1968-12-31,profitable (any price),0.0035136888148596945
+359,1968-12-31,junk growth: expensive + unprofitable,-0.5133548262264132
+360,1969-01-31,cheap + most profitable (corner),2.215083780868304
+361,1969-01-31,cheap + profitable (top 2 x top 2),0.8404545560314245
+362,1969-01-31,value trap: cheap + unprofitable,0.4001331154053269
+363,1969-01-31,cheap (any profitability),0.7373079073944042
+364,1969-01-31,profitable (any price),9.787464028976345e-05
+365,1969-01-31,junk growth: expensive + unprofitable,-0.4966113138283742
+366,1969-02-28,cheap + most profitable (corner),2.197697428985569
+367,1969-02-28,cheap + profitable (top 2 x top 2),0.8407036411836628
+368,1969-02-28,value trap: cheap + unprofitable,0.38891196027673813
+369,1969-02-28,cheap (any profitability),0.725944481842977
+370,1969-02-28,profitable (any price),0.0014897487262672815
+371,1969-02-28,junk growth: expensive + unprofitable,-0.492377801735461
+372,1969-03-31,cheap + most profitable (corner),2.208550695205247
+373,1969-03-31,cheap + profitable (top 2 x top 2),0.8389674519092096
+374,1969-03-31,value trap: cheap + unprofitable,0.41147638350813653
+375,1969-03-31,cheap (any profitability),0.7391667771437145
+376,1969-03-31,profitable (any price),0.0004658859380448632
+377,1969-03-31,junk growth: expensive + unprofitable,-0.492390622631501
+378,1969-04-30,cheap + most profitable (corner),2.1524371789631496
+379,1969-04-30,cheap + profitable (top 2 x top 2),0.8519882016340299
+380,1969-04-30,value trap: cheap + unprofitable,0.40300326603996495
+381,1969-04-30,cheap (any profitability),0.7388772909945935
+382,1969-04-30,profitable (any price),0.0078054702233218975
+383,1969-04-30,junk growth: expensive + unprofitable,-0.4845309552796886
+384,1969-05-31,cheap + most profitable (corner),2.201558625117992
+385,1969-05-31,cheap + profitable (top 2 x top 2),0.8509588175173657
+386,1969-05-31,value trap: cheap + unprofitable,0.3941045945845798
+387,1969-05-31,cheap (any profitability),0.7278316059583458
+388,1969-05-31,profitable (any price),0.013701726547718396
+389,1969-05-31,junk growth: expensive + unprofitable,-0.48490782141067656
+390,1969-06-30,cheap + most profitable (corner),2.184794162663432
+391,1969-06-30,cheap + profitable (top 2 x top 2),0.8627379188861652
+392,1969-06-30,value trap: cheap + unprofitable,0.39186055526485264
+393,1969-06-30,cheap (any profitability),0.7241960663690985
+394,1969-06-30,profitable (any price),0.018344401681423816
+395,1969-06-30,junk growth: expensive + unprofitable,-0.4860046722690309
+396,1969-07-31,cheap + most profitable (corner),2.0322739597540305
+397,1969-07-31,cheap + profitable (top 2 x top 2),0.886983403150656
+398,1969-07-31,value trap: cheap + unprofitable,0.4116335725185125
+399,1969-07-31,cheap (any profitability),0.7480129343935833
+400,1969-07-31,profitable (any price),0.011630581393241801
+401,1969-07-31,junk growth: expensive + unprofitable,-0.4859339108104521
+402,1969-08-31,cheap + most profitable (corner),2.05149504859553
+403,1969-08-31,cheap + profitable (top 2 x top 2),0.8930516608194943
+404,1969-08-31,value trap: cheap + unprofitable,0.3899886701910551
+405,1969-08-31,cheap (any profitability),0.7287344237165241
+406,1969-08-31,profitable (any price),0.023490209680496088
+407,1969-08-31,junk growth: expensive + unprofitable,-0.4906691905207763
+408,1969-09-30,cheap + most profitable (corner),1.9615417666082493
+409,1969-09-30,cheap + profitable (top 2 x top 2),0.9282646787975066
+410,1969-09-30,value trap: cheap + unprofitable,0.3809941716011038
+411,1969-09-30,cheap (any profitability),0.7321019578902574
+412,1969-09-30,profitable (any price),0.025612741031469044
+413,1969-09-30,junk growth: expensive + unprofitable,-0.4860522619675379
+414,1969-10-31,cheap + most profitable (corner),2.027867465256525
+415,1969-10-31,cheap + profitable (top 2 x top 2),0.9383983203658843
+416,1969-10-31,value trap: cheap + unprofitable,0.38064288557233383
+417,1969-10-31,cheap (any profitability),0.7404107507044599
+418,1969-10-31,profitable (any price),0.029799479351818592
+419,1969-10-31,junk growth: expensive + unprofitable,-0.4806120065173938
+420,1969-11-30,cheap + most profitable (corner),1.7735398645885883
+421,1969-11-30,cheap + profitable (top 2 x top 2),0.8720046171411155
+422,1969-11-30,value trap: cheap + unprofitable,0.40348015145397054
+423,1969-11-30,cheap (any profitability),0.7435482837938154
+424,1969-11-30,profitable (any price),0.027749800349572862
+425,1969-11-30,junk growth: expensive + unprofitable,-0.4839495409134472
+426,1969-12-31,cheap + most profitable (corner),1.659758200646602
+427,1969-12-31,cheap + profitable (top 2 x top 2),0.8284898120095812
+428,1969-12-31,value trap: cheap + unprofitable,0.40954920822474694
+429,1969-12-31,cheap (any profitability),0.7335387575143317
+430,1969-12-31,profitable (any price),0.0207568938943703
+431,1969-12-31,junk growth: expensive + unprofitable,-0.4766788964220009
+432,1970-01-31,cheap + most profitable (corner),1.6196595386143158
+433,1970-01-31,cheap + profitable (top 2 x top 2),0.7856108043490189
+434,1970-01-31,value trap: cheap + unprofitable,0.38233888125849713
+435,1970-01-31,cheap (any profitability),0.7059193933976822
+436,1970-01-31,profitable (any price),0.020649373598319087
+437,1970-01-31,junk growth: expensive + unprofitable,-0.4755752438715407
+438,1970-02-28,cheap + most profitable (corner),1.483059729231249
+439,1970-02-28,cheap + profitable (top 2 x top 2),0.7806311256921166
+440,1970-02-28,value trap: cheap + unprofitable,0.37981437174955723
+441,1970-02-28,cheap (any profitability),0.6997150859839651
+442,1970-02-28,profitable (any price),0.01634115095999178
+443,1970-02-28,junk growth: expensive + unprofitable,-0.47753917978137783
+444,1970-03-31,cheap + most profitable (corner),1.532442078396353
+445,1970-03-31,cheap + profitable (top 2 x top 2),0.7767613015679207
+446,1970-03-31,value trap: cheap + unprofitable,0.3713895205887443
+447,1970-03-31,cheap (any profitability),0.696720393480112
+448,1970-03-31,profitable (any price),0.013052732950533663
+449,1970-03-31,junk growth: expensive + unprofitable,-0.46690179239852947
+450,1970-04-30,cheap + most profitable (corner),1.3881844715186782
+451,1970-04-30,cheap + profitable (top 2 x top 2),0.7511547034897128
+452,1970-04-30,value trap: cheap + unprofitable,0.3424390359775149
+453,1970-04-30,cheap (any profitability),0.6677626961632901
+454,1970-04-30,profitable (any price),0.022024701415377823
+455,1970-04-30,junk growth: expensive + unprofitable,-0.4709524638831424
+456,1970-05-31,cheap + most profitable (corner),1.2970720860625895
+457,1970-05-31,cheap + profitable (top 2 x top 2),0.7297150930667375
+458,1970-05-31,value trap: cheap + unprofitable,0.30911936407130214
+459,1970-05-31,cheap (any profitability),0.6377282774004573
+460,1970-05-31,profitable (any price),0.027732368296999654
+461,1970-05-31,junk growth: expensive + unprofitable,-0.47907110780850004
+462,1970-06-30,cheap + most profitable (corner),1.282859375075895
+463,1970-06-30,cheap + profitable (top 2 x top 2),0.6990610866520173
+464,1970-06-30,value trap: cheap + unprofitable,0.27488292920771684
+465,1970-06-30,cheap (any profitability),0.5990251664216635
+466,1970-06-30,profitable (any price),0.03458739783973641
+467,1970-06-30,junk growth: expensive + unprofitable,-0.4628840402422296
+468,1970-07-31,cheap + most profitable (corner),1.211195705588925
+469,1970-07-31,cheap + profitable (top 2 x top 2),0.6355448024149213
+470,1970-07-31,value trap: cheap + unprofitable,0.2849619082515784
+471,1970-07-31,cheap (any profitability),0.5793487539354669
+472,1970-07-31,profitable (any price),0.033891582436649914
+473,1970-07-31,junk growth: expensive + unprofitable,-0.4620680005771687
+474,1970-08-31,cheap + most profitable (corner),1.0115191964641
+475,1970-08-31,cheap + profitable (top 2 x top 2),0.586258079041662
+476,1970-08-31,value trap: cheap + unprofitable,0.27338465801530365
+477,1970-08-31,cheap (any profitability),0.5510154436273118
+478,1970-08-31,profitable (any price),0.024958863454194624
+479,1970-08-31,junk growth: expensive + unprofitable,-0.47135567553311397
+480,1970-09-30,cheap + most profitable (corner),0.9144328891418518
+481,1970-09-30,cheap + profitable (top 2 x top 2),0.5362425099061243
+482,1970-09-30,value trap: cheap + unprofitable,0.2728829935178043
+483,1970-09-30,cheap (any profitability),0.538834143476393
+484,1970-09-30,profitable (any price),0.023382989473432314
+485,1970-09-30,junk growth: expensive + unprofitable,-0.48327156559566065
+486,1970-10-31,cheap + most profitable (corner),0.7105047041052941
+487,1970-10-31,cheap + profitable (top 2 x top 2),0.4547358054991124
+488,1970-10-31,value trap: cheap + unprofitable,0.2580631731387586
+489,1970-10-31,cheap (any profitability),0.5139719249382788
+490,1970-10-31,profitable (any price),0.024316154921582234
+491,1970-10-31,junk growth: expensive + unprofitable,-0.49622375160335763
+492,1970-11-30,cheap + most profitable (corner),0.6547247114538093
+493,1970-11-30,cheap + profitable (top 2 x top 2),0.38401321452059056
+494,1970-11-30,value trap: cheap + unprofitable,0.2652637337098147
+495,1970-11-30,cheap (any profitability),0.5150010756139045
+496,1970-11-30,profitable (any price),0.029733533032290094
+497,1970-11-30,junk growth: expensive + unprofitable,-0.5093407318809813
+498,1970-12-31,cheap + most profitable (corner),0.7211068584279325
+499,1970-12-31,cheap + profitable (top 2 x top 2),0.38476959640878583
+500,1970-12-31,value trap: cheap + unprofitable,0.25312217979025076
+501,1970-12-31,cheap (any profitability),0.5016146129183494
+502,1970-12-31,profitable (any price),0.02979821633873847
+503,1970-12-31,junk growth: expensive + unprofitable,-0.4951759235135622
+504,1971-01-31,cheap + most profitable (corner),0.8326632820776099
+505,1971-01-31,cheap + profitable (top 2 x top 2),0.3433027107068991
+506,1971-01-31,value trap: cheap + unprofitable,0.21425083647292786
+507,1971-01-31,cheap (any profitability),0.4608586593842603
+508,1971-01-31,profitable (any price),0.031027913880646185
+509,1971-01-31,junk growth: expensive + unprofitable,-0.48518706485530216
+510,1971-02-28,cheap + most profitable (corner),0.883218454639527
+511,1971-02-28,cheap + profitable (top 2 x top 2),0.3935658692092803
+512,1971-02-28,value trap: cheap + unprofitable,0.2016218010394315
+513,1971-02-28,cheap (any profitability),0.4597337597236566
+514,1971-02-28,profitable (any price),0.0382204523151537
+515,1971-02-28,junk growth: expensive + unprofitable,-0.479135222261975
+516,1971-03-31,cheap + most profitable (corner),0.9331362621500312
+517,1971-03-31,cheap + profitable (top 2 x top 2),0.4191790346637414
+518,1971-03-31,value trap: cheap + unprofitable,0.20301921123035171
+519,1971-03-31,cheap (any profitability),0.45533825762156854
+520,1971-03-31,profitable (any price),0.03717109475954139
+521,1971-03-31,junk growth: expensive + unprofitable,-0.47687877604687523
+522,1971-04-30,cheap + most profitable (corner),0.8311487845991499
+523,1971-04-30,cheap + profitable (top 2 x top 2),0.3903062164655777
+524,1971-04-30,value trap: cheap + unprofitable,0.21336364104409333
+525,1971-04-30,cheap (any profitability),0.45484769838567884
+526,1971-04-30,profitable (any price),0.03664509035824581
+527,1971-04-30,junk growth: expensive + unprofitable,-0.4771578700445477
+528,1971-05-31,cheap + most profitable (corner),0.9056379974270052
+529,1971-05-31,cheap + profitable (top 2 x top 2),0.4177508116593047
+530,1971-05-31,value trap: cheap + unprofitable,0.2184107966402291
+531,1971-05-31,cheap (any profitability),0.466195135328177
+532,1971-05-31,profitable (any price),0.03691369421070845
+533,1971-05-31,junk growth: expensive + unprofitable,-0.48489657359520677
+534,1971-06-30,cheap + most profitable (corner),0.9987451742217921
+535,1971-06-30,cheap + profitable (top 2 x top 2),0.49393316509498897
+536,1971-06-30,value trap: cheap + unprofitable,0.20518290859450605
+537,1971-06-30,cheap (any profitability),0.4781336727307961
+538,1971-06-30,profitable (any price),0.04339398473287748
+539,1971-06-30,junk growth: expensive + unprofitable,-0.4885284117537314
+540,1971-07-31,cheap + most profitable (corner),1.0126569668478234
+541,1971-07-31,cheap + profitable (top 2 x top 2),0.49209453203371445
+542,1971-07-31,value trap: cheap + unprofitable,0.2108668014713595
+543,1971-07-31,cheap (any profitability),0.48477710613385594
+544,1971-07-31,profitable (any price),0.0449234069078599
+545,1971-07-31,junk growth: expensive + unprofitable,-0.5066614365924538
+546,1971-08-31,cheap + most profitable (corner),1.021211129275322
+547,1971-08-31,cheap + profitable (top 2 x top 2),0.5284202539696441
+548,1971-08-31,value trap: cheap + unprofitable,0.20952691517966326
+549,1971-08-31,cheap (any profitability),0.48223774068298675
+550,1971-08-31,profitable (any price),0.05256813780145597
+551,1971-08-31,junk growth: expensive + unprofitable,-0.5107371542095724
+552,1971-09-30,cheap + most profitable (corner),1.1643133341333454
+553,1971-09-30,cheap + profitable (top 2 x top 2),0.5675317126148003
+554,1971-09-30,value trap: cheap + unprofitable,0.2031239533191076
+555,1971-09-30,cheap (any profitability),0.4729718433774519
+556,1971-09-30,profitable (any price),0.05784132324814739
+557,1971-09-30,junk growth: expensive + unprofitable,-0.5141822478785246
+558,1971-10-31,cheap + most profitable (corner),1.1218340270142804
+559,1971-10-31,cheap + profitable (top 2 x top 2),0.5365151531134702
+560,1971-10-31,value trap: cheap + unprofitable,0.22473965132956897
+561,1971-10-31,cheap (any profitability),0.4831916314418916
+562,1971-10-31,profitable (any price),0.049120509618356456
+563,1971-10-31,junk growth: expensive + unprofitable,-0.5015391944713279
+564,1971-11-30,cheap + most profitable (corner),1.0319188596776359
+565,1971-11-30,cheap + profitable (top 2 x top 2),0.534071170468662
+566,1971-11-30,value trap: cheap + unprofitable,0.24935299603473804
+567,1971-11-30,cheap (any profitability),0.49639009342619134
+568,1971-11-30,profitable (any price),0.0447163182335919
+569,1971-11-30,junk growth: expensive + unprofitable,-0.49308055270364004
+570,1971-12-31,cheap + most profitable (corner),0.8684497821901747
+571,1971-12-31,cheap + profitable (top 2 x top 2),0.4497451635218943
+572,1971-12-31,value trap: cheap + unprofitable,0.26878102955373073
+573,1971-12-31,cheap (any profitability),0.483955955284743
+574,1971-12-31,profitable (any price),0.04734265828499207
+575,1971-12-31,junk growth: expensive + unprofitable,-0.5030138454401967
+576,1972-01-31,cheap + most profitable (corner),0.8473201423809427
+577,1972-01-31,cheap + profitable (top 2 x top 2),0.4310261827874269
+578,1972-01-31,value trap: cheap + unprofitable,0.1977138653345254
+579,1972-01-31,cheap (any profitability),0.4026876390060987
+580,1972-01-31,profitable (any price),0.05728786849339307
+581,1972-01-31,junk growth: expensive + unprofitable,-0.48377857367277133
+582,1972-02-29,cheap + most profitable (corner),1.1764433810096215
+583,1972-02-29,cheap + profitable (top 2 x top 2),0.5528739501958633
+584,1972-02-29,value trap: cheap + unprofitable,0.20765065014247597
+585,1972-02-29,cheap (any profitability),0.4487870196708377
+586,1972-02-29,profitable (any price),0.048529308954659234
+587,1972-02-29,junk growth: expensive + unprofitable,-0.4757269559233738
+588,1972-03-31,cheap + most profitable (corner),1.423606257332843
+589,1972-03-31,cheap + profitable (top 2 x top 2),0.6590366506107539
+590,1972-03-31,value trap: cheap + unprofitable,0.2323775668704553
+591,1972-03-31,cheap (any profitability),0.5054497475399191
+592,1972-03-31,profitable (any price),0.04365511977736114
+593,1972-03-31,junk growth: expensive + unprofitable,-0.49136814109945304
+594,1972-04-30,cheap + most profitable (corner),1.4824434985049755
+595,1972-04-30,cheap + profitable (top 2 x top 2),0.6668734540577705
+596,1972-04-30,value trap: cheap + unprofitable,0.25077427380349415
+597,1972-04-30,cheap (any profitability),0.5266946983990044
+598,1972-04-30,profitable (any price),0.042012249805790436
+599,1972-04-30,junk growth: expensive + unprofitable,-0.5035328248884204
+600,1972-05-31,cheap + most profitable (corner),1.61674168088927
+601,1972-05-31,cheap + profitable (top 2 x top 2),0.7167503016073289
+602,1972-05-31,value trap: cheap + unprofitable,0.24047183764996793
+603,1972-05-31,cheap (any profitability),0.5463442701373309
+604,1972-05-31,profitable (any price),0.0438929018485108
+605,1972-05-31,junk growth: expensive + unprofitable,-0.5289440493725297
+606,1972-06-30,cheap + most profitable (corner),1.689202173622303
+607,1972-06-30,cheap + profitable (top 2 x top 2),0.7359998347080088
+608,1972-06-30,value trap: cheap + unprofitable,0.2472929279053926
+609,1972-06-30,cheap (any profitability),0.549252822434896
+610,1972-06-30,profitable (any price),0.04396754222890942
+611,1972-06-30,junk growth: expensive + unprofitable,-0.5242075945472233
+612,1972-07-31,cheap + most profitable (corner),1.8963078780272613
+613,1972-07-31,cheap + profitable (top 2 x top 2),0.7743658097191641
+614,1972-07-31,value trap: cheap + unprofitable,0.2658371468477525
+615,1972-07-31,cheap (any profitability),0.5835652844219634
+616,1972-07-31,profitable (any price),0.04124038171063216
+617,1972-07-31,junk growth: expensive + unprofitable,-0.5314054710787123
+618,1972-08-31,cheap + most profitable (corner),1.6987654767372984
+619,1972-08-31,cheap + profitable (top 2 x top 2),0.728431596475636
+620,1972-08-31,value trap: cheap + unprofitable,0.27067082378962093
+621,1972-08-31,cheap (any profitability),0.5787668611024464
+622,1972-08-31,profitable (any price),0.041428488973490385
+623,1972-08-31,junk growth: expensive + unprofitable,-0.5269351257612
+624,1972-09-30,cheap + most profitable (corner),1.5097010247273883
+625,1972-09-30,cheap + profitable (top 2 x top 2),0.6730176889119459
+626,1972-09-30,value trap: cheap + unprofitable,0.23526457288882718
+627,1972-09-30,cheap (any profitability),0.5422878886741906
+628,1972-09-30,profitable (any price),0.0492421262467988
+629,1972-09-30,junk growth: expensive + unprofitable,-0.5404410488808942
+630,1972-10-31,cheap + most profitable (corner),1.500539939273457
+631,1972-10-31,cheap + profitable (top 2 x top 2),0.6561651927797594
+632,1972-10-31,value trap: cheap + unprofitable,0.2290427641118833
+633,1972-10-31,cheap (any profitability),0.5342827803995409
+634,1972-10-31,profitable (any price),0.04964921169791814
+635,1972-10-31,junk growth: expensive + unprofitable,-0.5315701414356547
+636,1972-11-30,cheap + most profitable (corner),1.5805262228671686
+637,1972-11-30,cheap + profitable (top 2 x top 2),0.6787219641600148
+638,1972-11-30,value trap: cheap + unprofitable,0.22156659938138556
+639,1972-11-30,cheap (any profitability),0.5304777941229857
+640,1972-11-30,profitable (any price),0.05610320451633277
+641,1972-11-30,junk growth: expensive + unprofitable,-0.5210634623888883
+642,1972-12-31,cheap + most profitable (corner),1.7575599379943858
+643,1972-12-31,cheap + profitable (top 2 x top 2),0.7196329056309476
+644,1972-12-31,value trap: cheap + unprofitable,0.21857939846056307
+645,1972-12-31,cheap (any profitability),0.5260647159354048
+646,1972-12-31,profitable (any price),0.05856123041068839
+647,1972-12-31,junk growth: expensive + unprofitable,-0.5058516931262567
+648,1973-01-31,cheap + most profitable (corner),1.8822059889476712
+649,1973-01-31,cheap + profitable (top 2 x top 2),0.736482474191569
+650,1973-01-31,value trap: cheap + unprofitable,0.20547312788720795
+651,1973-01-31,cheap (any profitability),0.5068182081121435
+652,1973-01-31,profitable (any price),0.06119729445454314
+653,1973-01-31,junk growth: expensive + unprofitable,-0.4851491565323034
+654,1973-02-28,cheap + most profitable (corner),2.119860482603131
+655,1973-02-28,cheap + profitable (top 2 x top 2),0.8043809759418468
+656,1973-02-28,value trap: cheap + unprofitable,0.25421390448260195
+657,1973-02-28,cheap (any profitability),0.5550803901887937
+658,1973-02-28,profitable (any price),0.047463510747630444
+659,1973-02-28,junk growth: expensive + unprofitable,-0.48335154588992846
+660,1973-03-31,cheap + most profitable (corner),2.1857575273784238
+661,1973-03-31,cheap + profitable (top 2 x top 2),0.8686170656852357
+662,1973-03-31,value trap: cheap + unprofitable,0.2846918735401638
+663,1973-03-31,cheap (any profitability),0.6023102950001555
+664,1973-03-31,profitable (any price),0.03950810184163944
+665,1973-03-31,junk growth: expensive + unprofitable,-0.5070611861888777
+666,1973-04-30,cheap + most profitable (corner),2.292253182611443
+667,1973-04-30,cheap + profitable (top 2 x top 2),0.8593467631145273
+668,1973-04-30,value trap: cheap + unprofitable,0.28901009045088677
+669,1973-04-30,cheap (any profitability),0.6011738750120637
+670,1973-04-30,profitable (any price),0.03384483583739106
+671,1973-04-30,junk growth: expensive + unprofitable,-0.5003963949843171
+672,1973-05-31,cheap + most profitable (corner),2.18310849978542
+673,1973-05-31,cheap + profitable (top 2 x top 2),0.8276859682243727
+674,1973-05-31,value trap: cheap + unprofitable,0.3331477964381311
+675,1973-05-31,cheap (any profitability),0.6243823071781802
+676,1973-05-31,profitable (any price),0.0182931772427517
+677,1973-05-31,junk growth: expensive + unprofitable,-0.5004823161162391
+678,1973-06-30,cheap + most profitable (corner),2.158482881452985
+679,1973-06-30,cheap + profitable (top 2 x top 2),0.781535201035457
+680,1973-06-30,value trap: cheap + unprofitable,0.3261993398342766
+681,1973-06-30,cheap (any profitability),0.6013897275205149
+682,1973-06-30,profitable (any price),0.017538223659825602
+683,1973-06-30,junk growth: expensive + unprofitable,-0.4894434029006206
+684,1973-07-31,cheap + most profitable (corner),2.2902022643860573
+685,1973-07-31,cheap + profitable (top 2 x top 2),0.8516584453219704
+686,1973-07-31,value trap: cheap + unprofitable,0.3541674789326501
+687,1973-07-31,cheap (any profitability),0.6384470685873707
+688,1973-07-31,profitable (any price),0.01450516016032699
+689,1973-07-31,junk growth: expensive + unprofitable,-0.4902504618938692
+690,1973-08-31,cheap + most profitable (corner),2.155584695413273
+691,1973-08-31,cheap + profitable (top 2 x top 2),0.8737638405188972
+692,1973-08-31,value trap: cheap + unprofitable,0.3708254385440841
+693,1973-08-31,cheap (any profitability),0.6652533295917116
+694,1973-08-31,profitable (any price),0.0031489030185907207
+695,1973-08-31,junk growth: expensive + unprofitable,-0.4906864230625336
+696,1973-09-30,cheap + most profitable (corner),2.1678833654348963
+697,1973-09-30,cheap + profitable (top 2 x top 2),0.8649738464688668
+698,1973-09-30,value trap: cheap + unprofitable,0.37612246440803876
+699,1973-09-30,cheap (any profitability),0.6667633699006912
+700,1973-09-30,profitable (any price),-0.0007100109033577606
+701,1973-09-30,junk growth: expensive + unprofitable,-0.48171922843486736
+702,1973-10-31,cheap + most profitable (corner),2.1785918562494384
+703,1973-10-31,cheap + profitable (top 2 x top 2),0.8938550880530438
+704,1973-10-31,value trap: cheap + unprofitable,0.3616941381654306
+705,1973-10-31,cheap (any profitability),0.6688729124053767
+706,1973-10-31,profitable (any price),-0.0015640565617819346
+707,1973-10-31,junk growth: expensive + unprofitable,-0.47438370855169976
+708,1973-11-30,cheap + most profitable (corner),2.2061326606362885
+709,1973-11-30,cheap + profitable (top 2 x top 2),0.8671696631235617
+710,1973-11-30,value trap: cheap + unprofitable,0.3403545126915293
+711,1973-11-30,cheap (any profitability),0.640227871726643
+712,1973-11-30,profitable (any price),0.0048813180152484925
+713,1973-11-30,junk growth: expensive + unprofitable,-0.46437224904855423
+714,1973-12-31,cheap + most profitable (corner),2.606804881283709
+715,1973-12-31,cheap + profitable (top 2 x top 2),0.9026110772886475
+716,1973-12-31,value trap: cheap + unprofitable,0.31846293079003707
+717,1973-12-31,cheap (any profitability),0.6196281963142147
+718,1973-12-31,profitable (any price),0.016215352177548104
+719,1973-12-31,junk growth: expensive + unprofitable,-0.46927626253794175
+720,1974-01-31,cheap + most profitable (corner),2.4536250193018554
+721,1974-01-31,cheap + profitable (top 2 x top 2),0.8449077360253503
+722,1974-01-31,value trap: cheap + unprofitable,0.2757837924916362
+723,1974-01-31,cheap (any profitability),0.5611463411183841
+724,1974-01-31,profitable (any price),0.021759616026706174
+725,1974-01-31,junk growth: expensive + unprofitable,-0.4494873653921442
+726,1974-02-28,cheap + most profitable (corner),2.4308813605044644
+727,1974-02-28,cheap + profitable (top 2 x top 2),0.8331466537893368
+728,1974-02-28,value trap: cheap + unprofitable,0.2699833217965375
+729,1974-02-28,cheap (any profitability),0.5511609817555816
+730,1974-02-28,profitable (any price),0.019690915005766252
+731,1974-02-28,junk growth: expensive + unprofitable,-0.43546283403333086
+732,1974-03-31,cheap + most profitable (corner),2.2961254143586336
+733,1974-03-31,cheap + profitable (top 2 x top 2),0.7791880045493298
+734,1974-03-31,value trap: cheap + unprofitable,0.25082807467555024
+735,1974-03-31,cheap (any profitability),0.5183608224536593
+736,1974-03-31,profitable (any price),0.023954854791289115
+737,1974-03-31,junk growth: expensive + unprofitable,-0.43596426931694054
+738,1974-04-30,cheap + most profitable (corner),2.3678070205735002
+739,1974-04-30,cheap + profitable (top 2 x top 2),0.8045081930077511
+740,1974-04-30,value trap: cheap + unprofitable,0.25520951504180234
+741,1974-04-30,cheap (any profitability),0.5320744415880967
+742,1974-04-30,profitable (any price),0.025614045159203958
+743,1974-04-30,junk growth: expensive + unprofitable,-0.4381450752611382
+744,1974-05-31,cheap + most profitable (corner),2.468309086730423
+745,1974-05-31,cheap + profitable (top 2 x top 2),0.8335001499786423
+746,1974-05-31,value trap: cheap + unprofitable,0.2542999190422053
+747,1974-05-31,cheap (any profitability),0.548027918671598
+748,1974-05-31,profitable (any price),0.026268591141582753
+749,1974-05-31,junk growth: expensive + unprofitable,-0.44447657297399024
+750,1974-06-30,cheap + most profitable (corner),2.7746136948611175
+751,1974-06-30,cheap + profitable (top 2 x top 2),0.8999864268521829
+752,1974-06-30,value trap: cheap + unprofitable,0.23790799003508178
+753,1974-06-30,cheap (any profitability),0.5434939705544701
+754,1974-06-30,profitable (any price),0.03482106561581699
+755,1974-06-30,junk growth: expensive + unprofitable,-0.45389978348814364
+756,1974-07-31,cheap + most profitable (corner),2.7660459244034943
+757,1974-07-31,cheap + profitable (top 2 x top 2),0.9311283128914978
+758,1974-07-31,value trap: cheap + unprofitable,0.24821570080062694
+759,1974-07-31,cheap (any profitability),0.5570346982439638
+760,1974-07-31,profitable (any price),0.03599818861450821
+761,1974-07-31,junk growth: expensive + unprofitable,-0.4622855077939658
+762,1974-08-31,cheap + most profitable (corner),2.765508698552904
+763,1974-08-31,cheap + profitable (top 2 x top 2),0.9283105049288689
+764,1974-08-31,value trap: cheap + unprofitable,0.24803080535881827
+765,1974-08-31,cheap (any profitability),0.5574722516503612
+766,1974-08-31,profitable (any price),0.035018599476168255
+767,1974-08-31,junk growth: expensive + unprofitable,-0.46567762064050644
+768,1974-09-30,cheap + most profitable (corner),2.7012321309848106
+769,1974-09-30,cheap + profitable (top 2 x top 2),0.9158277656043989
+770,1974-09-30,value trap: cheap + unprofitable,0.2408699693045302
+771,1974-09-30,cheap (any profitability),0.5454170184179223
+772,1974-09-30,profitable (any price),0.03341919866065335
+773,1974-09-30,junk growth: expensive + unprofitable,-0.4510168564048196
+774,1974-10-31,cheap + most profitable (corner),2.535791841300231
+775,1974-10-31,cheap + profitable (top 2 x top 2),0.8454706108609029
+776,1974-10-31,value trap: cheap + unprofitable,0.2354235913377689
+777,1974-10-31,cheap (any profitability),0.5170622743261093
+778,1974-10-31,profitable (any price),0.03381468212189809
+779,1974-10-31,junk growth: expensive + unprofitable,-0.4508814236287707
+780,1974-11-30,cheap + most profitable (corner),2.505628298555824
+781,1974-11-30,cheap + profitable (top 2 x top 2),0.8652408266892957
+782,1974-11-30,value trap: cheap + unprofitable,0.2208391921932431
+783,1974-11-30,cheap (any profitability),0.5102077719356402
+784,1974-11-30,profitable (any price),0.032991265342002585
+785,1974-11-30,junk growth: expensive + unprofitable,-0.45246533537556055
+786,1974-12-31,cheap + most profitable (corner),2.509782133612589
+787,1974-12-31,cheap + profitable (top 2 x top 2),0.8253873996079837
+788,1974-12-31,value trap: cheap + unprofitable,0.2173103728859842
+789,1974-12-31,cheap (any profitability),0.5019830885780625
+790,1974-12-31,profitable (any price),0.036007034135230986
+791,1974-12-31,junk growth: expensive + unprofitable,-0.4564125486252053
+792,1975-01-31,cheap + most profitable (corner),2.136378368135221
+793,1975-01-31,cheap + profitable (top 2 x top 2),0.7156810413694172
+794,1975-01-31,value trap: cheap + unprofitable,0.194714352567805
+795,1975-01-31,cheap (any profitability),0.4391544397498779
+796,1975-01-31,profitable (any price),0.04297298515655079
+797,1975-01-31,junk growth: expensive + unprofitable,-0.44615142538092334
+798,1975-02-28,cheap + most profitable (corner),2.0469178292663024
+799,1975-02-28,cheap + profitable (top 2 x top 2),0.7244319016975762
+800,1975-02-28,value trap: cheap + unprofitable,0.16877291346927037
+801,1975-02-28,cheap (any profitability),0.4263680167777997
+802,1975-02-28,profitable (any price),0.05032966435078534
+803,1975-02-28,junk growth: expensive + unprofitable,-0.4553311488722731
+804,1975-03-31,cheap + most profitable (corner),2.1839534970916
+805,1975-03-31,cheap + profitable (top 2 x top 2),0.768577872609892
+806,1975-03-31,value trap: cheap + unprofitable,0.17276466287226322
+807,1975-03-31,cheap (any profitability),0.43733568505850773
+808,1975-03-31,profitable (any price),0.04879769614231688
+809,1975-03-31,junk growth: expensive + unprofitable,-0.4595562863345034
+810,1975-04-30,cheap + most profitable (corner),2.0408177513572996
+811,1975-04-30,cheap + profitable (top 2 x top 2),0.7066440275692143
+812,1975-04-30,value trap: cheap + unprofitable,0.1541376377285586
+813,1975-04-30,cheap (any profitability),0.40277772845754467
+814,1975-04-30,profitable (any price),0.04918848040957102
+815,1975-04-30,junk growth: expensive + unprofitable,-0.46198331696642414
+816,1975-05-31,cheap + most profitable (corner),2.111932056730906
+817,1975-05-31,cheap + profitable (top 2 x top 2),0.7229340846511758
+818,1975-05-31,value trap: cheap + unprofitable,0.15838415482586998
+819,1975-05-31,cheap (any profitability),0.40756588735503363
+820,1975-05-31,profitable (any price),0.051252433591793656
+821,1975-05-31,junk growth: expensive + unprofitable,-0.47600242238860124
+822,1975-06-30,cheap + most profitable (corner),2.250680292453845
+823,1975-06-30,cheap + profitable (top 2 x top 2),0.7796763937400188
+824,1975-06-30,value trap: cheap + unprofitable,0.15946111615658087
+825,1975-06-30,cheap (any profitability),0.43078813091497614
+826,1975-06-30,profitable (any price),0.05690862313735412
+827,1975-06-30,junk growth: expensive + unprofitable,-0.4897579005590248
+828,1975-07-31,cheap + most profitable (corner),2.2344345679281914
+829,1975-07-31,cheap + profitable (top 2 x top 2),0.7623446693299429
+830,1975-07-31,value trap: cheap + unprofitable,0.14838765799016018
+831,1975-07-31,cheap (any profitability),0.4131459932670756
+832,1975-07-31,profitable (any price),0.05596728833574871
+833,1975-07-31,junk growth: expensive + unprofitable,-0.47305613434799354
+834,1975-08-31,cheap + most profitable (corner),2.3413282746983213
+835,1975-08-31,cheap + profitable (top 2 x top 2),0.7611800922433163
+836,1975-08-31,value trap: cheap + unprofitable,0.1367129896248378
+837,1975-08-31,cheap (any profitability),0.40327129969986375
+838,1975-08-31,profitable (any price),0.05365342610445367
+839,1975-08-31,junk growth: expensive + unprofitable,-0.4610202275662132
+840,1975-09-30,cheap + most profitable (corner),2.519485160327801
+841,1975-09-30,cheap + profitable (top 2 x top 2),0.8270089125653164
+842,1975-09-30,value trap: cheap + unprofitable,0.15969394774933265
+843,1975-09-30,cheap (any profitability),0.4355295827711896
+844,1975-09-30,profitable (any price),0.05057989796265061
+845,1975-09-30,junk growth: expensive + unprofitable,-0.4579047603842694
+846,1975-10-31,cheap + most profitable (corner),2.6362242260542144
+847,1975-10-31,cheap + profitable (top 2 x top 2),0.8417219538581271
+848,1975-10-31,value trap: cheap + unprofitable,0.15691515854991578
+849,1975-10-31,cheap (any profitability),0.4414033009387599
+850,1975-10-31,profitable (any price),0.05624413651362015
+851,1975-10-31,junk growth: expensive + unprofitable,-0.46961974731686273
+852,1975-11-30,cheap + most profitable (corner),2.602170378779408
+853,1975-11-30,cheap + profitable (top 2 x top 2),0.799105342185034
+854,1975-11-30,value trap: cheap + unprofitable,0.12796051290639854
+855,1975-11-30,cheap (any profitability),0.41343823461647733
+856,1975-11-30,profitable (any price),0.06804866384049535
+857,1975-11-30,junk growth: expensive + unprofitable,-0.4820372802425297
+858,1975-12-31,cheap + most profitable (corner),2.6692898415324824
+859,1975-12-31,cheap + profitable (top 2 x top 2),0.8173807681403795
+860,1975-12-31,value trap: cheap + unprofitable,0.12283269439855116
+861,1975-12-31,cheap (any profitability),0.41470171111646903
+862,1975-12-31,profitable (any price),0.06537215298194066
+863,1975-12-31,junk growth: expensive + unprofitable,-0.4730329058010444
+864,1976-01-31,cheap + most profitable (corner),2.277025425401094
+865,1976-01-31,cheap + profitable (top 2 x top 2),0.7340148899702987
+866,1976-01-31,value trap: cheap + unprofitable,0.095361226473061
+867,1976-01-31,cheap (any profitability),0.3655436998271693
+868,1976-01-31,profitable (any price),0.06779048945492994
+869,1976-01-31,junk growth: expensive + unprofitable,-0.4523021655473528
+870,1976-02-29,cheap + most profitable (corner),2.245589126291039
+871,1976-02-29,cheap + profitable (top 2 x top 2),0.6943561892787664
+872,1976-02-29,value trap: cheap + unprofitable,0.07156323934490039
+873,1976-02-29,cheap (any profitability),0.34034170185434376
+874,1976-02-29,profitable (any price),0.07377095388267874
+875,1976-02-29,junk growth: expensive + unprofitable,-0.45381853136794925
+876,1976-03-31,cheap + most profitable (corner),2.2517408761436664
+877,1976-03-31,cheap + profitable (top 2 x top 2),0.6950401282026528
+878,1976-03-31,value trap: cheap + unprofitable,0.056131777832507446
+879,1976-03-31,cheap (any profitability),0.3284963624507631
+880,1976-03-31,profitable (any price),0.07588395653120106
+881,1976-03-31,junk growth: expensive + unprofitable,-0.44586984702583454
+882,1976-04-30,cheap + most profitable (corner),2.256049171108464
+883,1976-04-30,cheap + profitable (top 2 x top 2),0.7205083715575138
+884,1976-04-30,value trap: cheap + unprofitable,0.06093823478805849
+885,1976-04-30,cheap (any profitability),0.33671046318340014
+886,1976-04-30,profitable (any price),0.07344274972298814
+887,1976-04-30,junk growth: expensive + unprofitable,-0.44682766458968215
+888,1976-05-31,cheap + most profitable (corner),2.186325656816449
+889,1976-05-31,cheap + profitable (top 2 x top 2),0.6827661450267783
+890,1976-05-31,value trap: cheap + unprofitable,0.048389065248344076
+891,1976-05-31,cheap (any profitability),0.30898441318850156
+892,1976-05-31,profitable (any price),0.06973564849340907
+893,1976-05-31,junk growth: expensive + unprofitable,-0.43000250690724506
+894,1976-06-30,cheap + most profitable (corner),2.2071826434016213
+895,1976-06-30,cheap + profitable (top 2 x top 2),0.6904039614659045
+896,1976-06-30,value trap: cheap + unprofitable,0.05378738376927816
+897,1976-06-30,cheap (any profitability),0.3121356963752544
+898,1976-06-30,profitable (any price),0.07030819880277317
+899,1976-06-30,junk growth: expensive + unprofitable,-0.42242077655932053
+900,1976-07-31,cheap + most profitable (corner),2.216498010180127
+901,1976-07-31,cheap + profitable (top 2 x top 2),0.6806441662299552
+902,1976-07-31,value trap: cheap + unprofitable,0.05905928660929005
+903,1976-07-31,cheap (any profitability),0.3120260592458808
+904,1976-07-31,profitable (any price),0.0797883319086996
+905,1976-07-31,junk growth: expensive + unprofitable,-0.4503414759518706
+906,1976-08-31,cheap + most profitable (corner),2.324596046502912
+907,1976-08-31,cheap + profitable (top 2 x top 2),0.7410828774967084
+908,1976-08-31,value trap: cheap + unprofitable,0.049995605267493914
+909,1976-08-31,cheap (any profitability),0.33133231494721316
+910,1976-08-31,profitable (any price),0.09497002062435467
+911,1976-08-31,junk growth: expensive + unprofitable,-0.48739845848317653
+912,1976-09-30,cheap + most profitable (corner),2.2462447653959257
+913,1976-09-30,cheap + profitable (top 2 x top 2),0.74301272229089
+914,1976-09-30,value trap: cheap + unprofitable,0.055417588075273194
+915,1976-09-30,cheap (any profitability),0.33633493508733503
+916,1976-09-30,profitable (any price),0.089257074826945
+917,1976-09-30,junk growth: expensive + unprofitable,-0.4772427772365625
+918,1976-10-31,cheap + most profitable (corner),2.2065096522929495
+919,1976-10-31,cheap + profitable (top 2 x top 2),0.7189497611115911
+920,1976-10-31,value trap: cheap + unprofitable,0.03588725338368737
+921,1976-10-31,cheap (any profitability),0.312788135358804
+922,1976-10-31,profitable (any price),0.09527885946736236
+923,1976-10-31,junk growth: expensive + unprofitable,-0.4806420720425726
+924,1976-11-30,cheap + most profitable (corner),2.0494455589245586
+925,1976-11-30,cheap + profitable (top 2 x top 2),0.8071955165188456
+926,1976-11-30,value trap: cheap + unprofitable,0.045355056061430865
+927,1976-11-30,cheap (any profitability),0.3460387491650536
+928,1976-11-30,profitable (any price),0.10267953637404181
+929,1976-11-30,junk growth: expensive + unprofitable,-0.5046581658700192
+930,1976-12-31,cheap + most profitable (corner),1.7913560007499063
+931,1976-12-31,cheap + profitable (top 2 x top 2),0.8410492778950531
+932,1976-12-31,value trap: cheap + unprofitable,0.03716452967908035
+933,1976-12-31,cheap (any profitability),0.347222719852444
+934,1976-12-31,profitable (any price),0.11652494452276385
+935,1976-12-31,junk growth: expensive + unprofitable,-0.5258910001233736
+936,1977-01-31,cheap + most profitable (corner),1.6938116496622322
+937,1977-01-31,cheap + profitable (top 2 x top 2),0.7702529785873873
+938,1977-01-31,value trap: cheap + unprofitable,0.04289342638552296
+939,1977-01-31,cheap (any profitability),0.32745779265598696
+940,1977-01-31,profitable (any price),0.11465826514009736
+941,1977-01-31,junk growth: expensive + unprofitable,-0.5092841261210677
+942,1977-02-28,cheap + most profitable (corner),1.547884515152108
+943,1977-02-28,cheap + profitable (top 2 x top 2),0.7518441086444203
+944,1977-02-28,value trap: cheap + unprofitable,0.013333439172305006
+945,1977-02-28,cheap (any profitability),0.30052005092609924
+946,1977-02-28,profitable (any price),0.12601737913695277
+947,1977-02-28,junk growth: expensive + unprofitable,-0.5149523758022977
+948,1977-03-31,cheap + most profitable (corner),1.65360270788261
+949,1977-03-31,cheap + profitable (top 2 x top 2),0.8257979447082069
+950,1977-03-31,value trap: cheap + unprofitable,0.0349990616666096
+951,1977-03-31,cheap (any profitability),0.3388932374260152
+952,1977-03-31,profitable (any price),0.13311331984629482
+953,1977-03-31,junk growth: expensive + unprofitable,-0.5356045777480934
+954,1977-04-30,cheap + most profitable (corner),1.7623552532350124
+955,1977-04-30,cheap + profitable (top 2 x top 2),0.793278982011784
+956,1977-04-30,value trap: cheap + unprofitable,0.042680030599181906
+957,1977-04-30,cheap (any profitability),0.33768373449198164
+958,1977-04-30,profitable (any price),0.1303684342371556
+959,1977-04-30,junk growth: expensive + unprofitable,-0.5465334613065498
+960,1977-05-31,cheap + most profitable (corner),1.6599126151677672
+961,1977-05-31,cheap + profitable (top 2 x top 2),0.8104146738252462
+962,1977-05-31,value trap: cheap + unprofitable,0.004630127643418636
+963,1977-05-31,cheap (any profitability),0.31256526346693225
+964,1977-05-31,profitable (any price),0.15206508803268637
+965,1977-05-31,junk growth: expensive + unprofitable,-0.574310347177394
+966,1977-06-30,cheap + most profitable (corner),1.6834559025890075
+967,1977-06-30,cheap + profitable (top 2 x top 2),0.7648312402453472
+968,1977-06-30,value trap: cheap + unprofitable,0.011065112760785034
+969,1977-06-30,cheap (any profitability),0.29943279096633657
+970,1977-06-30,profitable (any price),0.14467023371152066
+971,1977-06-30,junk growth: expensive + unprofitable,-0.5573277174809885
+972,1977-07-31,cheap + most profitable (corner),1.7994735955200873
+973,1977-07-31,cheap + profitable (top 2 x top 2),0.7673389674617437
+974,1977-07-31,value trap: cheap + unprofitable,0.014829568434162832
+975,1977-07-31,cheap (any profitability),0.2989030867238709
+976,1977-07-31,profitable (any price),0.14355441133199243
+977,1977-07-31,junk growth: expensive + unprofitable,-0.5694543455228909
+978,1977-08-31,cheap + most profitable (corner),1.837300183643598
+979,1977-08-31,cheap + profitable (top 2 x top 2),0.7554975997185287
+980,1977-08-31,value trap: cheap + unprofitable,0.003803498649984416
+981,1977-08-31,cheap (any profitability),0.2856757208150682
+982,1977-08-31,profitable (any price),0.14437790958487984
+983,1977-08-31,junk growth: expensive + unprofitable,-0.5696684885714427
+984,1977-09-30,cheap + most profitable (corner),2.1288671165252087
+985,1977-09-30,cheap + profitable (top 2 x top 2),0.7996500052998479
+986,1977-09-30,value trap: cheap + unprofitable,0.023774328157862623
+987,1977-09-30,cheap (any profitability),0.31179874220564874
+988,1977-09-30,profitable (any price),0.12883051826957903
+989,1977-09-30,junk growth: expensive + unprofitable,-0.5514590207191956
+990,1977-10-31,cheap + most profitable (corner),2.3057342068317186
+991,1977-10-31,cheap + profitable (top 2 x top 2),0.8172748894663235
+992,1977-10-31,value trap: cheap + unprofitable,0.02925951097133872
+993,1977-10-31,cheap (any profitability),0.3210855632503262
+994,1977-10-31,profitable (any price),0.12338893501799864
+995,1977-10-31,junk growth: expensive + unprofitable,-0.5384716740345379
+996,1977-11-30,cheap + most profitable (corner),2.0100866681915543
+997,1977-11-30,cheap + profitable (top 2 x top 2),0.8789252372884169
+998,1977-11-30,value trap: cheap + unprofitable,0.023919874717987843
+999,1977-11-30,cheap (any profitability),0.33265273723845223
+1000,1977-11-30,profitable (any price),0.12598968230344343
+1001,1977-11-30,junk growth: expensive + unprofitable,-0.5474766793186263
+1002,1977-12-31,cheap + most profitable (corner),1.9316172644289544
+1003,1977-12-31,cheap + profitable (top 2 x top 2),0.8949501139988025
+1004,1977-12-31,value trap: cheap + unprofitable,0.0070317308232301645
+1005,1977-12-31,cheap (any profitability),0.3292105229326878
+1006,1977-12-31,profitable (any price),0.1411820798553325
+1007,1977-12-31,junk growth: expensive + unprofitable,-0.5713996714312928
+1008,1978-01-31,cheap + most profitable (corner),1.5735546768908595
+1009,1978-01-31,cheap + profitable (top 2 x top 2),0.9426333172638506
+1010,1978-01-31,value trap: cheap + unprofitable,0.0073531192968367964
+1011,1978-01-31,cheap (any profitability),0.3409260449874607
+1012,1978-01-31,profitable (any price),0.13784171884443075
+1013,1978-01-31,junk growth: expensive + unprofitable,-0.5661578890111436
+1014,1978-02-28,cheap + most profitable (corner),1.8033706165177827
+1015,1978-02-28,cheap + profitable (top 2 x top 2),0.9050640964679066
+1016,1978-02-28,value trap: cheap + unprofitable,0.007858948012386513
+1017,1978-02-28,cheap (any profitability),0.3201320893814137
+1018,1978-02-28,profitable (any price),0.14760309272075256
+1019,1978-02-28,junk growth: expensive + unprofitable,-0.5663866362810301
+1020,1978-03-31,cheap + most profitable (corner),1.9365842906295847
+1021,1978-03-31,cheap + profitable (top 2 x top 2),0.904390751537747
+1022,1978-03-31,value trap: cheap + unprofitable,0.003965968936677555
+1023,1978-03-31,cheap (any profitability),0.3132147063569448
+1024,1978-03-31,profitable (any price),0.14664381926694214
+1025,1978-03-31,junk growth: expensive + unprofitable,-0.5635189600653709
+1026,1978-04-30,cheap + most profitable (corner),1.9742543164873818
+1027,1978-04-30,cheap + profitable (top 2 x top 2),0.950805561022096
+1028,1978-04-30,value trap: cheap + unprofitable,0.014676485610198853
+1029,1978-04-30,cheap (any profitability),0.32812889777092047
+1030,1978-04-30,profitable (any price),0.14579757266434767
+1031,1978-04-30,junk growth: expensive + unprofitable,-0.5643680193375638
+1032,1978-05-31,cheap + most profitable (corner),2.0477217900847178
+1033,1978-05-31,cheap + profitable (top 2 x top 2),0.9838722203059167
+1034,1978-05-31,value trap: cheap + unprofitable,0.020841739174554785
+1035,1978-05-31,cheap (any profitability),0.3354722834983417
+1036,1978-05-31,profitable (any price),0.1408618751141817
+1037,1978-05-31,junk growth: expensive + unprofitable,-0.5586817473867169
+1038,1978-06-30,cheap + most profitable (corner),1.8501048986957631
+1039,1978-06-30,cheap + profitable (top 2 x top 2),1.0591758083783893
+1040,1978-06-30,value trap: cheap + unprofitable,0.02529678229851684
+1041,1978-06-30,cheap (any profitability),0.35223581813703264
+1042,1978-06-30,profitable (any price),0.1456139499027609
+1043,1978-06-30,junk growth: expensive + unprofitable,-0.5698915821714632
+1044,1978-07-31,cheap + most profitable (corner),1.9323647762368017
+1045,1978-07-31,cheap + profitable (top 2 x top 2),1.0485157111129673
+1046,1978-07-31,value trap: cheap + unprofitable,0.0025014986912132997
+1047,1978-07-31,cheap (any profitability),0.3311550298089909
+1048,1978-07-31,profitable (any price),0.15176234341045958
+1049,1978-07-31,junk growth: expensive + unprofitable,-0.56869628784032
+1050,1978-08-31,cheap + most profitable (corner),1.8014862162099603
+1051,1978-08-31,cheap + profitable (top 2 x top 2),1.0466279871015813
+1052,1978-08-31,value trap: cheap + unprofitable,-0.028173266143624698
+1053,1978-08-31,cheap (any profitability),0.2985925403622771
+1054,1978-08-31,profitable (any price),0.15795843580396163
+1055,1978-08-31,junk growth: expensive + unprofitable,-0.5755187185304698
+1056,1978-09-30,cheap + most profitable (corner),1.5845986649207369
+1057,1978-09-30,cheap + profitable (top 2 x top 2),0.9180378664675477
+1058,1978-09-30,value trap: cheap + unprofitable,-0.019633013150475276
+1059,1978-09-30,cheap (any profitability),0.3084914085420096
+1060,1978-09-30,profitable (any price),0.16830492709118006
+1061,1978-09-30,junk growth: expensive + unprofitable,-0.6013854258122369
+1062,1978-10-31,cheap + most profitable (corner),1.6060204585240676
+1063,1978-10-31,cheap + profitable (top 2 x top 2),0.8109803248052461
+1064,1978-10-31,value trap: cheap + unprofitable,-0.03137356171323391
+1065,1978-10-31,cheap (any profitability),0.28593390460228774
+1066,1978-10-31,profitable (any price),0.1656781756958563
+1067,1978-10-31,junk growth: expensive + unprofitable,-0.584122019037253
+1068,1978-11-30,cheap + most profitable (corner),1.5065861649903254
+1069,1978-11-30,cheap + profitable (top 2 x top 2),0.8147023816136687
+1070,1978-11-30,value trap: cheap + unprofitable,-0.045572395764485796
+1071,1978-11-30,cheap (any profitability),0.2651362952217742
+1072,1978-11-30,profitable (any price),0.16699052538834724
+1073,1978-11-30,junk growth: expensive + unprofitable,-0.5853583245310674
+1074,1978-12-31,cheap + most profitable (corner),1.547696779383612
+1075,1978-12-31,cheap + profitable (top 2 x top 2),0.7928698504535296
+1076,1978-12-31,value trap: cheap + unprofitable,-0.06048214023042009
+1077,1978-12-31,cheap (any profitability),0.24376713414085605
+1078,1978-12-31,profitable (any price),0.16652290204868514
+1079,1978-12-31,junk growth: expensive + unprofitable,-0.5698412282337992
+1080,1979-01-31,cheap + most profitable (corner),1.499697999424904
+1081,1979-01-31,cheap + profitable (top 2 x top 2),0.663171627132316
+1082,1979-01-31,value trap: cheap + unprofitable,-0.08088030265649748
+1083,1979-01-31,cheap (any profitability),0.19136940034593142
+1084,1979-01-31,profitable (any price),0.15932280020187783
+1085,1979-01-31,junk growth: expensive + unprofitable,-0.5345217344578215
+1086,1979-02-28,cheap + most profitable (corner),1.5168648704866734
+1087,1979-02-28,cheap + profitable (top 2 x top 2),0.6687443414645471
+1088,1979-02-28,value trap: cheap + unprofitable,-0.11567169091461094
+1089,1979-02-28,cheap (any profitability),0.14691276795619523
+1090,1979-02-28,profitable (any price),0.16036922226074535
+1091,1979-02-28,junk growth: expensive + unprofitable,-0.5149541446592985
+1092,1979-03-31,cheap + most profitable (corner),1.4735732385902853
+1093,1979-03-31,cheap + profitable (top 2 x top 2),0.6638887084116614
+1094,1979-03-31,value trap: cheap + unprofitable,-0.09825059914690493
+1095,1979-03-31,cheap (any profitability),0.15858088349912824
+1096,1979-03-31,profitable (any price),0.15440379494766598
+1097,1979-03-31,junk growth: expensive + unprofitable,-0.515531803553051
+1098,1979-04-30,cheap + most profitable (corner),1.4289360087167142
+1099,1979-04-30,cheap + profitable (top 2 x top 2),0.6584550968866993
+1100,1979-04-30,value trap: cheap + unprofitable,-0.11317873924656141
+1101,1979-04-30,cheap (any profitability),0.13423897280884756
+1102,1979-04-30,profitable (any price),0.14012328746096459
+1103,1979-04-30,junk growth: expensive + unprofitable,-0.48104310501882463
+1104,1979-05-31,cheap + most profitable (corner),1.6209685455503702
+1105,1979-05-31,cheap + profitable (top 2 x top 2),0.7126086631436579
+1106,1979-05-31,value trap: cheap + unprofitable,-0.10072610812009153
+1107,1979-05-31,cheap (any profitability),0.15697948870237677
+1108,1979-05-31,profitable (any price),0.12979156213195475
+1109,1979-05-31,junk growth: expensive + unprofitable,-0.4826034807007554
+1110,1979-06-30,cheap + most profitable (corner),1.6434192373465577
+1111,1979-06-30,cheap + profitable (top 2 x top 2),0.6969761656156417
+1112,1979-06-30,value trap: cheap + unprofitable,-0.06856169540612733
+1113,1979-06-30,cheap (any profitability),0.1920686010124193
+1114,1979-06-30,profitable (any price),0.13120839242429705
+1115,1979-06-30,junk growth: expensive + unprofitable,-0.4899545048830084
+1116,1979-07-31,cheap + most profitable (corner),1.5313731399688089
+1117,1979-07-31,cheap + profitable (top 2 x top 2),0.653650238648469
+1118,1979-07-31,value trap: cheap + unprofitable,-0.09935518762376294
+1119,1979-07-31,cheap (any profitability),0.15083301658148462
+1120,1979-07-31,profitable (any price),0.13772368954714698
+1121,1979-07-31,junk growth: expensive + unprofitable,-0.49582721284576137
+1122,1979-08-31,cheap + most profitable (corner),1.550567459466079
+1123,1979-08-31,cheap + profitable (top 2 x top 2),0.6813646799705317
+1124,1979-08-31,value trap: cheap + unprofitable,-0.08904635192170252
+1125,1979-08-31,cheap (any profitability),0.16251618519291
+1126,1979-08-31,profitable (any price),0.13551054620068048
+1127,1979-08-31,junk growth: expensive + unprofitable,-0.4943570463240392
+1128,1979-09-30,cheap + most profitable (corner),1.3883694181606732
+1129,1979-09-30,cheap + profitable (top 2 x top 2),0.6429233713039677
+1130,1979-09-30,value trap: cheap + unprofitable,-0.10931614065292539
+1131,1979-09-30,cheap (any profitability),0.13132014040975104
+1132,1979-09-30,profitable (any price),0.14063162981535116
+1133,1979-09-30,junk growth: expensive + unprofitable,-0.49245595202760506
+1134,1979-10-31,cheap + most profitable (corner),1.2850922500535846
+1135,1979-10-31,cheap + profitable (top 2 x top 2),0.5826741824344557
+1136,1979-10-31,value trap: cheap + unprofitable,-0.13454202761962675
+1137,1979-10-31,cheap (any profitability),0.09534144725390559
+1138,1979-10-31,profitable (any price),0.13030975565419367
+1139,1979-10-31,junk growth: expensive + unprofitable,-0.4844135909480608
+1140,1979-11-30,cheap + most profitable (corner),1.0668884763320947
+1141,1979-11-30,cheap + profitable (top 2 x top 2),0.49856785479263155
+1142,1979-11-30,value trap: cheap + unprofitable,-0.15842830960435705
+1143,1979-11-30,cheap (any profitability),0.05784737196909262
+1144,1979-11-30,profitable (any price),0.12194658246423984
+1145,1979-11-30,junk growth: expensive + unprofitable,-0.4845202638954219
+1146,1979-12-31,cheap + most profitable (corner),1.0111054485552993
+1147,1979-12-31,cheap + profitable (top 2 x top 2),0.4366265039902797
+1148,1979-12-31,value trap: cheap + unprofitable,-0.18724787423388733
+1149,1979-12-31,cheap (any profitability),0.016887164337199723
+1150,1979-12-31,profitable (any price),0.10988010247504532
+1151,1979-12-31,junk growth: expensive + unprofitable,-0.46597620198832024
+1152,1980-01-31,cheap + most profitable (corner),0.8734211154360967
+1153,1980-01-31,cheap + profitable (top 2 x top 2),0.38399434089973683
+1154,1980-01-31,value trap: cheap + unprofitable,-0.22384212788045077
+1155,1980-01-31,cheap (any profitability),-0.037082213133946995
+1156,1980-01-31,profitable (any price),0.07600224242458897
+1157,1980-01-31,junk growth: expensive + unprofitable,-0.4149591665623611
+1158,1980-02-29,cheap + most profitable (corner),0.8303887967606609
+1159,1980-02-29,cheap + profitable (top 2 x top 2),0.380557058194664
+1160,1980-02-29,value trap: cheap + unprofitable,-0.21846267029701572
+1161,1980-02-29,cheap (any profitability),-0.03532908937337842
+1162,1980-02-29,profitable (any price),0.06946674151494747
+1163,1980-02-29,junk growth: expensive + unprofitable,-0.39043429456502443
+1164,1980-03-31,cheap + most profitable (corner),0.689381914464128
+1165,1980-03-31,cheap + profitable (top 2 x top 2),0.3041368515153411
+1166,1980-03-31,value trap: cheap + unprofitable,-0.22244568334523995
+1167,1980-03-31,cheap (any profitability),-0.05895098899436879
+1168,1980-03-31,profitable (any price),0.023337244412586777
+1169,1980-03-31,junk growth: expensive + unprofitable,-0.3358811055765001
+1170,1980-04-30,cheap + most profitable (corner),0.7510192710227097
+1171,1980-04-30,cheap + profitable (top 2 x top 2),0.3679778799752358
+1172,1980-04-30,value trap: cheap + unprofitable,-0.20087939466927796
+1173,1980-04-30,cheap (any profitability),-0.025435669443116593
+1174,1980-04-30,profitable (any price),0.066745716011259
+1175,1980-04-30,junk growth: expensive + unprofitable,-0.37631656874214015
+1176,1980-05-31,cheap + most profitable (corner),0.8487048591402577
+1177,1980-05-31,cheap + profitable (top 2 x top 2),0.5224036057432098
+1178,1980-05-31,value trap: cheap + unprofitable,-0.1786596217678047
+1179,1980-05-31,cheap (any profitability),0.020304028012398723
+1180,1980-05-31,profitable (any price),0.0991177624062749
+1181,1980-05-31,junk growth: expensive + unprofitable,-0.3998554199135914
+1182,1980-06-30,cheap + most profitable (corner),0.8628098494815488
+1183,1980-06-30,cheap + profitable (top 2 x top 2),0.5621681629962012
+1184,1980-06-30,value trap: cheap + unprofitable,-0.15532462840629635
+1185,1980-06-30,cheap (any profitability),0.05514207231544588
+1186,1980-06-30,profitable (any price),0.1159646476535574
+1187,1980-06-30,junk growth: expensive + unprofitable,-0.4170131900153268
+1188,1980-07-31,cheap + most profitable (corner),0.8103581728957712
+1189,1980-07-31,cheap + profitable (top 2 x top 2),0.4394557207633427
+1190,1980-07-31,value trap: cheap + unprofitable,-0.1957405497974315
+1191,1980-07-31,cheap (any profitability),-0.007593330787838637
+1192,1980-07-31,profitable (any price),0.10079999351217905
+1193,1980-07-31,junk growth: expensive + unprofitable,-0.3975432075029218
+1194,1980-08-31,cheap + most profitable (corner),0.6583824165081023
+1195,1980-08-31,cheap + profitable (top 2 x top 2),0.5189561559945317
+1196,1980-08-31,value trap: cheap + unprofitable,-0.1572838194406887
+1197,1980-08-31,cheap (any profitability),0.045762106733642005
+1198,1980-08-31,profitable (any price),0.10312372264312408
+1199,1980-08-31,junk growth: expensive + unprofitable,-0.41360106890607284
+1200,1980-09-30,cheap + most profitable (corner),0.7044887987667934
+1201,1980-09-30,cheap + profitable (top 2 x top 2),0.4843588379306998
+1202,1980-09-30,value trap: cheap + unprofitable,-0.16255987588330822
+1203,1980-09-30,cheap (any profitability),0.03683258820636337
+1204,1980-09-30,profitable (any price),0.09376285745189405
+1205,1980-09-30,junk growth: expensive + unprofitable,-0.3949054211448849
+1206,1980-10-31,cheap + most profitable (corner),0.8362230199916301
+1207,1980-10-31,cheap + profitable (top 2 x top 2),0.609510479452877
+1208,1980-10-31,value trap: cheap + unprofitable,-0.09699532650176368
+1209,1980-10-31,cheap (any profitability),0.13098292383182986
+1210,1980-10-31,profitable (any price),0.09830691208750264
+1211,1980-10-31,junk growth: expensive + unprofitable,-0.4077937889447252
+1212,1980-11-30,cheap + most profitable (corner),1.0125577851714636
+1213,1980-11-30,cheap + profitable (top 2 x top 2),0.6393864771656248
+1214,1980-11-30,value trap: cheap + unprofitable,-0.07249056590278946
+1215,1980-11-30,cheap (any profitability),0.16204326309765538
+1216,1980-11-30,profitable (any price),0.13551166761716615
+1217,1980-11-30,junk growth: expensive + unprofitable,-0.4481332895401664
+1218,1980-12-31,cheap + most profitable (corner),1.3294090182761042
+1219,1980-12-31,cheap + profitable (top 2 x top 2),0.8597350098907144
+1220,1980-12-31,value trap: cheap + unprofitable,0.026144438387241786
+1221,1980-12-31,cheap (any profitability),0.29440522462283747
+1222,1980-12-31,profitable (any price),0.18347404761091513
+1223,1980-12-31,junk growth: expensive + unprofitable,-0.513778249399768
+1224,1981-01-31,cheap + most profitable (corner),1.510004768765684
+1225,1981-01-31,cheap + profitable (top 2 x top 2),0.9591547915400169
+1226,1981-01-31,value trap: cheap + unprofitable,0.061559745952500355
+1227,1981-01-31,cheap (any profitability),0.33977566404535997
+1228,1981-01-31,profitable (any price),0.17372367719632442
+1229,1981-01-31,junk growth: expensive + unprofitable,-0.5035879466017875
+1230,1981-02-28,cheap + most profitable (corner),1.458479904411019
+1231,1981-02-28,cheap + profitable (top 2 x top 2),0.9269751511881421
+1232,1981-02-28,value trap: cheap + unprofitable,0.027072732137427336
+1233,1981-02-28,cheap (any profitability),0.2787904207870564
+1234,1981-02-28,profitable (any price),0.16546398683756403
+1235,1981-02-28,junk growth: expensive + unprofitable,-0.4826968157105703
+1236,1981-03-31,cheap + most profitable (corner),1.6864163249059372
+1237,1981-03-31,cheap + profitable (top 2 x top 2),1.1338189172726207
+1238,1981-03-31,value trap: cheap + unprofitable,0.14423497881885972
+1239,1981-03-31,cheap (any profitability),0.4329786655037571
+1240,1981-03-31,profitable (any price),0.20474512722509974
+1241,1981-03-31,junk growth: expensive + unprofitable,-0.5270289156196587
+1242,1981-04-30,cheap + most profitable (corner),2.034346260761081
+1243,1981-04-30,cheap + profitable (top 2 x top 2),1.27562966858429
+1244,1981-04-30,value trap: cheap + unprofitable,0.18999300335683622
+1245,1981-04-30,cheap (any profitability),0.500572975198808
+1246,1981-04-30,profitable (any price),0.20998548106318382
+1247,1981-04-30,junk growth: expensive + unprofitable,-0.5426242555551466
+1248,1981-05-31,cheap + most profitable (corner),1.979991480108108
+1249,1981-05-31,cheap + profitable (top 2 x top 2),1.234502543366046
+1250,1981-05-31,value trap: cheap + unprofitable,0.14783062110363288
+1251,1981-05-31,cheap (any profitability),0.44713806864329175
+1252,1981-05-31,profitable (any price),0.19814386867904532
+1253,1981-05-31,junk growth: expensive + unprofitable,-0.5235207339433872
+1254,1981-06-30,cheap + most profitable (corner),2.1241731455730837
+1255,1981-06-30,cheap + profitable (top 2 x top 2),1.2686211906350398
+1256,1981-06-30,value trap: cheap + unprofitable,0.18698612284343819
+1257,1981-06-30,cheap (any profitability),0.48788977670986133
+1258,1981-06-30,profitable (any price),0.20414301566797777
+1259,1981-06-30,junk growth: expensive + unprofitable,-0.5337271459864434
+1260,1981-07-31,cheap + most profitable (corner),2.118451199694377
+1261,1981-07-31,cheap + profitable (top 2 x top 2),1.3219259989565302
+1262,1981-07-31,value trap: cheap + unprofitable,0.20132067958636912
+1263,1981-07-31,cheap (any profitability),0.5043562857476254
+1264,1981-07-31,profitable (any price),0.20518611719088176
+1265,1981-07-31,junk growth: expensive + unprofitable,-0.5320645026069135
+1266,1981-08-31,cheap + most profitable (corner),2.058407208908908
+1267,1981-08-31,cheap + profitable (top 2 x top 2),1.3947100150224299
+1268,1981-08-31,value trap: cheap + unprofitable,0.20886304811015677
+1269,1981-08-31,cheap (any profitability),0.5264451005135928
+1270,1981-08-31,profitable (any price),0.23478402512915442
+1271,1981-08-31,junk growth: expensive + unprofitable,-0.5639202899055156
+1272,1981-09-30,cheap + most profitable (corner),2.3875928010278695
+1273,1981-09-30,cheap + profitable (top 2 x top 2),1.4033082779970898
+1274,1981-09-30,value trap: cheap + unprofitable,0.21077953258228588
+1275,1981-09-30,cheap (any profitability),0.5406832922499736
+1276,1981-09-30,profitable (any price),0.251918478746054
+1277,1981-09-30,junk growth: expensive + unprofitable,-0.581904292133834
+1278,1981-10-31,cheap + most profitable (corner),2.0064462331218165
+1279,1981-10-31,cheap + profitable (top 2 x top 2),1.278825951785135
+1280,1981-10-31,value trap: cheap + unprofitable,0.18992488949035535
+1281,1981-10-31,cheap (any profitability),0.4974043912048398
+1282,1981-10-31,profitable (any price),0.2852649468400328
+1283,1981-10-31,junk growth: expensive + unprofitable,-0.6197782098973683
+1284,1981-11-30,cheap + most profitable (corner),2.210047403723605
+1285,1981-11-30,cheap + profitable (top 2 x top 2),1.259229863955528
+1286,1981-11-30,value trap: cheap + unprofitable,0.1617115231533901
+1287,1981-11-30,cheap (any profitability),0.47212444706461554
+1288,1981-11-30,profitable (any price),0.26945737420347426
+1289,1981-11-30,junk growth: expensive + unprofitable,-0.5880512914682232
+1290,1981-12-31,cheap + most profitable (corner),2.3253463235379317
+1291,1981-12-31,cheap + profitable (top 2 x top 2),1.297150680765498
+1292,1981-12-31,value trap: cheap + unprofitable,0.19739714431713118
+1293,1981-12-31,cheap (any profitability),0.503252050605441
+1294,1981-12-31,profitable (any price),0.2588099037616378
+1295,1981-12-31,junk growth: expensive + unprofitable,-0.5793905885474512
+1296,1982-01-31,cheap + most profitable (corner),2.3661897157984826
+1297,1982-01-31,cheap + profitable (top 2 x top 2),1.1988760750517158
+1298,1982-01-31,value trap: cheap + unprofitable,0.2001245793647759
+1299,1982-01-31,cheap (any profitability),0.49474589137634606
+1300,1982-01-31,profitable (any price),0.2510434049503638
+1301,1982-01-31,junk growth: expensive + unprofitable,-0.5757695806885753
+1302,1982-02-28,cheap + most profitable (corner),2.682710563040952
+1303,1982-02-28,cheap + profitable (top 2 x top 2),1.227830367895077
+1304,1982-02-28,value trap: cheap + unprofitable,0.17966487450410673
+1305,1982-02-28,cheap (any profitability),0.49095338158880764
+1306,1982-02-28,profitable (any price),0.26305479820571476
+1307,1982-02-28,junk growth: expensive + unprofitable,-0.5916143080997304
+1308,1982-03-31,cheap + most profitable (corner),2.9777868956096234
+1309,1982-03-31,cheap + profitable (top 2 x top 2),1.1036476686157353
+1310,1982-03-31,value trap: cheap + unprofitable,0.1619310005791572
+1311,1982-03-31,cheap (any profitability),0.46236378089485375
+1312,1982-03-31,profitable (any price),0.28912660554903247
+1313,1982-03-31,junk growth: expensive + unprofitable,-0.6300892515296679
+1314,1982-04-30,cheap + most profitable (corner),3.3482437976150656
+1315,1982-04-30,cheap + profitable (top 2 x top 2),1.25386749545785
+1316,1982-04-30,value trap: cheap + unprofitable,0.16850739655970215
+1317,1982-04-30,cheap (any profitability),0.4964613403227298
+1318,1982-04-30,profitable (any price),0.2808464066139029
+1319,1982-04-30,junk growth: expensive + unprofitable,-0.6151932536615523
+1320,1982-05-31,cheap + most profitable (corner),3.6048065704982983
+1321,1982-05-31,cheap + profitable (top 2 x top 2),1.367514872961193
+1322,1982-05-31,value trap: cheap + unprofitable,0.17752279277777516
+1323,1982-05-31,cheap (any profitability),0.5410455008068908
+1324,1982-05-31,profitable (any price),0.27397908323276465
+1325,1982-05-31,junk growth: expensive + unprofitable,-0.6326083200169246
+1326,1982-06-30,cheap + most profitable (corner),3.792997070383975
+1327,1982-06-30,cheap + profitable (top 2 x top 2),1.3822081717182928
+1328,1982-06-30,value trap: cheap + unprofitable,0.1663238655899819
+1329,1982-06-30,cheap (any profitability),0.5393910321921003
+1330,1982-06-30,profitable (any price),0.28001293642256453
+1331,1982-06-30,junk growth: expensive + unprofitable,-0.6444103697849092
+1332,1982-07-31,cheap + most profitable (corner),3.5940511860570368
+1333,1982-07-31,cheap + profitable (top 2 x top 2),1.3960366275911946
+1334,1982-07-31,value trap: cheap + unprofitable,0.14986414924698388
+1335,1982-07-31,cheap (any profitability),0.5417423151265399
+1336,1982-07-31,profitable (any price),0.28530882597424334
+1337,1982-07-31,junk growth: expensive + unprofitable,-0.6575177027799484
+1338,1982-08-31,cheap + most profitable (corner),3.352332014160784
+1339,1982-08-31,cheap + profitable (top 2 x top 2),1.2975666886645834
+1340,1982-08-31,value trap: cheap + unprofitable,0.08693369381274607
+1341,1982-08-31,cheap (any profitability),0.46735557167407604
+1342,1982-08-31,profitable (any price),0.30045129429729434
+1343,1982-08-31,junk growth: expensive + unprofitable,-0.6629335886738891
+1344,1982-09-30,cheap + most profitable (corner),3.359721560157398
+1345,1982-09-30,cheap + profitable (top 2 x top 2),1.3795903515670345
+1346,1982-09-30,value trap: cheap + unprofitable,0.11602088673105859
+1347,1982-09-30,cheap (any profitability),0.5041450053134486
+1348,1982-09-30,profitable (any price),0.30259073173445605
+1349,1982-09-30,junk growth: expensive + unprofitable,-0.6698178374988045
+1350,1982-10-31,cheap + most profitable (corner),3.479992304069662
+1351,1982-10-31,cheap + profitable (top 2 x top 2),1.363541948116855
+1352,1982-10-31,value trap: cheap + unprofitable,0.13445311776016466
+1353,1982-10-31,cheap (any profitability),0.5259408803098202
+1354,1982-10-31,profitable (any price),0.3000138470044069
+1355,1982-10-31,junk growth: expensive + unprofitable,-0.6782421552180784
+1356,1982-11-30,cheap + most profitable (corner),3.095929261563203
+1357,1982-11-30,cheap + profitable (top 2 x top 2),1.1537585052416497
+1358,1982-11-30,value trap: cheap + unprofitable,0.12089471418223896
+1359,1982-11-30,cheap (any profitability),0.48621195128140404
+1360,1982-11-30,profitable (any price),0.28948538097373855
+1361,1982-11-30,junk growth: expensive + unprofitable,-0.6698217413972412
+1362,1982-12-31,cheap + most profitable (corner),3.5434575669851416
+1363,1982-12-31,cheap + profitable (top 2 x top 2),1.210484787336815
+1364,1982-12-31,value trap: cheap + unprofitable,0.137263713466518
+1365,1982-12-31,cheap (any profitability),0.50327215262351
+1366,1982-12-31,profitable (any price),0.25652056936525547
+1367,1982-12-31,junk growth: expensive + unprofitable,-0.6461666393249226
+1368,1983-01-31,cheap + most profitable (corner),3.498807297725109
+1369,1983-01-31,cheap + profitable (top 2 x top 2),1.2498129902885466
+1370,1983-01-31,value trap: cheap + unprofitable,0.1316282095574104
+1371,1983-01-31,cheap (any profitability),0.4952509654329944
+1372,1983-01-31,profitable (any price),0.2694018104447611
+1373,1983-01-31,junk growth: expensive + unprofitable,-0.6521551335111982
+1374,1983-02-28,cheap + most profitable (corner),3.1982902025679536
+1375,1983-02-28,cheap + profitable (top 2 x top 2),1.2308444671991703
+1376,1983-02-28,value trap: cheap + unprofitable,0.11232473049477343
+1377,1983-02-28,cheap (any profitability),0.4662504407688013
+1378,1983-02-28,profitable (any price),0.26598018194063955
+1379,1983-02-28,junk growth: expensive + unprofitable,-0.6372531222842686
+1380,1983-03-31,cheap + most profitable (corner),3.0085052476984613
+1381,1983-03-31,cheap + profitable (top 2 x top 2),1.236553906502838
+1382,1983-03-31,value trap: cheap + unprofitable,0.08535924440809262
+1383,1983-03-31,cheap (any profitability),0.4435906956972844
+1384,1983-03-31,profitable (any price),0.26679083135101034
+1385,1983-03-31,junk growth: expensive + unprofitable,-0.6376357473990761
+1386,1983-04-30,cheap + most profitable (corner),3.0827157147178985
+1387,1983-04-30,cheap + profitable (top 2 x top 2),1.209246145853097
+1388,1983-04-30,value trap: cheap + unprofitable,0.06077559378057673
+1389,1983-04-30,cheap (any profitability),0.42169295332324674
+1390,1983-04-30,profitable (any price),0.27355705929815355
+1391,1983-04-30,junk growth: expensive + unprofitable,-0.638803812697877
+1392,1983-05-31,cheap + most profitable (corner),3.0730484030157497
+1393,1983-05-31,cheap + profitable (top 2 x top 2),1.1459982987189856
+1394,1983-05-31,value trap: cheap + unprofitable,0.09164484496176684
+1395,1983-05-31,cheap (any profitability),0.4403872433924043
+1396,1983-05-31,profitable (any price),0.2640213309349926
+1397,1983-05-31,junk growth: expensive + unprofitable,-0.6267297394483287
+1398,1983-06-30,cheap + most profitable (corner),3.45020001017249
+1399,1983-06-30,cheap + profitable (top 2 x top 2),1.2367804560274602
+1400,1983-06-30,value trap: cheap + unprofitable,0.11420747161140343
+1401,1983-06-30,cheap (any profitability),0.47463050219048264
+1402,1983-06-30,profitable (any price),0.24984622545336488
+1403,1983-06-30,junk growth: expensive + unprofitable,-0.6112534864587776
+1404,1983-07-31,cheap + most profitable (corner),3.6418602619803266
+1405,1983-07-31,cheap + profitable (top 2 x top 2),1.2685678668624942
+1406,1983-07-31,value trap: cheap + unprofitable,0.11440034818316325
+1407,1983-07-31,cheap (any profitability),0.4760794229046006
+1408,1983-07-31,profitable (any price),0.2475084803527956
+1409,1983-07-31,junk growth: expensive + unprofitable,-0.6122786561969077
+1410,1983-08-31,cheap + most profitable (corner),3.4782813824501027
+1411,1983-08-31,cheap + profitable (top 2 x top 2),1.2577168728502226
+1412,1983-08-31,value trap: cheap + unprofitable,0.11501239150966258
+1413,1983-08-31,cheap (any profitability),0.4726574438174247
+1414,1983-08-31,profitable (any price),0.22669793460859933
+1415,1983-08-31,junk growth: expensive + unprofitable,-0.5883829341799158
+1416,1983-09-30,cheap + most profitable (corner),3.828247015771458
+1417,1983-09-30,cheap + profitable (top 2 x top 2),1.2399393889067314
+1418,1983-09-30,value trap: cheap + unprofitable,0.13812716818189097
+1419,1983-09-30,cheap (any profitability),0.4896446354088011
+1420,1983-09-30,profitable (any price),0.21524470749459934
+1421,1983-09-30,junk growth: expensive + unprofitable,-0.5845188585763333
+1422,1983-10-31,cheap + most profitable (corner),4.010749507378826
+1423,1983-10-31,cheap + profitable (top 2 x top 2),1.3080233966789567
+1424,1983-10-31,value trap: cheap + unprofitable,0.1191568264961802
+1425,1983-10-31,cheap (any profitability),0.4850797836350176
+1426,1983-10-31,profitable (any price),0.21946897092860218
+1427,1983-10-31,junk growth: expensive + unprofitable,-0.5907754944652643
+1428,1983-11-30,cheap + most profitable (corner),3.980883338103859
+1429,1983-11-30,cheap + profitable (top 2 x top 2),1.363498099647138
+1430,1983-11-30,value trap: cheap + unprofitable,0.13341431957124295
+1431,1983-11-30,cheap (any profitability),0.5049612164952502
+1432,1983-11-30,profitable (any price),0.209220683186764
+1433,1983-11-30,junk growth: expensive + unprofitable,-0.5800183161885631
+1434,1983-12-31,cheap + most profitable (corner),4.0971526016666004
+1435,1983-12-31,cheap + profitable (top 2 x top 2),1.383897613116961
+1436,1983-12-31,value trap: cheap + unprofitable,0.14443712697005595
+1437,1983-12-31,cheap (any profitability),0.5218625612079233
+1438,1983-12-31,profitable (any price),0.20834113790505993
+1439,1983-12-31,junk growth: expensive + unprofitable,-0.5807291312593912
+1440,1984-01-31,cheap + most profitable (corner),3.9286839204916193
+1441,1984-01-31,cheap + profitable (top 2 x top 2),1.2774202821705472
+1442,1984-01-31,value trap: cheap + unprofitable,0.16022600518024976
+1443,1984-01-31,cheap (any profitability),0.5087130306492222
+1444,1984-01-31,profitable (any price),0.1967440468588204
+1445,1984-01-31,junk growth: expensive + unprofitable,-0.5591887520012253
+1446,1984-02-29,cheap + most profitable (corner),4.028888661802171
+1447,1984-02-29,cheap + profitable (top 2 x top 2),1.263850910528407
+1448,1984-02-29,value trap: cheap + unprofitable,0.1842673987804926
+1449,1984-02-29,cheap (any profitability),0.5196751543508553
+1450,1984-02-29,profitable (any price),0.188389662997011
+1451,1984-02-29,junk growth: expensive + unprofitable,-0.5470319763371247
+1452,1984-03-31,cheap + most profitable (corner),4.028986343420826
+1453,1984-03-31,cheap + profitable (top 2 x top 2),1.2957009738241099
+1454,1984-03-31,value trap: cheap + unprofitable,0.1735751261239329
+1455,1984-03-31,cheap (any profitability),0.5194302096559997
+1456,1984-03-31,profitable (any price),0.19278668449270375
+1457,1984-03-31,junk growth: expensive + unprofitable,-0.5532819400571665
+1458,1984-04-30,cheap + most profitable (corner),4.310510327105568
+1459,1984-04-30,cheap + profitable (top 2 x top 2),1.3734106742196732
+1460,1984-04-30,value trap: cheap + unprofitable,0.17495900899595718
+1461,1984-04-30,cheap (any profitability),0.5340160159941754
+1462,1984-04-30,profitable (any price),0.19571508484555378
+1463,1984-04-30,junk growth: expensive + unprofitable,-0.5547390461679453
+1464,1984-05-31,cheap + most profitable (corner),4.0411637739015385
+1465,1984-05-31,cheap + profitable (top 2 x top 2),1.2896455232593205
+1466,1984-05-31,value trap: cheap + unprofitable,0.1591754072584921
+1467,1984-05-31,cheap (any profitability),0.5064590599126966
+1468,1984-05-31,profitable (any price),0.21062365363413083
+1469,1984-05-31,junk growth: expensive + unprofitable,-0.5611722623341702
+1470,1984-06-30,cheap + most profitable (corner),4.215215061643727
+1471,1984-06-30,cheap + profitable (top 2 x top 2),1.2584157725878793
+1472,1984-06-30,value trap: cheap + unprofitable,0.1619933963879734
+1473,1984-06-30,cheap (any profitability),0.5042195269530168
+1474,1984-06-30,profitable (any price),0.20181083152357204
+1475,1984-06-30,junk growth: expensive + unprofitable,-0.5511528866325682
+1476,1984-07-31,cheap + most profitable (corner),4.501421294627425
+1477,1984-07-31,cheap + profitable (top 2 x top 2),1.3348948005076648
+1478,1984-07-31,value trap: cheap + unprofitable,0.1747847247155334
+1479,1984-07-31,cheap (any profitability),0.5283227664410723
+1480,1984-07-31,profitable (any price),0.19894103735689117
+1481,1984-07-31,junk growth: expensive + unprofitable,-0.5527919362971183
+1482,1984-08-31,cheap + most profitable (corner),4.521506102919869
+1483,1984-08-31,cheap + profitable (top 2 x top 2),1.4118663252224288
+1484,1984-08-31,value trap: cheap + unprofitable,0.16937035599374517
+1485,1984-08-31,cheap (any profitability),0.5373525880709311
+1486,1984-08-31,profitable (any price),0.21171709480392598
+1487,1984-08-31,junk growth: expensive + unprofitable,-0.5723064514324547
+1488,1984-09-30,cheap + most profitable (corner),4.33628027018217
+1489,1984-09-30,cheap + profitable (top 2 x top 2),1.4178882636542753
+1490,1984-09-30,value trap: cheap + unprofitable,0.16344960484788706
+1491,1984-09-30,cheap (any profitability),0.5370966394152257
+1492,1984-09-30,profitable (any price),0.21409502315317064
+1493,1984-09-30,junk growth: expensive + unprofitable,-0.5797237502198791
+1494,1984-10-31,cheap + most profitable (corner),4.298009259833565
+1495,1984-10-31,cheap + profitable (top 2 x top 2),1.4580212083530797
+1496,1984-10-31,value trap: cheap + unprofitable,0.1650919629643257
+1497,1984-10-31,cheap (any profitability),0.5466999227109963
+1498,1984-10-31,profitable (any price),0.20956925849217156
+1499,1984-10-31,junk growth: expensive + unprofitable,-0.5692142779232181
+1500,1984-11-30,cheap + most profitable (corner),4.209799520243324
+1501,1984-11-30,cheap + profitable (top 2 x top 2),1.4318528862004434
+1502,1984-11-30,value trap: cheap + unprofitable,0.16297796107393192
+1503,1984-11-30,cheap (any profitability),0.540393192261714
+1504,1984-11-30,profitable (any price),0.20572154190754577
+1505,1984-11-30,junk growth: expensive + unprofitable,-0.5698864587459278
+1506,1984-12-31,cheap + most profitable (corner),4.246474776908846
+1507,1984-12-31,cheap + profitable (top 2 x top 2),1.4288122723939383
+1508,1984-12-31,value trap: cheap + unprofitable,0.1721667235619877
+1509,1984-12-31,cheap (any profitability),0.5498698906185586
+1510,1984-12-31,profitable (any price),0.1992678023408141
+1511,1984-12-31,junk growth: expensive + unprofitable,-0.5647793425968495
+1512,1985-01-31,cheap + most profitable (corner),4.234396875473707
+1513,1985-01-31,cheap + profitable (top 2 x top 2),1.352520512445461
+1514,1985-01-31,value trap: cheap + unprofitable,0.19583733491858957
+1515,1985-01-31,cheap (any profitability),0.5463432742642327
+1516,1985-01-31,profitable (any price),0.1890505271684575
+1517,1985-01-31,junk growth: expensive + unprofitable,-0.5465399595596985
+1518,1985-02-28,cheap + most profitable (corner),4.089797293436256
+1519,1985-02-28,cheap + profitable (top 2 x top 2),1.3655555730712154
+1520,1985-02-28,value trap: cheap + unprofitable,0.20046061657610537
+1521,1985-02-28,cheap (any profitability),0.5590822065261554
+1522,1985-02-28,profitable (any price),0.19524820258832087
+1523,1985-02-28,junk growth: expensive + unprofitable,-0.5613276364512281
+1524,1985-03-31,cheap + most profitable (corner),3.9754760390899193
+1525,1985-03-31,cheap + profitable (top 2 x top 2),1.4055390946906687
+1526,1985-03-31,value trap: cheap + unprofitable,0.18888205387993584
+1527,1985-03-31,cheap (any profitability),0.5598619353564787
+1528,1985-03-31,profitable (any price),0.2008997374989523
+1529,1985-03-31,junk growth: expensive + unprofitable,-0.5632797720494345
+1530,1985-04-30,cheap + most profitable (corner),3.6432726897518437
+1531,1985-04-30,cheap + profitable (top 2 x top 2),1.4002618026051503
+1532,1985-04-30,value trap: cheap + unprofitable,0.20328171553877628
+1533,1985-04-30,cheap (any profitability),0.5729282259519815
+1534,1985-04-30,profitable (any price),0.20423106153135184
+1535,1985-04-30,junk growth: expensive + unprofitable,-0.5733245460609008
+1536,1985-05-31,cheap + most profitable (corner),3.617366030583309
+1537,1985-05-31,cheap + profitable (top 2 x top 2),1.426898404782193
+1538,1985-05-31,value trap: cheap + unprofitable,0.18910522503663207
+1539,1985-05-31,cheap (any profitability),0.5662145566071668
+1540,1985-05-31,profitable (any price),0.20706439634345353
+1541,1985-05-31,junk growth: expensive + unprofitable,-0.5736456029849554
+1542,1985-06-30,cheap + most profitable (corner),3.819960214067949
+1543,1985-06-30,cheap + profitable (top 2 x top 2),1.425072085041256
+1544,1985-06-30,value trap: cheap + unprofitable,0.19199090388325968
+1545,1985-06-30,cheap (any profitability),0.5682713363085268
+1546,1985-06-30,profitable (any price),0.19792731935349273
+1547,1985-06-30,junk growth: expensive + unprofitable,-0.5561868308765894
+1548,1985-07-31,cheap + most profitable (corner),4.004916467335973
+1549,1985-07-31,cheap + profitable (top 2 x top 2),1.5235914811745799
+1550,1985-07-31,value trap: cheap + unprofitable,0.19984689975548342
+1551,1985-07-31,cheap (any profitability),0.600170141222157
+1552,1985-07-31,profitable (any price),0.19617159219697378
+1553,1985-07-31,junk growth: expensive + unprofitable,-0.5597297831911867
+1554,1985-08-31,cheap + most profitable (corner),4.214610382462791
+1555,1985-08-31,cheap + profitable (top 2 x top 2),1.5382405019994834
+1556,1985-08-31,value trap: cheap + unprofitable,0.19444141559650618
+1557,1985-08-31,cheap (any profitability),0.6008625033544455
+1558,1985-08-31,profitable (any price),0.18966490553545934
+1559,1985-08-31,junk growth: expensive + unprofitable,-0.5488440128971941
+1560,1985-09-30,cheap + most profitable (corner),4.031439946563432
+1561,1985-09-30,cheap + profitable (top 2 x top 2),1.6095552753926703
+1562,1985-09-30,value trap: cheap + unprofitable,0.19894568727829154
+1563,1985-09-30,cheap (any profitability),0.613752068985131
+1564,1985-09-30,profitable (any price),0.1839311769591141
+1565,1985-09-30,junk growth: expensive + unprofitable,-0.5424988546739145
+1566,1985-10-31,cheap + most profitable (corner),3.8193658367208707
+1567,1985-10-31,cheap + profitable (top 2 x top 2),1.637995308398498
+1568,1985-10-31,value trap: cheap + unprofitable,0.2028417593124643
+1569,1985-10-31,cheap (any profitability),0.6241483531104826
+1570,1985-10-31,profitable (any price),0.18276186035542308
+1571,1985-10-31,junk growth: expensive + unprofitable,-0.5452755796911041
+1572,1985-11-30,cheap + most profitable (corner),3.4955448646147937
+1573,1985-11-30,cheap + profitable (top 2 x top 2),1.5519930061172609
+1574,1985-11-30,value trap: cheap + unprofitable,0.2183271132494622
+1575,1985-11-30,cheap (any profitability),0.6237084551471492
+1576,1985-11-30,profitable (any price),0.17936015338188804
+1577,1985-11-30,junk growth: expensive + unprofitable,-0.5410706325517967
+1578,1985-12-31,cheap + most profitable (corner),2.991046357353156
+1579,1985-12-31,cheap + profitable (top 2 x top 2),1.5048130299516727
+1580,1985-12-31,value trap: cheap + unprofitable,0.2222211114574275
+1581,1985-12-31,cheap (any profitability),0.6181929807666238
+1582,1985-12-31,profitable (any price),0.17047478757676227
+1583,1985-12-31,junk growth: expensive + unprofitable,-0.5304611290218826
+1584,1986-01-31,cheap + most profitable (corner),2.708003676370931
+1585,1986-01-31,cheap + profitable (top 2 x top 2),1.4592911352120361
+1586,1986-01-31,value trap: cheap + unprofitable,0.22684304129139288
+1587,1986-01-31,cheap (any profitability),0.6067537201270319
+1588,1986-01-31,profitable (any price),0.16018230574966297
+1589,1986-01-31,junk growth: expensive + unprofitable,-0.5218310465110072
+1590,1986-02-28,cheap + most profitable (corner),3.2983867098687236
+1591,1986-02-28,cheap + profitable (top 2 x top 2),1.5122949559299714
+1592,1986-02-28,value trap: cheap + unprofitable,0.22710759171305073
+1593,1986-02-28,cheap (any profitability),0.6153390453324488
+1594,1986-02-28,profitable (any price),0.15545010152741234
+1595,1986-02-28,junk growth: expensive + unprofitable,-0.5187723384417768
+1596,1986-03-31,cheap + most profitable (corner),2.8758866492322146
+1597,1986-03-31,cheap + profitable (top 2 x top 2),1.437173514754992
+1598,1986-03-31,value trap: cheap + unprofitable,0.23137525385405588
+1599,1986-03-31,cheap (any profitability),0.6120512236674562
+1600,1986-03-31,profitable (any price),0.15357262677574868
+1601,1986-03-31,junk growth: expensive + unprofitable,-0.520640646451285
+1602,1986-04-30,cheap + most profitable (corner),2.976450356973363
+1603,1986-04-30,cheap + profitable (top 2 x top 2),1.4506800584451698
+1604,1986-04-30,value trap: cheap + unprofitable,0.22736555402500813
+1605,1986-04-30,cheap (any profitability),0.6079519620601828
+1606,1986-04-30,profitable (any price),0.14399081403280012
+1607,1986-04-30,junk growth: expensive + unprofitable,-0.5158182983093818
+1608,1986-05-31,cheap + most profitable (corner),3.306272020503367
+1609,1986-05-31,cheap + profitable (top 2 x top 2),1.5414554962719982
+1610,1986-05-31,value trap: cheap + unprofitable,0.24864778634402973
+1611,1986-05-31,cheap (any profitability),0.6424385605554408
+1612,1986-05-31,profitable (any price),0.14437165037467348
+1613,1986-05-31,junk growth: expensive + unprofitable,-0.5298375396469379
+1614,1986-06-30,cheap + most profitable (corner),3.651964021793728
+1615,1986-06-30,cheap + profitable (top 2 x top 2),1.5466792337669624
+1616,1986-06-30,value trap: cheap + unprofitable,0.27006828813145534
+1617,1986-06-30,cheap (any profitability),0.6543024110649296
+1618,1986-06-30,profitable (any price),0.1480277575372555
+1619,1986-06-30,junk growth: expensive + unprofitable,-0.5370494683616138
+1620,1986-07-31,cheap + most profitable (corner),3.9226973282524282
+1621,1986-07-31,cheap + profitable (top 2 x top 2),1.5933285835237498
+1622,1986-07-31,value trap: cheap + unprofitable,0.2661086489741331
+1623,1986-07-31,cheap (any profitability),0.6575083939285775
+1624,1986-07-31,profitable (any price),0.15674146137314904
+1625,1986-07-31,junk growth: expensive + unprofitable,-0.5452894478015503
+1626,1986-08-31,cheap + most profitable (corner),3.784751395177148
+1627,1986-08-31,cheap + profitable (top 2 x top 2),1.6331569958149923
+1628,1986-08-31,value trap: cheap + unprofitable,0.2613469088372673
+1629,1986-08-31,cheap (any profitability),0.6634830525101862
+1630,1986-08-31,profitable (any price),0.16516073397130082
+1631,1986-08-31,junk growth: expensive + unprofitable,-0.5734624257098471
+1632,1986-09-30,cheap + most profitable (corner),4.33546023701935
+1633,1986-09-30,cheap + profitable (top 2 x top 2),1.5271398770003892
+1634,1986-09-30,value trap: cheap + unprofitable,0.24671855429293776
+1635,1986-09-30,cheap (any profitability),0.6312057045885606
+1636,1986-09-30,profitable (any price),0.1610206633851199
+1637,1986-09-30,junk growth: expensive + unprofitable,-0.5620783005143333
+1638,1986-10-31,cheap + most profitable (corner),4.081086152960927
+1639,1986-10-31,cheap + profitable (top 2 x top 2),1.490970251782009
+1640,1986-10-31,value trap: cheap + unprofitable,0.2498506991141871
+1641,1986-10-31,cheap (any profitability),0.6289869229363301
+1642,1986-10-31,profitable (any price),0.15947397614411862
+1643,1986-10-31,junk growth: expensive + unprofitable,-0.5693595290304392
+1644,1986-11-30,cheap + most profitable (corner),3.969648059778608
+1645,1986-11-30,cheap + profitable (top 2 x top 2),1.4869854514129597
+1646,1986-11-30,value trap: cheap + unprofitable,0.2657202772651053
+1647,1986-11-30,cheap (any profitability),0.6368450436918047
+1648,1986-11-30,profitable (any price),0.1557253413866131
+1649,1986-11-30,junk growth: expensive + unprofitable,-0.5687505875472955
+1650,1986-12-31,cheap + most profitable (corner),3.861636163019467
+1651,1986-12-31,cheap + profitable (top 2 x top 2),1.5192188118095347
+1652,1986-12-31,value trap: cheap + unprofitable,0.2627738674861917
+1653,1986-12-31,cheap (any profitability),0.6352100387708286
+1654,1986-12-31,profitable (any price),0.15618914777367032
+1655,1986-12-31,junk growth: expensive + unprofitable,-0.5670256471693282
+1656,1987-01-31,cheap + most profitable (corner),3.490254250011109
+1657,1987-01-31,cheap + profitable (top 2 x top 2),1.4622063800323022
+1658,1987-01-31,value trap: cheap + unprofitable,0.2846750983773676
+1659,1987-01-31,cheap (any profitability),0.6446828108790317
+1660,1987-01-31,profitable (any price),0.13924621730731657
+1661,1987-01-31,junk growth: expensive + unprofitable,-0.5631929610593642
+1662,1987-02-28,cheap + most profitable (corner),3.610478188690421
+1663,1987-02-28,cheap + profitable (top 2 x top 2),1.3827865309018499
+1664,1987-02-28,value trap: cheap + unprofitable,0.28239055072346564
+1665,1987-02-28,cheap (any profitability),0.6302554375725631
+1666,1987-02-28,profitable (any price),0.13591502947548384
+1667,1987-02-28,junk growth: expensive + unprofitable,-0.5499131252308262
+1668,1987-03-31,cheap + most profitable (corner),3.5894315865497797
+1669,1987-03-31,cheap + profitable (top 2 x top 2),1.3919971486426794
+1670,1987-03-31,value trap: cheap + unprofitable,0.2891311147362772
+1671,1987-03-31,cheap (any profitability),0.6458905415038332
+1672,1987-03-31,profitable (any price),0.13424916228474948
+1673,1987-03-31,junk growth: expensive + unprofitable,-0.5415205566489715
+1674,1987-04-30,cheap + most profitable (corner),3.497444255190244
+1675,1987-04-30,cheap + profitable (top 2 x top 2),1.3728779306676642
+1676,1987-04-30,value trap: cheap + unprofitable,0.2910772451756709
+1677,1987-04-30,cheap (any profitability),0.6390431682912909
+1678,1987-04-30,profitable (any price),0.1325109421227484
+1679,1987-04-30,junk growth: expensive + unprofitable,-0.5399467491302159
+1680,1987-05-31,cheap + most profitable (corner),3.3892495415883204
+1681,1987-05-31,cheap + profitable (top 2 x top 2),1.3361804481975939
+1682,1987-05-31,value trap: cheap + unprofitable,0.2758110004145353
+1683,1987-05-31,cheap (any profitability),0.6209838592875683
+1684,1987-05-31,profitable (any price),0.13891614556568066
+1685,1987-05-31,junk growth: expensive + unprofitable,-0.5393927187478647
+1686,1987-06-30,cheap + most profitable (corner),3.3645452470943313
+1687,1987-06-30,cheap + profitable (top 2 x top 2),1.3620966656095748
+1688,1987-06-30,value trap: cheap + unprofitable,0.2725476370931088
+1689,1987-06-30,cheap (any profitability),0.6125389014759937
+1690,1987-06-30,profitable (any price),0.1407418915616605
+1691,1987-06-30,junk growth: expensive + unprofitable,-0.5451005075562607
+1692,1987-07-31,cheap + most profitable (corner),3.849222325922785
+1693,1987-07-31,cheap + profitable (top 2 x top 2),1.3408607350074275
+1694,1987-07-31,value trap: cheap + unprofitable,0.26911779847062567
+1695,1987-07-31,cheap (any profitability),0.5965048786594218
+1696,1987-07-31,profitable (any price),0.14002415575920923
+1697,1987-07-31,junk growth: expensive + unprofitable,-0.5417310314183027
+1698,1987-08-31,cheap + most profitable (corner),3.803298850657235
+1699,1987-08-31,cheap + profitable (top 2 x top 2),1.2870502507033432
+1700,1987-08-31,value trap: cheap + unprofitable,0.23869511411379474
+1701,1987-08-31,cheap (any profitability),0.5548239024502399
+1702,1987-08-31,profitable (any price),0.14389425193521999
+1703,1987-08-31,junk growth: expensive + unprofitable,-0.5322070032955217
+1704,1987-09-30,cheap + most profitable (corner),3.4560144785580285
+1705,1987-09-30,cheap + profitable (top 2 x top 2),1.2702038493179582
+1706,1987-09-30,value trap: cheap + unprofitable,0.23630287625608326
+1707,1987-09-30,cheap (any profitability),0.5418109818152463
+1708,1987-09-30,profitable (any price),0.1403263475552139
+1709,1987-09-30,junk growth: expensive + unprofitable,-0.5240457185061207
+1710,1987-10-31,cheap + most profitable (corner),3.5667973498681054
+1711,1987-10-31,cheap + profitable (top 2 x top 2),1.2666811899464405
+1712,1987-10-31,value trap: cheap + unprofitable,0.21850156992242553
+1713,1987-10-31,cheap (any profitability),0.5229980629778519
+1714,1987-10-31,profitable (any price),0.14280735136071576
+1715,1987-10-31,junk growth: expensive + unprofitable,-0.5152415156257584
+1716,1987-11-30,cheap + most profitable (corner),3.759149683130623
+1717,1987-11-30,cheap + profitable (top 2 x top 2),1.2052204433955578
+1718,1987-11-30,value trap: cheap + unprofitable,0.19063752702227177
+1719,1987-11-30,cheap (any profitability),0.4885522367867152
+1720,1987-11-30,profitable (any price),0.14549537656437117
+1721,1987-11-30,junk growth: expensive + unprofitable,-0.5067778005619283
+1722,1987-12-31,cheap + most profitable (corner),3.627003678979121
+1723,1987-12-31,cheap + profitable (top 2 x top 2),1.1575459962397523
+1724,1987-12-31,value trap: cheap + unprofitable,0.17214361578011061
+1725,1987-12-31,cheap (any profitability),0.4675319407883336
+1726,1987-12-31,profitable (any price),0.15748660738584275
+1727,1987-12-31,junk growth: expensive + unprofitable,-0.5204494618195645
+1728,1988-01-31,cheap + most profitable (corner),3.6676349888514457
+1729,1988-01-31,cheap + profitable (top 2 x top 2),1.190444679684889
+1730,1988-01-31,value trap: cheap + unprofitable,0.16845706901377655
+1731,1988-01-31,cheap (any profitability),0.4563069773957138
+1732,1988-01-31,profitable (any price),0.15761326639475715
+1733,1988-01-31,junk growth: expensive + unprofitable,-0.5122962166159801
+1734,1988-02-29,cheap + most profitable (corner),3.6717087549656435
+1735,1988-02-29,cheap + profitable (top 2 x top 2),1.2205607603513804
+1736,1988-02-29,value trap: cheap + unprofitable,0.1759212372949186
+1737,1988-02-29,cheap (any profitability),0.4793648432366544
+1738,1988-02-29,profitable (any price),0.1639163648495876
+1739,1988-02-29,junk growth: expensive + unprofitable,-0.526946587660075
+1740,1988-03-31,cheap + most profitable (corner),4.572979716963891
+1741,1988-03-31,cheap + profitable (top 2 x top 2),1.3060335287236318
+1742,1988-03-31,value trap: cheap + unprofitable,0.14039114655119
+1743,1988-03-31,cheap (any profitability),0.45340337352679616
+1744,1988-03-31,profitable (any price),0.17554559116156376
+1745,1988-03-31,junk growth: expensive + unprofitable,-0.5124715174216752
+1746,1988-04-30,cheap + most profitable (corner),4.680233254752445
+1747,1988-04-30,cheap + profitable (top 2 x top 2),1.2554888174418353
+1748,1988-04-30,value trap: cheap + unprofitable,0.13699583643087565
+1749,1988-04-30,cheap (any profitability),0.443692624613528
+1750,1988-04-30,profitable (any price),0.17859233025153753
+1751,1988-04-30,junk growth: expensive + unprofitable,-0.5167094193755113
+1752,1988-05-31,cheap + most profitable (corner),4.9249801682355265
+1753,1988-05-31,cheap + profitable (top 2 x top 2),1.2878650970575665
+1754,1988-05-31,value trap: cheap + unprofitable,0.12018335007313441
+1755,1988-05-31,cheap (any profitability),0.4394514256046558
+1756,1988-05-31,profitable (any price),0.17830798859210462
+1757,1988-05-31,junk growth: expensive + unprofitable,-0.5120775660706788
+1758,1988-06-30,cheap + most profitable (corner),5.0399627842168195
+1759,1988-06-30,cheap + profitable (top 2 x top 2),1.2842439701009996
+1760,1988-06-30,value trap: cheap + unprofitable,0.10220351196124677
+1761,1988-06-30,cheap (any profitability),0.4205518254187446
+1762,1988-06-30,profitable (any price),0.18072697731950949
+1763,1988-06-30,junk growth: expensive + unprofitable,-0.5021185825499352
+1764,1988-07-31,cheap + most profitable (corner),6.409291804223648
+1765,1988-07-31,cheap + profitable (top 2 x top 2),1.3179638548765222
+1766,1988-07-31,value trap: cheap + unprofitable,0.045447949483913064
+1767,1988-07-31,cheap (any profitability),0.371445412924335
+1768,1988-07-31,profitable (any price),0.20405776318901303
+1769,1988-07-31,junk growth: expensive + unprofitable,-0.5036016632398703
+1770,1988-08-31,cheap + most profitable (corner),5.871281835867391
+1771,1988-08-31,cheap + profitable (top 2 x top 2),1.301974135555057
+1772,1988-08-31,value trap: cheap + unprofitable,0.06692600696674122
+1773,1988-08-31,cheap (any profitability),0.4046056835701066
+1774,1988-08-31,profitable (any price),0.18743665738565563
+1775,1988-08-31,junk growth: expensive + unprofitable,-0.4979731535664581
+1776,1988-09-30,cheap + most profitable (corner),6.15294552809344
+1777,1988-09-30,cheap + profitable (top 2 x top 2),1.2677797363213208
+1778,1988-09-30,value trap: cheap + unprofitable,0.06871632819724516
+1779,1988-09-30,cheap (any profitability),0.39890245489097453
+1780,1988-09-30,profitable (any price),0.19008318423691573
+1781,1988-09-30,junk growth: expensive + unprofitable,-0.5184174796528387
+1782,1988-10-31,cheap + most profitable (corner),6.151151619193914
+1783,1988-10-31,cheap + profitable (top 2 x top 2),1.3910821787588117
+1784,1988-10-31,value trap: cheap + unprofitable,0.023954258187247834
+1785,1988-10-31,cheap (any profitability),0.4245938480374414
+1786,1988-10-31,profitable (any price),0.19520143770205278
+1787,1988-10-31,junk growth: expensive + unprofitable,-0.5510585481235625
+1788,1988-11-30,cheap + most profitable (corner),4.472574011046744
+1789,1988-11-30,cheap + profitable (top 2 x top 2),1.213977688826839
+1790,1988-11-30,value trap: cheap + unprofitable,-0.05285172479100686
+1791,1988-11-30,cheap (any profitability),0.3323624706236583
+1792,1988-11-30,profitable (any price),0.2179685386110688
+1793,1988-11-30,junk growth: expensive + unprofitable,-0.5766015964464632
+1794,1988-12-31,cheap + most profitable (corner),4.4546717741986805
+1795,1988-12-31,cheap + profitable (top 2 x top 2),1.0991195489723102
+1796,1988-12-31,value trap: cheap + unprofitable,-0.12204230233698066
+1797,1988-12-31,cheap (any profitability),0.24333209871836425
+1798,1988-12-31,profitable (any price),0.24765706400375365
+1799,1988-12-31,junk growth: expensive + unprofitable,-0.5890945563054932
+1800,1989-01-31,cheap + most profitable (corner),5.365418826015346
+1801,1989-01-31,cheap + profitable (top 2 x top 2),1.0637153004982776
+1802,1989-01-31,value trap: cheap + unprofitable,-0.10264390119768518
+1803,1989-01-31,cheap (any profitability),0.2383572407212453
+1804,1989-01-31,profitable (any price),0.23344485179118069
+1805,1989-01-31,junk growth: expensive + unprofitable,-0.5586341322974526
+1806,1989-02-28,cheap + most profitable (corner),4.632880978606776
+1807,1989-02-28,cheap + profitable (top 2 x top 2),0.8967738287852083
+1808,1989-02-28,value trap: cheap + unprofitable,-0.14126407781839923
+1809,1989-02-28,cheap (any profitability),0.1309097952195144
+1810,1989-02-28,profitable (any price),0.23696474625067143
+1811,1989-02-28,junk growth: expensive + unprofitable,-0.5183477950299776
+1812,1989-03-31,cheap + most profitable (corner),5.139503782835494
+1813,1989-03-31,cheap + profitable (top 2 x top 2),0.8163971396347096
+1814,1989-03-31,value trap: cheap + unprofitable,-0.20043355110969252
+1815,1989-03-31,cheap (any profitability),0.0628443020502456
+1816,1989-03-31,profitable (any price),0.24921467070317194
+1817,1989-03-31,junk growth: expensive + unprofitable,-0.4954520479842843
+1818,1989-04-30,cheap + most profitable (corner),6.004096494854009
+1819,1989-04-30,cheap + profitable (top 2 x top 2),0.8333356144001509
+1820,1989-04-30,value trap: cheap + unprofitable,-0.18249021309204194
+1821,1989-04-30,cheap (any profitability),0.08673441076840493
+1822,1989-04-30,profitable (any price),0.2427802488396673
+1823,1989-04-30,junk growth: expensive + unprofitable,-0.48828283104186077
+1824,1989-05-31,cheap + most profitable (corner),6.6520737262780685
+1825,1989-05-31,cheap + profitable (top 2 x top 2),0.9652126507717937
+1826,1989-05-31,value trap: cheap + unprofitable,-0.1400235007189744
+1827,1989-05-31,cheap (any profitability),0.14937196452654544
+1828,1989-05-31,profitable (any price),0.22418950494890888
+1829,1989-05-31,junk growth: expensive + unprofitable,-0.49247220289497506
+1830,1989-06-30,cheap + most profitable (corner),6.713369229717743
+1831,1989-06-30,cheap + profitable (top 2 x top 2),1.0702590683531028
+1832,1989-06-30,value trap: cheap + unprofitable,-0.14216642382552003
+1833,1989-06-30,cheap (any profitability),0.15877404578916843
+1834,1989-06-30,profitable (any price),0.22024007010911495
+1835,1989-06-30,junk growth: expensive + unprofitable,-0.48446473885852104
+1836,1989-07-31,cheap + most profitable (corner),7.471975154328623
+1837,1989-07-31,cheap + profitable (top 2 x top 2),0.934819143036298
+1838,1989-07-31,value trap: cheap + unprofitable,-0.14954852878658653
+1839,1989-07-31,cheap (any profitability),0.1458676270648811
+1840,1989-07-31,profitable (any price),0.21672896317766033
+1841,1989-07-31,junk growth: expensive + unprofitable,-0.4801748616131437
+1842,1989-08-31,cheap + most profitable (corner),8.87716510908513
+1843,1989-08-31,cheap + profitable (top 2 x top 2),1.0161683931295635
+1844,1989-08-31,value trap: cheap + unprofitable,-0.12979855093809134
+1845,1989-08-31,cheap (any profitability),0.18120870333119776
+1846,1989-08-31,profitable (any price),0.20994362714270443
+1847,1989-08-31,junk growth: expensive + unprofitable,-0.4849575982420299
+1848,1989-09-30,cheap + most profitable (corner),9.207418772151874
+1849,1989-09-30,cheap + profitable (top 2 x top 2),1.0388871816006615
+1850,1989-09-30,value trap: cheap + unprofitable,-0.07508184124130934
+1851,1989-09-30,cheap (any profitability),0.23957256871448362
+1852,1989-09-30,profitable (any price),0.19673528432912635
+1853,1989-09-30,junk growth: expensive + unprofitable,-0.488538655994608
+1854,1989-10-31,cheap + most profitable (corner),9.956443369436291
+1855,1989-10-31,cheap + profitable (top 2 x top 2),1.1537750900183674
+1856,1989-10-31,value trap: cheap + unprofitable,-0.07665727183337823
+1857,1989-10-31,cheap (any profitability),0.2554707679337871
+1858,1989-10-31,profitable (any price),0.18666009323412647
+1859,1989-10-31,junk growth: expensive + unprofitable,-0.48486097778939274
+1860,1989-11-30,cheap + most profitable (corner),9.350368769184515
+1861,1989-11-30,cheap + profitable (top 2 x top 2),1.1235607516208979
+1862,1989-11-30,value trap: cheap + unprofitable,-0.12039219226034259
+1863,1989-11-30,cheap (any profitability),0.20429164506304276
+1864,1989-11-30,profitable (any price),0.21349067203320637
+1865,1989-11-30,junk growth: expensive + unprofitable,-0.49504690604302404
+1866,1989-12-31,cheap + most profitable (corner),9.508195473104841
+1867,1989-12-31,cheap + profitable (top 2 x top 2),1.0847209540767864
+1868,1989-12-31,value trap: cheap + unprofitable,-0.13141710092474934
+1869,1989-12-31,cheap (any profitability),0.1911351906190608
+1870,1989-12-31,profitable (any price),0.22080674803649747
+1871,1989-12-31,junk growth: expensive + unprofitable,-0.5024182720435787
+1872,1990-01-31,cheap + most profitable (corner),10.880524635942518
+1873,1990-01-31,cheap + profitable (top 2 x top 2),1.1041853758549842
+1874,1990-01-31,value trap: cheap + unprofitable,-0.1317611612225249
+1875,1990-01-31,cheap (any profitability),0.18739771374512393
+1876,1990-01-31,profitable (any price),0.2060505723788415
+1877,1990-01-31,junk growth: expensive + unprofitable,-0.4806882773335419
+1878,1990-02-28,cheap + most profitable (corner),10.945819586022068
+1879,1990-02-28,cheap + profitable (top 2 x top 2),1.0788547073084032
+1880,1990-02-28,value trap: cheap + unprofitable,-0.12648792779690754
+1881,1990-02-28,cheap (any profitability),0.18464311801308253
+1882,1990-02-28,profitable (any price),0.19331804125553598
+1883,1990-02-28,junk growth: expensive + unprofitable,-0.4679270011085864
+1884,1990-03-31,cheap + most profitable (corner),12.146989396562427
+1885,1990-03-31,cheap + profitable (top 2 x top 2),1.1195988907060634
+1886,1990-03-31,value trap: cheap + unprofitable,-0.10970561756437214
+1887,1990-03-31,cheap (any profitability),0.20590825693171744
+1888,1990-03-31,profitable (any price),0.1889494666491376
+1889,1990-03-31,junk growth: expensive + unprofitable,-0.47055177580725693
+1890,1990-04-30,cheap + most profitable (corner),11.854093829361487
+1891,1990-04-30,cheap + profitable (top 2 x top 2),1.1255488638895077
+1892,1990-04-30,value trap: cheap + unprofitable,-0.09392951247360237
+1893,1990-04-30,cheap (any profitability),0.2238483332491994
+1894,1990-04-30,profitable (any price),0.17467185364803073
+1895,1990-04-30,junk growth: expensive + unprofitable,-0.46603024703199014
+1896,1990-05-31,cheap + most profitable (corner),13.339570719679047
+1897,1990-05-31,cheap + profitable (top 2 x top 2),1.1418464098905692
+1898,1990-05-31,value trap: cheap + unprofitable,-0.08942159058781618
+1899,1990-05-31,cheap (any profitability),0.23731134860399816
+1900,1990-05-31,profitable (any price),0.16953546454293544
+1901,1990-05-31,junk growth: expensive + unprofitable,-0.4551496365138853
+1902,1990-06-30,cheap + most profitable (corner),12.803028651371127
+1903,1990-06-30,cheap + profitable (top 2 x top 2),1.1024924458834398
+1904,1990-06-30,value trap: cheap + unprofitable,-0.09124222527614423
+1905,1990-06-30,cheap (any profitability),0.23214808607517212
+1906,1990-06-30,profitable (any price),0.16861042656320402
+1907,1990-06-30,junk growth: expensive + unprofitable,-0.45328067034147523
+1908,1990-07-31,cheap + most profitable (corner),12.089378140911451
+1909,1990-07-31,cheap + profitable (top 2 x top 2),0.9540146878736071
+1910,1990-07-31,value trap: cheap + unprofitable,-0.11701376699879351
+1911,1990-07-31,cheap (any profitability),0.1919083910024495
+1912,1990-07-31,profitable (any price),0.1710275617969872
+1913,1990-07-31,junk growth: expensive + unprofitable,-0.4497457109609978
+1914,1990-08-31,cheap + most profitable (corner),12.33843508748543
+1915,1990-08-31,cheap + profitable (top 2 x top 2),1.0149766036802115
+1916,1990-08-31,value trap: cheap + unprofitable,-0.1249080540123001
+1917,1990-08-31,cheap (any profitability),0.18959900986564104
+1918,1990-08-31,profitable (any price),0.17004302621668987
+1919,1990-08-31,junk growth: expensive + unprofitable,-0.4467001856723968
+1920,1990-09-30,cheap + most profitable (corner),11.720050190365138
+1921,1990-09-30,cheap + profitable (top 2 x top 2),0.9398293177328056
+1922,1990-09-30,value trap: cheap + unprofitable,-0.1464359334969495
+1923,1990-09-30,cheap (any profitability),0.16297362358864387
+1924,1990-09-30,profitable (any price),0.17959189750248372
+1925,1990-09-30,junk growth: expensive + unprofitable,-0.452242304705482
+1926,1990-10-31,cheap + most profitable (corner),12.779037116566403
+1927,1990-10-31,cheap + profitable (top 2 x top 2),0.9445670973793951
+1928,1990-10-31,value trap: cheap + unprofitable,-0.15325384655686713
+1929,1990-10-31,cheap (any profitability),0.1566587124419483
+1930,1990-10-31,profitable (any price),0.17880304564698934
+1931,1990-10-31,junk growth: expensive + unprofitable,-0.4367441641893276
+1932,1990-11-30,cheap + most profitable (corner),12.717913821221854
+1933,1990-11-30,cheap + profitable (top 2 x top 2),1.0049832261866976
+1934,1990-11-30,value trap: cheap + unprofitable,-0.18363554919260916
+1935,1990-11-30,cheap (any profitability),0.13517949082265135
+1936,1990-11-30,profitable (any price),0.18494115363827812
+1937,1990-11-30,junk growth: expensive + unprofitable,-0.4329089884930325
+1938,1990-12-31,cheap + most profitable (corner),12.933026929104456
+1939,1990-12-31,cheap + profitable (top 2 x top 2),1.0040674084488503
+1940,1990-12-31,value trap: cheap + unprofitable,-0.18889959865319972
+1941,1990-12-31,cheap (any profitability),0.1312659004570229
+1942,1990-12-31,profitable (any price),0.1826960006823375
+1943,1990-12-31,junk growth: expensive + unprofitable,-0.40953310435866375
+1944,1991-01-31,cheap + most profitable (corner),11.889749280482826
+1945,1991-01-31,cheap + profitable (top 2 x top 2),0.9289236021441054
+1946,1991-01-31,value trap: cheap + unprofitable,-0.16252935712112015
+1947,1991-01-31,cheap (any profitability),0.13827940918340986
+1948,1991-01-31,profitable (any price),0.16064425861488574
+1949,1991-01-31,junk growth: expensive + unprofitable,-0.3822787037224752
+1950,1991-02-28,cheap + most profitable (corner),10.51348610989837
+1951,1991-02-28,cheap + profitable (top 2 x top 2),0.8907223312332915
+1952,1991-02-28,value trap: cheap + unprofitable,-0.15214177046886712
+1953,1991-02-28,cheap (any profitability),0.1407320398095646
+1954,1991-02-28,profitable (any price),0.1516146005730281
+1955,1991-02-28,junk growth: expensive + unprofitable,-0.36295462872782625
+1956,1991-03-31,cheap + most profitable (corner),10.990019323531525
+1957,1991-03-31,cheap + profitable (top 2 x top 2),0.8951646125756558
+1958,1991-03-31,value trap: cheap + unprofitable,-0.14713554052060418
+1959,1991-03-31,cheap (any profitability),0.1468230370010435
+1960,1991-03-31,profitable (any price),0.1469994932933265
+1961,1991-03-31,junk growth: expensive + unprofitable,-0.3461221056175182
+1962,1991-04-30,cheap + most profitable (corner),11.503636582297737
+1963,1991-04-30,cheap + profitable (top 2 x top 2),0.8843248379468138
+1964,1991-04-30,value trap: cheap + unprofitable,-0.1686507242570442
+1965,1991-04-30,cheap (any profitability),0.13062495652365103
+1966,1991-04-30,profitable (any price),0.15197844926557025
+1967,1991-04-30,junk growth: expensive + unprofitable,-0.339389750575088
+1968,1991-05-31,cheap + most profitable (corner),11.146933332762277
+1969,1991-05-31,cheap + profitable (top 2 x top 2),0.8118555417607962
+1970,1991-05-31,value trap: cheap + unprofitable,-0.18366381686095068
+1971,1991-05-31,cheap (any profitability),0.1090607106833763
+1972,1991-05-31,profitable (any price),0.15621868748605428
+1973,1991-05-31,junk growth: expensive + unprofitable,-0.34111187521197683
+1974,1991-06-30,cheap + most profitable (corner),10.877429483063173
+1975,1991-06-30,cheap + profitable (top 2 x top 2),0.753405291998867
+1976,1991-06-30,value trap: cheap + unprofitable,-0.20112543717385356
+1977,1991-06-30,cheap (any profitability),0.09044153534991373
+1978,1991-06-30,profitable (any price),0.15992522900489647
+1979,1991-06-30,junk growth: expensive + unprofitable,-0.343433209164954
+1980,1991-07-31,cheap + most profitable (corner),11.070252713680318
+1981,1991-07-31,cheap + profitable (top 2 x top 2),0.7658278390517537
+1982,1991-07-31,value trap: cheap + unprofitable,-0.20698537437056985
+1983,1991-07-31,cheap (any profitability),0.0889963282376145
+1984,1991-07-31,profitable (any price),0.167529484641056
+1985,1991-07-31,junk growth: expensive + unprofitable,-0.3565634594717405
+1986,1991-08-31,cheap + most profitable (corner),10.380988132516926
+1987,1991-08-31,cheap + profitable (top 2 x top 2),0.7241102817914491
+1988,1991-08-31,value trap: cheap + unprofitable,-0.22549899408439977
+1989,1991-08-31,cheap (any profitability),0.06904367126292943
+1990,1991-08-31,profitable (any price),0.1812553750276471
+1991,1991-08-31,junk growth: expensive + unprofitable,-0.36888946842039083
+1992,1991-09-30,cheap + most profitable (corner),9.880423253215856
+1993,1991-09-30,cheap + profitable (top 2 x top 2),0.7233947972257662
+1994,1991-09-30,value trap: cheap + unprofitable,-0.24400186363691345
+1995,1991-09-30,cheap (any profitability),0.05643568834933688
+1996,1991-09-30,profitable (any price),0.1972369752234564
+1997,1991-09-30,junk growth: expensive + unprofitable,-0.39074485283076943
+1998,1991-10-31,cheap + most profitable (corner),9.252363546580664
+1999,1991-10-31,cheap + profitable (top 2 x top 2),0.7220406922323055
+2000,1991-10-31,value trap: cheap + unprofitable,-0.2666851644700706
+2001,1991-10-31,cheap (any profitability),0.03862772139065429
+2002,1991-10-31,profitable (any price),0.21397188756832763
+2003,1991-10-31,junk growth: expensive + unprofitable,-0.40676945139821874
+2004,1991-11-30,cheap + most profitable (corner),9.488125458957082
+2005,1991-11-30,cheap + profitable (top 2 x top 2),0.6962556046922448
+2006,1991-11-30,value trap: cheap + unprofitable,-0.2572343573612401
+2007,1991-11-30,cheap (any profitability),0.03933242950959026
+2008,1991-11-30,profitable (any price),0.1986725688264459
+2009,1991-11-30,junk growth: expensive + unprofitable,-0.38679425487787933
+2010,1991-12-31,cheap + most profitable (corner),9.378159983100103
+2011,1991-12-31,cheap + profitable (top 2 x top 2),0.7140692901064423
+2012,1991-12-31,value trap: cheap + unprofitable,-0.27126875212237467
+2013,1991-12-31,cheap (any profitability),0.031169498328891043
+2014,1991-12-31,profitable (any price),0.20460055976263325
+2015,1991-12-31,junk growth: expensive + unprofitable,-0.3955995330391766
+2016,1992-01-31,cheap + most profitable (corner),8.16726838982398
+2017,1992-01-31,cheap + profitable (top 2 x top 2),0.6625584961770079
+2018,1992-01-31,value trap: cheap + unprofitable,-0.27784138756381993
+2019,1992-01-31,cheap (any profitability),0.016988046972525428
+2020,1992-01-31,profitable (any price),0.19704426444080458
+2021,1992-01-31,junk growth: expensive + unprofitable,-0.3915123381581994
+2022,1992-02-29,cheap + most profitable (corner),7.5937957543794
+2023,1992-02-29,cheap + profitable (top 2 x top 2),0.5777820489179539
+2024,1992-02-29,value trap: cheap + unprofitable,-0.263454721630915
+2025,1992-02-29,cheap (any profitability),0.006353103200058996
+2026,1992-02-29,profitable (any price),0.18555915848468696
+2027,1992-02-29,junk growth: expensive + unprofitable,-0.35339924830347624
+2028,1992-03-31,cheap + most profitable (corner),7.575150291155746
+2029,1992-03-31,cheap + profitable (top 2 x top 2),0.5861887307836127
+2030,1992-03-31,value trap: cheap + unprofitable,-0.25843495548111883
+2031,1992-03-31,cheap (any profitability),0.008176377555360936
+2032,1992-03-31,profitable (any price),0.18647971291529797
+2033,1992-03-31,junk growth: expensive + unprofitable,-0.33863292466723693
+2034,1992-04-30,cheap + most profitable (corner),7.121722992824656
+2035,1992-04-30,cheap + profitable (top 2 x top 2),0.6141158514856413
+2036,1992-04-30,value trap: cheap + unprofitable,-0.2538793795889427
+2037,1992-04-30,cheap (any profitability),0.017349432217522498
+2038,1992-04-30,profitable (any price),0.1846096152634349
+2039,1992-04-30,junk growth: expensive + unprofitable,-0.33029244803585833
+2040,1992-05-31,cheap + most profitable (corner),7.122554176835546
+2041,1992-05-31,cheap + profitable (top 2 x top 2),0.593283845607609
+2042,1992-05-31,value trap: cheap + unprofitable,-0.2595867699242501
+2043,1992-05-31,cheap (any profitability),0.007929599642731544
+2044,1992-05-31,profitable (any price),0.19123395400787846
+2045,1992-05-31,junk growth: expensive + unprofitable,-0.3377879276555463
+2046,1992-06-30,cheap + most profitable (corner),6.761647319705877
+2047,1992-06-30,cheap + profitable (top 2 x top 2),0.6047587765135611
+2048,1992-06-30,value trap: cheap + unprofitable,-0.26779768629037204
+2049,1992-06-30,cheap (any profitability),0.005930936688533173
+2050,1992-06-30,profitable (any price),0.20045209749108284
+2051,1992-06-30,junk growth: expensive + unprofitable,-0.3613473692556619
+2052,1992-07-31,cheap + most profitable (corner),6.563725783541741
+2053,1992-07-31,cheap + profitable (top 2 x top 2),0.6247528662004043
+2054,1992-07-31,value trap: cheap + unprofitable,-0.2625533393769798
+2055,1992-07-31,cheap (any profitability),0.012691747639998363
+2056,1992-07-31,profitable (any price),0.19953669070995317
+2057,1992-07-31,junk growth: expensive + unprofitable,-0.3613641215001139
+2058,1992-08-31,cheap + most profitable (corner),6.366266274769697
+2059,1992-08-31,cheap + profitable (top 2 x top 2),0.6407164272804975
+2060,1992-08-31,value trap: cheap + unprofitable,-0.27738692606224236
+2061,1992-08-31,cheap (any profitability),0.0027573751949767633
+2062,1992-08-31,profitable (any price),0.20574024993439544
+2063,1992-08-31,junk growth: expensive + unprofitable,-0.3744705855410979
+2064,1992-09-30,cheap + most profitable (corner),7.358614692163318
+2065,1992-09-30,cheap + profitable (top 2 x top 2),0.6462082591380276
+2066,1992-09-30,value trap: cheap + unprofitable,-0.2669752041246727
+2067,1992-09-30,cheap (any profitability),0.01439869916540193
+2068,1992-09-30,profitable (any price),0.19824093237481688
+2069,1992-09-30,junk growth: expensive + unprofitable,-0.35257842655514915
+2070,1992-10-31,cheap + most profitable (corner),7.487193507296801
+2071,1992-10-31,cheap + profitable (top 2 x top 2),0.6784652213228823
+2072,1992-10-31,value trap: cheap + unprofitable,-0.2591991943293974
+2073,1992-10-31,cheap (any profitability),0.026727735766709948
+2074,1992-10-31,profitable (any price),0.18968998758494315
+2075,1992-10-31,junk growth: expensive + unprofitable,-0.3536975895468213
+2076,1992-11-30,cheap + most profitable (corner),7.930893658879695
+2077,1992-11-30,cheap + profitable (top 2 x top 2),0.6912580363070455
+2078,1992-11-30,value trap: cheap + unprofitable,-0.23540764251972812
+2079,1992-11-30,cheap (any profitability),0.053565931513268605
+2080,1992-11-30,profitable (any price),0.18754909212505555
+2081,1992-11-30,junk growth: expensive + unprofitable,-0.3782845396501734
+2082,1992-12-31,cheap + most profitable (corner),8.063698797916933
+2083,1992-12-31,cheap + profitable (top 2 x top 2),0.6530327223609083
+2084,1992-12-31,value trap: cheap + unprofitable,-0.24511872234767762
+2085,1992-12-31,cheap (any profitability),0.04181321202339916
+2086,1992-12-31,profitable (any price),0.1801919046775602
+2087,1992-12-31,junk growth: expensive + unprofitable,-0.36061736221434326
+2088,1993-01-31,cheap + most profitable (corner),7.1918979910948515
+2089,1993-01-31,cheap + profitable (top 2 x top 2),0.6388177921308131
+2090,1993-01-31,value trap: cheap + unprofitable,-0.22920693929238645
+2091,1993-01-31,cheap (any profitability),0.05421134418832074
+2092,1993-01-31,profitable (any price),0.162245330808783
+2093,1993-01-31,junk growth: expensive + unprofitable,-0.33118110786002564
+2094,1993-02-28,cheap + most profitable (corner),7.707979120206414
+2095,1993-02-28,cheap + profitable (top 2 x top 2),0.6321383873817354
+2096,1993-02-28,value trap: cheap + unprofitable,-0.21179890284376135
+2097,1993-02-28,cheap (any profitability),0.0638178499363189
+2098,1993-02-28,profitable (any price),0.14946343301323473
+2099,1993-02-28,junk growth: expensive + unprofitable,-0.3245936930556572
+2100,1993-03-31,cheap + most profitable (corner),7.915681511155883
+2101,1993-03-31,cheap + profitable (top 2 x top 2),0.6379485012386719
+2102,1993-03-31,value trap: cheap + unprofitable,-0.20966065505501907
+2103,1993-03-31,cheap (any profitability),0.06402155132397436
+2104,1993-03-31,profitable (any price),0.1523828528156579
+2105,1993-03-31,junk growth: expensive + unprofitable,-0.33240673360797457
+2106,1993-04-30,cheap + most profitable (corner),8.17101158033712
+2107,1993-04-30,cheap + profitable (top 2 x top 2),0.6318829042117617
+2108,1993-04-30,value trap: cheap + unprofitable,-0.2059876504383491
+2109,1993-04-30,cheap (any profitability),0.0679446013118139
+2110,1993-04-30,profitable (any price),0.1517408749102298
+2111,1993-04-30,junk growth: expensive + unprofitable,-0.33574396024973396
+2112,1993-05-31,cheap + most profitable (corner),7.67647609190416
+2113,1993-05-31,cheap + profitable (top 2 x top 2),0.634167640786822
+2114,1993-05-31,value trap: cheap + unprofitable,-0.20551419114459835
+2115,1993-05-31,cheap (any profitability),0.06613142325876442
+2116,1993-05-31,profitable (any price),0.15994089711722714
+2117,1993-05-31,junk growth: expensive + unprofitable,-0.3545462783767195
+2118,1993-06-30,cheap + most profitable (corner),7.4536500670748165
+2119,1993-06-30,cheap + profitable (top 2 x top 2),0.718324977585018
+2120,1993-06-30,value trap: cheap + unprofitable,-0.1868912557558966
+2121,1993-06-30,cheap (any profitability),0.0956069124601222
+2122,1993-06-30,profitable (any price),0.1498524054155581
+2123,1993-06-30,junk growth: expensive + unprofitable,-0.33923933395513417
+2124,1993-07-31,cheap + most profitable (corner),6.640022230480864
+2125,1993-07-31,cheap + profitable (top 2 x top 2),0.7004893656793316
+2126,1993-07-31,value trap: cheap + unprofitable,-0.18942640800027333
+2127,1993-07-31,cheap (any profitability),0.09193388616909925
+2128,1993-07-31,profitable (any price),0.14445115640848893
+2129,1993-07-31,junk growth: expensive + unprofitable,-0.34143688167241826
+2130,1993-08-31,cheap + most profitable (corner),6.92308766882781
+2131,1993-08-31,cheap + profitable (top 2 x top 2),0.6966639756012512
+2132,1993-08-31,value trap: cheap + unprofitable,-0.18144882339460422
+2133,1993-08-31,cheap (any profitability),0.09629782880893956
+2134,1993-08-31,profitable (any price),0.14220927454302723
+2135,1993-08-31,junk growth: expensive + unprofitable,-0.3219215819161627
+2136,1993-09-30,cheap + most profitable (corner),6.581803911916089
+2137,1993-09-30,cheap + profitable (top 2 x top 2),0.6737343477123987
+2138,1993-09-30,value trap: cheap + unprofitable,-0.19156909234137365
+2139,1993-09-30,cheap (any profitability),0.0821814730024577
+2140,1993-09-30,profitable (any price),0.14533296874378987
+2141,1993-09-30,junk growth: expensive + unprofitable,-0.29346788464440066
+2142,1993-10-31,cheap + most profitable (corner),6.611553242562761
+2143,1993-10-31,cheap + profitable (top 2 x top 2),0.6396137202066581
+2144,1993-10-31,value trap: cheap + unprofitable,-0.190229563195498
+2145,1993-10-31,cheap (any profitability),0.07561145112112344
+2146,1993-10-31,profitable (any price),0.1397093323569758
+2147,1993-10-31,junk growth: expensive + unprofitable,-0.27208131715824646
+2148,1993-11-30,cheap + most profitable (corner),7.3150109195875075
+2149,1993-11-30,cheap + profitable (top 2 x top 2),0.6334505936198234
+2150,1993-11-30,value trap: cheap + unprofitable,-0.19134186283863652
+2151,1993-11-30,cheap (any profitability),0.07376491517964667
+2152,1993-11-30,profitable (any price),0.14355432368448096
+2153,1993-11-30,junk growth: expensive + unprofitable,-0.3091585883066571
+2154,1993-12-31,cheap + most profitable (corner),7.1254253023679865
+2155,1993-12-31,cheap + profitable (top 2 x top 2),0.6400638764845403
+2156,1993-12-31,value trap: cheap + unprofitable,-0.18474828418210854
+2157,1993-12-31,cheap (any profitability),0.08078264933262269
+2158,1993-12-31,profitable (any price),0.14736959057305632
+2159,1993-12-31,junk growth: expensive + unprofitable,-0.3234172526467023
+2160,1994-01-31,cheap + most profitable (corner),6.283416436042327
+2161,1994-01-31,cheap + profitable (top 2 x top 2),0.5761682644232275
+2162,1994-01-31,value trap: cheap + unprofitable,-0.18274578740669556
+2163,1994-01-31,cheap (any profitability),0.06511169127364136
+2164,1994-01-31,profitable (any price),0.1266016518025026
+2165,1994-01-31,junk growth: expensive + unprofitable,-0.2819412013832485
+2166,1994-02-28,cheap + most profitable (corner),5.518340586642755
+2167,1994-02-28,cheap + profitable (top 2 x top 2),0.5327506904074784
+2168,1994-02-28,value trap: cheap + unprofitable,-0.18484851989177464
+2169,1994-02-28,cheap (any profitability),0.054083400369813184
+2170,1994-02-28,profitable (any price),0.11203223517637317
+2171,1994-02-28,junk growth: expensive + unprofitable,-0.23183562404384173
+2172,1994-03-31,cheap + most profitable (corner),5.691376218157825
+2173,1994-03-31,cheap + profitable (top 2 x top 2),0.5315594980672189
+2174,1994-03-31,value trap: cheap + unprofitable,-0.1905757859462005
+2175,1994-03-31,cheap (any profitability),0.04904630738219584
+2176,1994-03-31,profitable (any price),0.1134114980525367
+2177,1994-03-31,junk growth: expensive + unprofitable,-0.21929541791413643
+2178,1994-04-30,cheap + most profitable (corner),5.777041929269564
+2179,1994-04-30,cheap + profitable (top 2 x top 2),0.6006872828316656
+2180,1994-04-30,value trap: cheap + unprofitable,-0.17372362561143095
+2181,1994-04-30,cheap (any profitability),0.07870827026020843
+2182,1994-04-30,profitable (any price),0.12241485845084421
+2183,1994-04-30,junk growth: expensive + unprofitable,-0.2713698137521837
+2184,1994-05-31,cheap + most profitable (corner),5.559407418825805
+2185,1994-05-31,cheap + profitable (top 2 x top 2),0.606734225314637
+2186,1994-05-31,value trap: cheap + unprofitable,-0.17851719339991567
+2187,1994-05-31,cheap (any profitability),0.07468835383665207
+2188,1994-05-31,profitable (any price),0.1338223623004866
+2189,1994-05-31,junk growth: expensive + unprofitable,-0.3040974546498938
+2190,1994-06-30,cheap + most profitable (corner),5.641328199971528
+2191,1994-06-30,cheap + profitable (top 2 x top 2),0.5989695538277768
+2192,1994-06-30,value trap: cheap + unprofitable,-0.18434690669233966
+2193,1994-06-30,cheap (any profitability),0.06766789235438098
+2194,1994-06-30,profitable (any price),0.131310525705975
+2195,1994-06-30,junk growth: expensive + unprofitable,-0.29534649245574207
+2196,1994-07-31,cheap + most profitable (corner),5.477042105625214
+2197,1994-07-31,cheap + profitable (top 2 x top 2),0.6221261915193843
+2198,1994-07-31,value trap: cheap + unprofitable,-0.1792103232832517
+2199,1994-07-31,cheap (any profitability),0.0774457640953996
+2200,1994-07-31,profitable (any price),0.12483047508780043
+2201,1994-07-31,junk growth: expensive + unprofitable,-0.2741369685219317
+2202,1994-08-31,cheap + most profitable (corner),5.327033735412173
+2203,1994-08-31,cheap + profitable (top 2 x top 2),0.6256206829426967
+2204,1994-08-31,value trap: cheap + unprofitable,-0.19077216431844635
+2205,1994-08-31,cheap (any profitability),0.06704859320087597
+2206,1994-08-31,profitable (any price),0.13019918216114745
+2207,1994-08-31,junk growth: expensive + unprofitable,-0.28464547226711845
+2208,1994-09-30,cheap + most profitable (corner),5.55866417867888
+2209,1994-09-30,cheap + profitable (top 2 x top 2),0.6089887040039748
+2210,1994-09-30,value trap: cheap + unprofitable,-0.1841634157282136
+2211,1994-09-30,cheap (any profitability),0.06611785335258524
+2212,1994-09-30,profitable (any price),0.1283915757349623
+2213,1994-09-30,junk growth: expensive + unprofitable,-0.2744698938873872
+2214,1994-10-31,cheap + most profitable (corner),5.216241471368806
+2215,1994-10-31,cheap + profitable (top 2 x top 2),0.5950050745742381
+2216,1994-10-31,value trap: cheap + unprofitable,-0.1862375668201306
+2217,1994-10-31,cheap (any profitability),0.05699798161179248
+2218,1994-10-31,profitable (any price),0.13275757104539743
+2219,1994-10-31,junk growth: expensive + unprofitable,-0.2768222490159227
+2220,1994-11-30,cheap + most profitable (corner),4.828953538657461
+2221,1994-11-30,cheap + profitable (top 2 x top 2),0.544000176012394
+2222,1994-11-30,value trap: cheap + unprofitable,-0.1863108508699951
+2223,1994-11-30,cheap (any profitability),0.04872327216561745
+2224,1994-11-30,profitable (any price),0.13197386838615643
+2225,1994-11-30,junk growth: expensive + unprofitable,-0.2870588635159047
+2226,1994-12-31,cheap + most profitable (corner),3.985075775822195
+2227,1994-12-31,cheap + profitable (top 2 x top 2),0.5024232217244211
+2228,1994-12-31,value trap: cheap + unprofitable,-0.19279752870696465
+2229,1994-12-31,cheap (any profitability),0.026013263477049797
+2230,1994-12-31,profitable (any price),0.14130395429992926
+2231,1994-12-31,junk growth: expensive + unprofitable,-0.30537206001268025
+2232,1995-01-31,cheap + most profitable (corner),3.590613899395339
+2233,1995-01-31,cheap + profitable (top 2 x top 2),0.4708864719189203
+2234,1995-01-31,value trap: cheap + unprofitable,-0.1809978857325789
+2235,1995-01-31,cheap (any profitability),0.02684833833345257
+2236,1995-01-31,profitable (any price),0.11774171401795441
+2237,1995-01-31,junk growth: expensive + unprofitable,-0.2719734221396445
+2238,1995-02-28,cheap + most profitable (corner),3.272559147281741
+2239,1995-02-28,cheap + profitable (top 2 x top 2),0.4012114979540855
+2240,1995-02-28,value trap: cheap + unprofitable,-0.2017447437446801
+2241,1995-02-28,cheap (any profitability),-0.0015728864519787278
+2242,1995-02-28,profitable (any price),0.12428043153995016
+2243,1995-02-28,junk growth: expensive + unprofitable,-0.25366124128611045
+2244,1995-03-31,cheap + most profitable (corner),3.0637221517142583
+2245,1995-03-31,cheap + profitable (top 2 x top 2),0.386543099653599
+2246,1995-03-31,value trap: cheap + unprofitable,-0.20335314756119593
+2247,1995-03-31,cheap (any profitability),-0.01056609199591596
+2248,1995-03-31,profitable (any price),0.12044000291221324
+2249,1995-03-31,junk growth: expensive + unprofitable,-0.23808478729559568
+2250,1995-04-30,cheap + most profitable (corner),2.9794483699475593
+2251,1995-04-30,cheap + profitable (top 2 x top 2),0.373549184579014
+2252,1995-04-30,value trap: cheap + unprofitable,-0.20089281501001122
+2253,1995-04-30,cheap (any profitability),-0.008121869496975687
+2254,1995-04-30,profitable (any price),0.11450733274229297
+2255,1995-04-30,junk growth: expensive + unprofitable,-0.22972880276467156
+2256,1995-05-31,cheap + most profitable (corner),3.457047987894321
+2257,1995-05-31,cheap + profitable (top 2 x top 2),0.4116057453510482
+2258,1995-05-31,value trap: cheap + unprofitable,-0.20230033597318042
+2259,1995-05-31,cheap (any profitability),-0.0009495790614412192
+2260,1995-05-31,profitable (any price),0.11643892679075396
+2261,1995-05-31,junk growth: expensive + unprofitable,-0.23417563561506316
+2262,1995-06-30,cheap + most profitable (corner),2.9879013797546397
+2263,1995-06-30,cheap + profitable (top 2 x top 2),0.375632707207177
+2264,1995-06-30,value trap: cheap + unprofitable,-0.19672034811428563
+2265,1995-06-30,cheap (any profitability),-0.005938752411614678
+2266,1995-06-30,profitable (any price),0.11145632443039544
+2267,1995-06-30,junk growth: expensive + unprofitable,-0.22393866020348419
+2268,1995-07-31,cheap + most profitable (corner),2.9404576590799456
+2269,1995-07-31,cheap + profitable (top 2 x top 2),0.3720160522400835
+2270,1995-07-31,value trap: cheap + unprofitable,-0.19147057570827386
+2271,1995-07-31,cheap (any profitability),-0.005895393497196699
+2272,1995-07-31,profitable (any price),0.10624370240241565
+2273,1995-07-31,junk growth: expensive + unprofitable,-0.21665330876206812
+2274,1995-08-31,cheap + most profitable (corner),1.8720486747420413
+2275,1995-08-31,cheap + profitable (top 2 x top 2),0.2371273463072303
+2276,1995-08-31,value trap: cheap + unprofitable,-0.20797671527580552
+2277,1995-08-31,cheap (any profitability),-0.042683884307024855
+2278,1995-08-31,profitable (any price),0.09463216293920307
+2279,1995-08-31,junk growth: expensive + unprofitable,-0.18530498928121142
+2280,1995-09-30,cheap + most profitable (corner),1.860573386257561
+2281,1995-09-30,cheap + profitable (top 2 x top 2),0.24757122476972526
+2282,1995-09-30,value trap: cheap + unprofitable,-0.2065408846172403
+2283,1995-09-30,cheap (any profitability),-0.04156270521208183
+2284,1995-09-30,profitable (any price),0.09698247689906792
+2285,1995-09-30,junk growth: expensive + unprofitable,-0.19402057838956155
+2286,1995-10-31,cheap + most profitable (corner),1.4155227947930245
+2287,1995-10-31,cheap + profitable (top 2 x top 2),0.21930218035530524
+2288,1995-10-31,value trap: cheap + unprofitable,-0.2174966343189466
+2289,1995-10-31,cheap (any profitability),-0.049388958244420245
+2290,1995-10-31,profitable (any price),0.10167872509048648
+2291,1995-10-31,junk growth: expensive + unprofitable,-0.20833739873502755
+2292,1995-11-30,cheap + most profitable (corner),1.4216573681567066
+2293,1995-11-30,cheap + profitable (top 2 x top 2),0.23662478485122374
+2294,1995-11-30,value trap: cheap + unprofitable,-0.22906920448323975
+2295,1995-11-30,cheap (any profitability),-0.06117127537998723
+2296,1995-11-30,profitable (any price),0.10199703102192959
+2297,1995-11-30,junk growth: expensive + unprofitable,-0.1929201280868058
+2298,1995-12-31,cheap + most profitable (corner),1.313015444889944
+2299,1995-12-31,cheap + profitable (top 2 x top 2),0.24768171468467237
+2300,1995-12-31,value trap: cheap + unprofitable,-0.22234662768046154
+2301,1995-12-31,cheap (any profitability),-0.051183169606622614
+2302,1995-12-31,profitable (any price),0.09670100370027179
+2303,1995-12-31,junk growth: expensive + unprofitable,-0.16861971681047927
+2304,1996-01-31,cheap + most profitable (corner),0.6987612952560271
+2305,1996-01-31,cheap + profitable (top 2 x top 2),0.11082015308390103
+2306,1996-01-31,value trap: cheap + unprofitable,-0.2369361137358167
+2307,1996-01-31,cheap (any profitability),-0.0825710594521909
+2308,1996-01-31,profitable (any price),0.08428048720736547
+2309,1996-01-31,junk growth: expensive + unprofitable,-0.12372439938071866
+2310,1996-02-29,cheap + most profitable (corner),0.4456500884194521
+2311,1996-02-29,cheap + profitable (top 2 x top 2),0.04693537747293086
+2312,1996-02-29,value trap: cheap + unprofitable,-0.2458529636908342
+2313,1996-02-29,cheap (any profitability),-0.09575091703272898
+2314,1996-02-29,profitable (any price),0.08617725158577794
+2315,1996-02-29,junk growth: expensive + unprofitable,-0.15094617392924203
+2316,1996-03-31,cheap + most profitable (corner),0.07644609587882845
+2317,1996-03-31,cheap + profitable (top 2 x top 2),-0.001528717979517591
+2318,1996-03-31,value trap: cheap + unprofitable,-0.25551042133351054
+2319,1996-03-31,cheap (any profitability),-0.11199191942117681
+2320,1996-03-31,profitable (any price),0.09391632121703308
+2321,1996-03-31,junk growth: expensive + unprofitable,-0.18690999311726164
+2322,1996-04-30,cheap + most profitable (corner),0.5705681696810387
+2323,1996-04-30,cheap + profitable (top 2 x top 2),0.05198870572702985
+2324,1996-04-30,value trap: cheap + unprofitable,-0.25103529804734803
+2325,1996-04-30,cheap (any profitability),-0.10476268859054882
+2326,1996-04-30,profitable (any price),0.09496536535692912
+2327,1996-04-30,junk growth: expensive + unprofitable,-0.18514495226873418
+2328,1996-05-31,cheap + most profitable (corner),1.0280766359223725
+2329,1996-05-31,cheap + profitable (top 2 x top 2),0.11482940361410376
+2330,1996-05-31,value trap: cheap + unprofitable,-0.22773620067957034
+2331,1996-05-31,cheap (any profitability),-0.0747068545802756
+2332,1996-05-31,profitable (any price),0.0841236624775159
+2333,1996-05-31,junk growth: expensive + unprofitable,-0.1975425991392903
+2334,1996-06-30,cheap + most profitable (corner),0.9437055038483555
+2335,1996-06-30,cheap + profitable (top 2 x top 2),0.0540625431943107
+2336,1996-06-30,value trap: cheap + unprofitable,-0.23745856896238837
+2337,1996-06-30,cheap (any profitability),-0.08521397991307156
+2338,1996-06-30,profitable (any price),0.08067318143019997
+2339,1996-06-30,junk growth: expensive + unprofitable,-0.17929518219002316
+2340,1996-07-31,cheap + most profitable (corner),0.8573244101059814
+2341,1996-07-31,cheap + profitable (top 2 x top 2),0.025533010477944984
+2342,1996-07-31,value trap: cheap + unprofitable,-0.2527859825733627
+2343,1996-07-31,cheap (any profitability),-0.10149265875013447
+2344,1996-07-31,profitable (any price),0.08438735509011153
+2345,1996-07-31,junk growth: expensive + unprofitable,-0.20338616032591328
+2346,1996-08-31,cheap + most profitable (corner),0.9597781936526804
+2347,1996-08-31,cheap + profitable (top 2 x top 2),0.04810340862653972
+2348,1996-08-31,value trap: cheap + unprofitable,-0.2619062939018537
+2349,1996-08-31,cheap (any profitability),-0.11109336527206093
+2350,1996-08-31,profitable (any price),0.08552699822257637
+2351,1996-08-31,junk growth: expensive + unprofitable,-0.18628385601692543
+2352,1996-09-30,cheap + most profitable (corner),1.076875811204784
+2353,1996-09-30,cheap + profitable (top 2 x top 2),0.059412293350365575
+2354,1996-09-30,value trap: cheap + unprofitable,-0.23907357748701952
+2355,1996-09-30,cheap (any profitability),-0.08887299557632378
+2356,1996-09-30,profitable (any price),0.0786944113420931
+2357,1996-09-30,junk growth: expensive + unprofitable,-0.1958668751936936
+2358,1996-10-31,cheap + most profitable (corner),1.0822540297263057
+2359,1996-10-31,cheap + profitable (top 2 x top 2),0.07694983817468715
+2360,1996-10-31,value trap: cheap + unprofitable,-0.23975821582394763
+2361,1996-10-31,cheap (any profitability),-0.09673379223980683
+2362,1996-10-31,profitable (any price),0.07660512676777143
+2363,1996-10-31,junk growth: expensive + unprofitable,-0.18409897260322872
+2364,1996-11-30,cheap + most profitable (corner),1.0798903032787055
+2365,1996-11-30,cheap + profitable (top 2 x top 2),0.07429801200143094
+2366,1996-11-30,value trap: cheap + unprofitable,-0.22470993902755543
+2367,1996-11-30,cheap (any profitability),-0.07790539453022882
+2368,1996-11-30,profitable (any price),0.06995536869041596
+2369,1996-11-30,junk growth: expensive + unprofitable,-0.17962309770406049
+2370,1996-12-31,cheap + most profitable (corner),1.2683791502660466
+2371,1996-12-31,cheap + profitable (top 2 x top 2),0.1006375679715239
+2372,1996-12-31,value trap: cheap + unprofitable,-0.1738715061581967
+2373,1996-12-31,cheap (any profitability),-0.025822322581824597
+2374,1996-12-31,profitable (any price),0.06026136786500391
+2375,1996-12-31,junk growth: expensive + unprofitable,-0.211449462483268
+2376,1997-01-31,cheap + most profitable (corner),1.023172791703551
+2377,1997-01-31,cheap + profitable (top 2 x top 2),0.08153065066593834
+2378,1997-01-31,value trap: cheap + unprofitable,-0.16098579523683032
+2379,1997-01-31,cheap (any profitability),-0.020852951012075738
+2380,1997-01-31,profitable (any price),0.049326020404537596
+2381,1997-01-31,junk growth: expensive + unprofitable,-0.20180826348437197
+2382,1997-02-28,cheap + most profitable (corner),0.8925204959517437
+2383,1997-02-28,cheap + profitable (top 2 x top 2),0.07360125935203299
+2384,1997-02-28,value trap: cheap + unprofitable,-0.16842678871977212
+2385,1997-02-28,cheap (any profitability),-0.03436386930465252
+2386,1997-02-28,profitable (any price),0.05195223921133563
+2387,1997-02-28,junk growth: expensive + unprofitable,-0.17636939581189892
+2388,1997-03-31,cheap + most profitable (corner),0.8287098340208257
+2389,1997-03-31,cheap + profitable (top 2 x top 2),0.059875572000480215
+2390,1997-03-31,value trap: cheap + unprofitable,-0.1733333914162022
+2391,1997-03-31,cheap (any profitability),-0.038844807865124786
+2392,1997-03-31,profitable (any price),0.0535315340059781
+2393,1997-03-31,junk growth: expensive + unprofitable,-0.17660381534630432
+2394,1997-04-30,cheap + most profitable (corner),0.7522255101790924
+2395,1997-04-30,cheap + profitable (top 2 x top 2),0.06786934419862045
+2396,1997-04-30,value trap: cheap + unprofitable,-0.19294170581550218
+2397,1997-04-30,cheap (any profitability),-0.058272626481248535
+2398,1997-04-30,profitable (any price),0.05913302284365618
+2399,1997-04-30,junk growth: expensive + unprofitable,-0.1653100970340846
+2400,1997-05-31,cheap + most profitable (corner),0.597106710403182
+2401,1997-05-31,cheap + profitable (top 2 x top 2),0.05946637257102605
+2402,1997-05-31,value trap: cheap + unprofitable,-0.20390250026827395
+2403,1997-05-31,cheap (any profitability),-0.07167050115851348
+2404,1997-05-31,profitable (any price),0.060032330047446125
+2405,1997-05-31,junk growth: expensive + unprofitable,-0.13806776138814403
+2406,1997-06-30,cheap + most profitable (corner),0.5512297525556487
+2407,1997-06-30,cheap + profitable (top 2 x top 2),0.03756519892389809
+2408,1997-06-30,value trap: cheap + unprofitable,-0.22445797526126532
+2409,1997-06-30,cheap (any profitability),-0.09651016818091018
+2410,1997-06-30,profitable (any price),0.06791772033033072
+2411,1997-06-30,junk growth: expensive + unprofitable,-0.12883248872417163
+2412,1997-07-31,cheap + most profitable (corner),0.5809034757940634
+2413,1997-07-31,cheap + profitable (top 2 x top 2),0.05060267453953893
+2414,1997-07-31,value trap: cheap + unprofitable,-0.2070168088155988
+2415,1997-07-31,cheap (any profitability),-0.07240728223883364
+2416,1997-07-31,profitable (any price),0.06173055094942215
+2417,1997-07-31,junk growth: expensive + unprofitable,-0.13576988869891737
+2418,1997-08-31,cheap + most profitable (corner),0.567635692688828
+2419,1997-08-31,cheap + profitable (top 2 x top 2),0.042202252301131615
+2420,1997-08-31,value trap: cheap + unprofitable,-0.19998492604460272
+2421,1997-08-31,cheap (any profitability),-0.07036476108958833
+2422,1997-08-31,profitable (any price),0.0604285537367939
+2423,1997-08-31,junk growth: expensive + unprofitable,-0.13171001184301712
+2424,1997-09-30,cheap + most profitable (corner),0.5726484971770505
+2425,1997-09-30,cheap + profitable (top 2 x top 2),0.03372305576176293
+2426,1997-09-30,value trap: cheap + unprofitable,-0.21464049034435384
+2427,1997-09-30,cheap (any profitability),-0.08358131415513181
+2428,1997-09-30,profitable (any price),0.06837432021063594
+2429,1997-09-30,junk growth: expensive + unprofitable,-0.13198848320223444
+2430,1997-10-31,cheap + most profitable (corner),0.6816078690844605
+2431,1997-10-31,cheap + profitable (top 2 x top 2),0.05425889079575641
+2432,1997-10-31,value trap: cheap + unprofitable,-0.2004320237486471
+2433,1997-10-31,cheap (any profitability),-0.06767281173545348
+2434,1997-10-31,profitable (any price),0.060930687508545356
+2435,1997-10-31,junk growth: expensive + unprofitable,-0.13166607245784812
+2436,1997-11-30,cheap + most profitable (corner),0.7702228222619583
+2437,1997-11-30,cheap + profitable (top 2 x top 2),0.028549076507461413
+2438,1997-11-30,value trap: cheap + unprofitable,-0.20546066107212146
+2439,1997-11-30,cheap (any profitability),-0.07062938477973313
+2440,1997-11-30,profitable (any price),0.062588995356055
+2441,1997-11-30,junk growth: expensive + unprofitable,-0.15195569023443622
+2442,1997-12-31,cheap + most profitable (corner),0.7140561492397435
+2443,1997-12-31,cheap + profitable (top 2 x top 2),0.012117799548224895
+2444,1997-12-31,value trap: cheap + unprofitable,-0.20752475703167228
+2445,1997-12-31,cheap (any profitability),-0.07370964526987833
+2446,1997-12-31,profitable (any price),0.07015530270788095
+2447,1997-12-31,junk growth: expensive + unprofitable,-0.17865963091187687
+2448,1998-01-31,cheap + most profitable (corner),0.5246545097192006
+2449,1998-01-31,cheap + profitable (top 2 x top 2),-0.03380858776363482
+2450,1998-01-31,value trap: cheap + unprofitable,-0.20529106799697383
+2451,1998-01-31,cheap (any profitability),-0.08379161025563941
+2452,1998-01-31,profitable (any price),0.0653362432989757
+2453,1998-01-31,junk growth: expensive + unprofitable,-0.16265002435168063
+2454,1998-02-28,cheap + most profitable (corner),0.44395333569447404
+2455,1998-02-28,cheap + profitable (top 2 x top 2),-0.06828449697506711
+2456,1998-02-28,value trap: cheap + unprofitable,-0.21290982124708402
+2457,1998-02-28,cheap (any profitability),-0.09393556805095227
+2458,1998-02-28,profitable (any price),0.06109507511577905
+2459,1998-02-28,junk growth: expensive + unprofitable,-0.13766231939538243
+2460,1998-03-31,cheap + most profitable (corner),0.3723278766762863
+2461,1998-03-31,cheap + profitable (top 2 x top 2),-0.07802753869629342
+2462,1998-03-31,value trap: cheap + unprofitable,-0.22055604918662974
+2463,1998-03-31,cheap (any profitability),-0.10089327402742643
+2464,1998-03-31,profitable (any price),0.06342501058126859
+2465,1998-03-31,junk growth: expensive + unprofitable,-0.13697998375771736
+2466,1998-04-30,cheap + most profitable (corner),0.30921538299113616
+2467,1998-04-30,cheap + profitable (top 2 x top 2),-0.08047194380767075
+2468,1998-04-30,value trap: cheap + unprofitable,-0.21754418309345613
+2469,1998-04-30,cheap (any profitability),-0.10010406209896217
+2470,1998-04-30,profitable (any price),0.0602891780845094
+2471,1998-04-30,junk growth: expensive + unprofitable,-0.12588267672563647
+2472,1998-05-31,cheap + most profitable (corner),0.32207165038773033
+2473,1998-05-31,cheap + profitable (top 2 x top 2),-0.08211253271720031
+2474,1998-05-31,value trap: cheap + unprofitable,-0.21871443723569928
+2475,1998-05-31,cheap (any profitability),-0.10015789918622908
+2476,1998-05-31,profitable (any price),0.05581102574902075
+2477,1998-05-31,junk growth: expensive + unprofitable,-0.1051899778536951
+2478,1998-06-30,cheap + most profitable (corner),0.47275305297302017
+2479,1998-06-30,cheap + profitable (top 2 x top 2),-0.09295272599593074
+2480,1998-06-30,value trap: cheap + unprofitable,-0.23979389165143883
+2481,1998-06-30,cheap (any profitability),-0.12018895928567974
+2482,1998-06-30,profitable (any price),0.051794453479833136
+2483,1998-06-30,junk growth: expensive + unprofitable,-0.06963292100852869
+2484,1998-07-31,cheap + most profitable (corner),0.370166337265462
+2485,1998-07-31,cheap + profitable (top 2 x top 2),-0.10572575917093652
+2486,1998-07-31,value trap: cheap + unprofitable,-0.24921940312454394
+2487,1998-07-31,cheap (any profitability),-0.13111868090075018
+2488,1998-07-31,profitable (any price),0.052843384094295676
+2489,1998-07-31,junk growth: expensive + unprofitable,-0.04914141229538316
+2490,1998-08-31,cheap + most profitable (corner),0.3298938994556164
+2491,1998-08-31,cheap + profitable (top 2 x top 2),-0.13799688054160208
+2492,1998-08-31,value trap: cheap + unprofitable,-0.24701353778978496
+2493,1998-08-31,cheap (any profitability),-0.12973781299642817
+2494,1998-08-31,profitable (any price),0.05411999722460359
+2495,1998-08-31,junk growth: expensive + unprofitable,-0.08810316825749942
+2496,1998-09-30,cheap + most profitable (corner),0.43842783781367833
+2497,1998-09-30,cheap + profitable (top 2 x top 2),-0.14562176799102577
+2498,1998-09-30,value trap: cheap + unprofitable,-0.26844928571888194
+2499,1998-09-30,cheap (any profitability),-0.1511596197577869
+2500,1998-09-30,profitable (any price),0.062407415380194564
+2501,1998-09-30,junk growth: expensive + unprofitable,-0.03392608630575866
+2502,1998-10-31,cheap + most profitable (corner),0.4707547226807629
+2503,1998-10-31,cheap + profitable (top 2 x top 2),-0.13094506914503246
+2504,1998-10-31,value trap: cheap + unprofitable,-0.27504905922405876
+2505,1998-10-31,cheap (any profitability),-0.16395714829063512
+2506,1998-10-31,profitable (any price),0.06655255019907869
+2507,1998-10-31,junk growth: expensive + unprofitable,-0.040077258283501394
+2508,1998-11-30,cheap + most profitable (corner),0.45789032443682287
+2509,1998-11-30,cheap + profitable (top 2 x top 2),-0.11258595842120245
+2510,1998-11-30,value trap: cheap + unprofitable,-0.274624107038939
+2511,1998-11-30,cheap (any profitability),-0.15217824567238636
+2512,1998-11-30,profitable (any price),0.07070094771149016
+2513,1998-11-30,junk growth: expensive + unprofitable,-0.08417288584003713
+2514,1998-12-31,cheap + most profitable (corner),0.4445330381137753
+2515,1998-12-31,cheap + profitable (top 2 x top 2),-0.11547863897739563
+2516,1998-12-31,value trap: cheap + unprofitable,-0.2735906844190593
+2517,1998-12-31,cheap (any profitability),-0.15182750408056211
+2518,1998-12-31,profitable (any price),0.06937778295092678
+2519,1998-12-31,junk growth: expensive + unprofitable,-0.08050126885738373
+2520,1999-01-31,cheap + most profitable (corner),0.3294925772087487
+2521,1999-01-31,cheap + profitable (top 2 x top 2),-0.1554031481103466
+2522,1999-01-31,value trap: cheap + unprofitable,-0.2899126732351279
+2523,1999-01-31,cheap (any profitability),-0.18302313181705476
+2524,1999-01-31,profitable (any price),0.06678133137458486
+2525,1999-01-31,junk growth: expensive + unprofitable,-0.048842298874174905
+2526,1999-02-28,cheap + most profitable (corner),0.3609903857947736
+2527,1999-02-28,cheap + profitable (top 2 x top 2),-0.1547843891674574
+2528,1999-02-28,value trap: cheap + unprofitable,-0.27883202957303044
+2529,1999-02-28,cheap (any profitability),-0.17600545755727837
+2530,1999-02-28,profitable (any price),0.05730515374338463
+2531,1999-02-28,junk growth: expensive + unprofitable,-0.008950315156439403
+2532,1999-03-31,cheap + most profitable (corner),0.392354297378642
+2533,1999-03-31,cheap + profitable (top 2 x top 2),-0.1729174400246305
+2534,1999-03-31,value trap: cheap + unprofitable,-0.293183894997855
+2535,1999-03-31,cheap (any profitability),-0.19036497417975684
+2536,1999-03-31,profitable (any price),0.05727860474097812
+2537,1999-03-31,junk growth: expensive + unprofitable,0.02145989998675102
+2538,1999-04-30,cheap + most profitable (corner),0.2562966522143144
+2539,1999-04-30,cheap + profitable (top 2 x top 2),-0.20355285662477174
+2540,1999-04-30,value trap: cheap + unprofitable,-0.3081220747905893
+2541,1999-04-30,cheap (any profitability),-0.21328053239274314
+2542,1999-04-30,profitable (any price),0.0674688186510719
+2543,1999-04-30,junk growth: expensive + unprofitable,0.008194831800919511
+2544,1999-05-31,cheap + most profitable (corner),0.21389548477316045
+2545,1999-05-31,cheap + profitable (top 2 x top 2),-0.21464290486148974
+2546,1999-05-31,value trap: cheap + unprofitable,-0.29946112896607513
+2547,1999-05-31,cheap (any profitability),-0.20394878904433134
+2548,1999-05-31,profitable (any price),0.06603622077098126
+2549,1999-05-31,junk growth: expensive + unprofitable,-0.004273872326469252
+2550,1999-06-30,cheap + most profitable (corner),0.41647372436856167
+2551,1999-06-30,cheap + profitable (top 2 x top 2),-0.20677645679213252
+2552,1999-06-30,value trap: cheap + unprofitable,-0.31931590719345326
+2553,1999-06-30,cheap (any profitability),-0.22086223229194513
+2554,1999-06-30,profitable (any price),0.06901412039688282
+2555,1999-06-30,junk growth: expensive + unprofitable,-0.0004228107228188005
+2556,1999-07-31,cheap + most profitable (corner),0.3164585630239445
+2557,1999-07-31,cheap + profitable (top 2 x top 2),-0.19978665812904994
+2558,1999-07-31,value trap: cheap + unprofitable,-0.314492909356328
+2559,1999-07-31,cheap (any profitability),-0.21739180890125187
+2560,1999-07-31,profitable (any price),0.0711895186114373
+2561,1999-07-31,junk growth: expensive + unprofitable,0.004273485727802173
+2562,1999-08-31,cheap + most profitable (corner),0.32386499091150744
+2563,1999-08-31,cheap + profitable (top 2 x top 2),-0.18921709697008393
+2564,1999-08-31,value trap: cheap + unprofitable,-0.32691176025201085
+2565,1999-08-31,cheap (any profitability),-0.22414654950424118
+2566,1999-08-31,profitable (any price),0.07517788435141881
+2567,1999-08-31,junk growth: expensive + unprofitable,0.0015672386559260065
+2568,1999-09-30,cheap + most profitable (corner),0.3272195429949136
+2569,1999-09-30,cheap + profitable (top 2 x top 2),-0.2262088960708445
+2570,1999-09-30,value trap: cheap + unprofitable,-0.34356871496448793
+2571,1999-09-30,cheap (any profitability),-0.24625356734168813
+2572,1999-09-30,profitable (any price),0.08307785014443803
+2573,1999-09-30,junk growth: expensive + unprofitable,0.0090099391388887
+2574,1999-10-31,cheap + most profitable (corner),0.4106240987608998
+2575,1999-10-31,cheap + profitable (top 2 x top 2),-0.20263805668953616
+2576,1999-10-31,value trap: cheap + unprofitable,-0.3225902004092752
+2577,1999-10-31,cheap (any profitability),-0.21781761423388546
+2578,1999-10-31,profitable (any price),0.08061869136220268
+2579,1999-10-31,junk growth: expensive + unprofitable,-0.03523976581021837
+2580,1999-11-30,cheap + most profitable (corner),0.27396341572684935
+2581,1999-11-30,cheap + profitable (top 2 x top 2),-0.19352216593198668
+2582,1999-11-30,value trap: cheap + unprofitable,-0.3342870284233309
+2583,1999-11-30,cheap (any profitability),-0.22146059523920492
+2584,1999-11-30,profitable (any price),0.0843258273255838
+2585,1999-11-30,junk growth: expensive + unprofitable,-0.03304090392825232
+2586,1999-12-31,cheap + most profitable (corner),0.21928684141117882
+2587,1999-12-31,cheap + profitable (top 2 x top 2),-0.18312014065232107
+2588,1999-12-31,value trap: cheap + unprofitable,-0.33896270425831454
+2589,1999-12-31,cheap (any profitability),-0.22453626759195833
+2590,1999-12-31,profitable (any price),0.08329978119115089
+2591,1999-12-31,junk growth: expensive + unprofitable,-0.003785796799458563
+2592,2000-01-31,cheap + most profitable (corner),0.2704589745864161
+2593,2000-01-31,cheap + profitable (top 2 x top 2),-0.20099014539849114
+2594,2000-01-31,value trap: cheap + unprofitable,-0.34827660017181483
+2595,2000-01-31,cheap (any profitability),-0.2430853340302792
+2596,2000-01-31,profitable (any price),0.0765025862070563
+2597,2000-01-31,junk growth: expensive + unprofitable,0.005831658153428343
+2598,2000-02-29,cheap + most profitable (corner),0.20915041522984668
+2599,2000-02-29,cheap + profitable (top 2 x top 2),-0.24108122488925965
+2600,2000-02-29,value trap: cheap + unprofitable,-0.36811578189693994
+2601,2000-02-29,cheap (any profitability),-0.27884876823705684
+2602,2000-02-29,profitable (any price),0.07624285388930518
+2603,2000-02-29,junk growth: expensive + unprofitable,0.05705440249327376
+2604,2000-03-31,cheap + most profitable (corner),0.10824586856964746
+2605,2000-03-31,cheap + profitable (top 2 x top 2),-0.24745684870218032
+2606,2000-03-31,value trap: cheap + unprofitable,-0.3914735955795361
+2607,2000-03-31,cheap (any profitability),-0.3015494098119683
+2608,2000-03-31,profitable (any price),0.08033330895615642
+2609,2000-03-31,junk growth: expensive + unprofitable,0.08818540202578018
+2610,2000-04-30,cheap + most profitable (corner),-0.10649481647122694
+2611,2000-04-30,cheap + profitable (top 2 x top 2),-0.3635320427172358
+2612,2000-04-30,value trap: cheap + unprofitable,-0.45898055387805103
+2613,2000-04-30,cheap (any profitability),-0.3928101658165759
+2614,2000-04-30,profitable (any price),0.11065361287610309
+2615,2000-04-30,junk growth: expensive + unprofitable,0.10619335386662598
+2616,2000-05-31,cheap + most profitable (corner),-0.05116340250573115
+2617,2000-05-31,cheap + profitable (top 2 x top 2),-0.3791682637703795
+2618,2000-05-31,value trap: cheap + unprofitable,-0.4659479322700253
+2619,2000-05-31,cheap (any profitability),-0.3985835774799126
+2620,2000-05-31,profitable (any price),0.10769235423650225
+2621,2000-05-31,junk growth: expensive + unprofitable,0.13607468728009176
+2622,2000-06-30,cheap + most profitable (corner),-0.11497312100215984
+2623,2000-06-30,cheap + profitable (top 2 x top 2),-0.40011056740700246
+2624,2000-06-30,value trap: cheap + unprofitable,-0.4817266853385024
+2625,2000-06-30,cheap (any profitability),-0.41936591855885763
+2626,2000-06-30,profitable (any price),0.10274080226289661
+2627,2000-06-30,junk growth: expensive + unprofitable,0.19606374300807583
+2628,2000-07-31,cheap + most profitable (corner),-0.13963176297041036
+2629,2000-07-31,cheap + profitable (top 2 x top 2),-0.40423815213435565
+2630,2000-07-31,value trap: cheap + unprofitable,-0.4921428868102431
+2631,2000-07-31,cheap (any profitability),-0.4310875965353982
+2632,2000-07-31,profitable (any price),0.1111877874092102
+2633,2000-07-31,junk growth: expensive + unprofitable,0.23007532818268972
+2634,2000-08-31,cheap + most profitable (corner),-0.17504603626530624
+2635,2000-08-31,cheap + profitable (top 2 x top 2),-0.44265003741405606
+2636,2000-08-31,value trap: cheap + unprofitable,-0.5092969727717944
+2637,2000-08-31,cheap (any profitability),-0.4531756173679454
+2638,2000-08-31,profitable (any price),0.11400055846188883
+2639,2000-08-31,junk growth: expensive + unprofitable,0.26428409490558025
+2640,2000-09-30,cheap + most profitable (corner),-0.20489052967629473
+2641,2000-09-30,cheap + profitable (top 2 x top 2),-0.461810149987561
+2642,2000-09-30,value trap: cheap + unprofitable,-0.5345411140712308
+2643,2000-09-30,cheap (any profitability),-0.47505966124374377
+2644,2000-09-30,profitable (any price),0.12483876392103022
+2645,2000-09-30,junk growth: expensive + unprofitable,0.3066017221515076
+2646,2000-10-31,cheap + most profitable (corner),-0.20133320601078353
+2647,2000-10-31,cheap + profitable (top 2 x top 2),-0.45140690286208474
+2648,2000-10-31,value trap: cheap + unprofitable,-0.5485667529004898
+2649,2000-10-31,cheap (any profitability),-0.48388997171541015
+2650,2000-10-31,profitable (any price),0.12451937949211245
+2651,2000-10-31,junk growth: expensive + unprofitable,0.320992371531309
+2652,2000-11-30,cheap + most profitable (corner),-0.22158032156913932
+2653,2000-11-30,cheap + profitable (top 2 x top 2),-0.426921491890236
+2654,2000-11-30,value trap: cheap + unprofitable,-0.5375169544587391
+2655,2000-11-30,cheap (any profitability),-0.4739075329245944
+2656,2000-11-30,profitable (any price),0.10938343881132928
+2657,2000-11-30,junk growth: expensive + unprofitable,0.3264518656205757
+2658,2000-12-31,cheap + most profitable (corner),-0.1675317873984773
+2659,2000-12-31,cheap + profitable (top 2 x top 2),-0.37314835012169
+2660,2000-12-31,value trap: cheap + unprofitable,-0.5170270583145297
+2661,2000-12-31,cheap (any profitability),-0.45314599229580454
+2662,2000-12-31,profitable (any price),0.09064972962653095
+2663,2000-12-31,junk growth: expensive + unprofitable,0.38448213091867633
+2664,2001-01-31,cheap + most profitable (corner),-0.3135569728389046
+2665,2001-01-31,cheap + profitable (top 2 x top 2),-0.37836660435628067
+2666,2001-01-31,value trap: cheap + unprofitable,-0.5142575576155947
+2667,2001-01-31,cheap (any profitability),-0.4574625464094487
+2668,2001-01-31,profitable (any price),0.08129377600755716
+2669,2001-01-31,junk growth: expensive + unprofitable,0.4725180561458808
+2670,2001-02-28,cheap + most profitable (corner),-0.25159925872879096
+2671,2001-02-28,cheap + profitable (top 2 x top 2),-0.2959542790413072
+2672,2001-02-28,value trap: cheap + unprofitable,-0.4978136617159379
+2673,2001-02-28,cheap (any profitability),-0.43695574424925443
+2674,2001-02-28,profitable (any price),0.06447629478975103
+2675,2001-02-28,junk growth: expensive + unprofitable,0.513048347200624
+2676,2001-03-31,cheap + most profitable (corner),-0.25101659048087144
+2677,2001-03-31,cheap + profitable (top 2 x top 2),-0.26072652511223215
+2678,2001-03-31,value trap: cheap + unprofitable,-0.45868858720363204
+2679,2001-03-31,cheap (any profitability),-0.40130629215954783
+2680,2001-03-31,profitable (any price),0.05274466994509197
+2681,2001-03-31,junk growth: expensive + unprofitable,0.46518968798341764
+2682,2001-04-30,cheap + most profitable (corner),-0.21471423708271709
+2683,2001-04-30,cheap + profitable (top 2 x top 2),-0.24569060749918248
+2684,2001-04-30,value trap: cheap + unprofitable,-0.44691904386887404
+2685,2001-04-30,cheap (any profitability),-0.38205810979154
+2686,2001-04-30,profitable (any price),0.0640997460563939
+2687,2001-04-30,junk growth: expensive + unprofitable,0.36287794075991675
+2688,2001-05-31,cheap + most profitable (corner),-0.22012866732150926
+2689,2001-05-31,cheap + profitable (top 2 x top 2),-0.2842504933186586
+2690,2001-05-31,value trap: cheap + unprofitable,-0.4538974855886726
+2691,2001-05-31,cheap (any profitability),-0.3860339044449783
+2692,2001-05-31,profitable (any price),0.06407264848164473
+2693,2001-05-31,junk growth: expensive + unprofitable,0.3587134466238038
+2694,2001-06-30,cheap + most profitable (corner),-0.1653351588736356
+2695,2001-06-30,cheap + profitable (top 2 x top 2),-0.25021037458199946
+2696,2001-06-30,value trap: cheap + unprofitable,-0.4321890331442316
+2697,2001-06-30,cheap (any profitability),-0.36169776743663695
+2698,2001-06-30,profitable (any price),0.06398507017299004
+2699,2001-06-30,junk growth: expensive + unprofitable,0.3040314630864531
+2700,2001-07-31,cheap + most profitable (corner),-0.19384321513903358
+2701,2001-07-31,cheap + profitable (top 2 x top 2),-0.2729371473681259
+2702,2001-07-31,value trap: cheap + unprofitable,-0.4629968581728072
+2703,2001-07-31,cheap (any profitability),-0.39618570310974743
+2704,2001-07-31,profitable (any price),0.068612185597271
+2705,2001-07-31,junk growth: expensive + unprofitable,0.3546578794549802
+2706,2001-08-31,cheap + most profitable (corner),-0.24443183170198612
+2707,2001-08-31,cheap + profitable (top 2 x top 2),-0.30000044827717776
+2708,2001-08-31,value trap: cheap + unprofitable,-0.4879616072346187
+2709,2001-08-31,cheap (any profitability),-0.4156849854567649
+2710,2001-08-31,profitable (any price),0.082200337785445
+2711,2001-08-31,junk growth: expensive + unprofitable,0.33448955487946597
+2712,2001-09-30,cheap + most profitable (corner),-0.25963897389342927
+2713,2001-09-30,cheap + profitable (top 2 x top 2),-0.3033932093557783
+2714,2001-09-30,value trap: cheap + unprofitable,-0.4938381437685332
+2715,2001-09-30,cheap (any profitability),-0.41885168671398265
+2716,2001-09-30,profitable (any price),0.08288045149725676
+2717,2001-09-30,junk growth: expensive + unprofitable,0.3372315709149065
+2718,2001-10-31,cheap + most profitable (corner),-0.20445735850414337
+2719,2001-10-31,cheap + profitable (top 2 x top 2),-0.2726454427051428
+2720,2001-10-31,value trap: cheap + unprofitable,-0.4641709732442877
+2721,2001-10-31,cheap (any profitability),-0.3940485608658758
+2722,2001-10-31,profitable (any price),0.0670079268618502
+2723,2001-10-31,junk growth: expensive + unprofitable,0.3529785398987766
+2724,2001-11-30,cheap + most profitable (corner),-0.29036130106569047
+2725,2001-11-30,cheap + profitable (top 2 x top 2),-0.29761999311595844
+2726,2001-11-30,value trap: cheap + unprofitable,-0.46305108411527107
+2727,2001-11-30,cheap (any profitability),-0.3991883051024626
+2728,2001-11-30,profitable (any price),0.06784292336501352
+2729,2001-11-30,junk growth: expensive + unprofitable,0.29896156960210973
+2730,2001-12-31,cheap + most profitable (corner),-0.2777700866463356
+2731,2001-12-31,cheap + profitable (top 2 x top 2),-0.32200900810091326
+2732,2001-12-31,value trap: cheap + unprofitable,-0.482688353791223
+2733,2001-12-31,cheap (any profitability),-0.4187728146523282
+2734,2001-12-31,profitable (any price),0.0871553609813347
+2735,2001-12-31,junk growth: expensive + unprofitable,0.19526841562021136
+2736,2002-01-31,cheap + most profitable (corner),-0.3448322632247841
+2737,2002-01-31,cheap + profitable (top 2 x top 2),-0.3271220508909609
+2738,2002-01-31,value trap: cheap + unprofitable,-0.4733504912155755
+2739,2002-01-31,cheap (any profitability),-0.40988264827304266
+2740,2002-01-31,profitable (any price),0.09614584817824268
+2741,2002-01-31,junk growth: expensive + unprofitable,0.1338083194174
+2742,2002-02-28,cheap + most profitable (corner),-0.32817526878193426
+2743,2002-02-28,cheap + profitable (top 2 x top 2),-0.2939431946851683
+2744,2002-02-28,value trap: cheap + unprofitable,-0.40090777872757444
+2745,2002-02-28,cheap (any profitability),-0.34724508505585494
+2746,2002-02-28,profitable (any price),0.0927761771826987
+2747,2002-02-28,junk growth: expensive + unprofitable,0.038620780908591223
+2748,2002-03-31,cheap + most profitable (corner),-0.3665822931863625
+2749,2002-03-31,cheap + profitable (top 2 x top 2),-0.30053084116986495
+2750,2002-03-31,value trap: cheap + unprofitable,-0.374719367458373
+2751,2002-03-31,cheap (any profitability),-0.32873379497839517
+2752,2002-03-31,profitable (any price),0.07998087188048664
+2753,2002-03-31,junk growth: expensive + unprofitable,0.05780142016066114
+2754,2002-04-30,cheap + most profitable (corner),-0.3727069843324117
+2755,2002-04-30,cheap + profitable (top 2 x top 2),-0.32123383620359214
+2756,2002-04-30,value trap: cheap + unprofitable,-0.3837034168395712
+2757,2002-04-30,cheap (any profitability),-0.33923529647900186
+2758,2002-04-30,profitable (any price),0.08551502400457145
+2759,2002-04-30,junk growth: expensive + unprofitable,0.034921649863479454
+2760,2002-05-31,cheap + most profitable (corner),-0.379965510445442
+2761,2002-05-31,cheap + profitable (top 2 x top 2),-0.30352693276225395
+2762,2002-05-31,value trap: cheap + unprofitable,-0.35984472642083365
+2763,2002-05-31,cheap (any profitability),-0.3171569484346324
+2764,2002-05-31,profitable (any price),0.09058948620330698
+2765,2002-05-31,junk growth: expensive + unprofitable,-0.034422911174518456
+2766,2002-06-30,cheap + most profitable (corner),-0.2895405103546622
+2767,2002-06-30,cheap + profitable (top 2 x top 2),-0.24241419346643844
+2768,2002-06-30,value trap: cheap + unprofitable,-0.3138611894538793
+2769,2002-06-30,cheap (any profitability),-0.2747481441958778
+2770,2002-06-30,profitable (any price),0.08669323181681299
+2771,2002-06-30,junk growth: expensive + unprofitable,-0.11609613467608715
+2772,2002-07-31,cheap + most profitable (corner),-0.29386029112635836
+2773,2002-07-31,cheap + profitable (top 2 x top 2),-0.2694962784118812
+2774,2002-07-31,value trap: cheap + unprofitable,-0.347046560017079
+2775,2002-07-31,cheap (any profitability),-0.30339893383333516
+2776,2002-07-31,profitable (any price),0.09942372530472587
+2777,2002-07-31,junk growth: expensive + unprofitable,-0.11654310634182696
+2778,2002-08-31,cheap + most profitable (corner),-0.2635656653928464
+2779,2002-08-31,cheap + profitable (top 2 x top 2),-0.28216644501297705
+2780,2002-08-31,value trap: cheap + unprofitable,-0.3641991770867552
+2781,2002-08-31,cheap (any profitability),-0.31468005605778193
+2782,2002-08-31,profitable (any price),0.09410649649159519
+2783,2002-08-31,junk growth: expensive + unprofitable,-0.10405253711692009
+2784,2002-09-30,cheap + most profitable (corner),-0.25609593831871913
+2785,2002-09-30,cheap + profitable (top 2 x top 2),-0.25599341995999625
+2786,2002-09-30,value trap: cheap + unprofitable,-0.3503292984522113
+2787,2002-09-30,cheap (any profitability),-0.30017313071870455
+2788,2002-09-30,profitable (any price),0.08148947030942888
+2789,2002-09-30,junk growth: expensive + unprofitable,-0.07484316837874339
+2790,2002-10-31,cheap + most profitable (corner),-0.34798061120076096
+2791,2002-10-31,cheap + profitable (top 2 x top 2),-0.2602962794993696
+2792,2002-10-31,value trap: cheap + unprofitable,-0.35357300304265726
+2793,2002-10-31,cheap (any profitability),-0.2983856583026794
+2794,2002-10-31,profitable (any price),0.07909010284550488
+2795,2002-10-31,junk growth: expensive + unprofitable,-0.06369115522963686
+2796,2002-11-30,cheap + most profitable (corner),-0.3441348655707467
+2797,2002-11-30,cheap + profitable (top 2 x top 2),-0.19966568297015908
+2798,2002-11-30,value trap: cheap + unprofitable,-0.3262793767541847
+2799,2002-11-30,cheap (any profitability),-0.25731605729986773
+2800,2002-11-30,profitable (any price),0.06787738239319774
+2801,2002-11-30,junk growth: expensive + unprofitable,-0.08704540587030685
+2802,2002-12-31,cheap + most profitable (corner),-0.38897385373542426
+2803,2002-12-31,cheap + profitable (top 2 x top 2),-0.20030237601030776
+2804,2002-12-31,value trap: cheap + unprofitable,-0.3317230247974142
+2805,2002-12-31,cheap (any profitability),-0.257049175581051
+2806,2002-12-31,profitable (any price),0.07501205200130667
+2807,2002-12-31,junk growth: expensive + unprofitable,-0.12784601379885452
+2808,2003-01-31,cheap + most profitable (corner),-0.42229026272611203
+2809,2003-01-31,cheap + profitable (top 2 x top 2),-0.20991416696942744
+2810,2003-01-31,value trap: cheap + unprofitable,-0.308348634217813
+2811,2003-01-31,cheap (any profitability),-0.24464643059287816
+2812,2003-01-31,profitable (any price),0.0633296385001485
+2813,2003-01-31,junk growth: expensive + unprofitable,-0.13956339036334198

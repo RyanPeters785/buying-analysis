@@ -33,6 +33,7 @@ expensive part; signals were often real but rarely paid enough to cover it.
 | "Sell in May" / seasonality? | Sep–Oct is reliably weak, but selling half the year cost 63% of ending value. |
 | Rotate between countries, or US vs international? | Momentum beat random picks but not plain US stocks; the US lead is narrowing (+10.4 to +5.2 pts/yr). |
 | Hold small-cap / value instead? | **The only large long-run edge** (small value beat the market in 96% of 20-year windows since 1927), but it has lagged since 2007. |
+| Cheap **and** profitable stocks? | Nearly doubled the value edge (13.2% vs 10.5%/yr since 1964); cheap-but-unprofitable only matched the market; lagged 2007–2022. |
 | What does today's valuation imply? | CAPE 31 (Sept 2023) historically meant about 4.5%/yr over the next decade, with a wide range (−4% to +8%). |
 
 **Practical reading.** Invest each contribution as soon as it arrives in a low-cost broad index fund and
@@ -429,6 +430,42 @@ than without (−74%). On the true blowups it helped about half the time (GE +16
 other half (BAC −24%, HWM −16%, INTC −9%). For single-stock blowup risk, diversifying across many stocks
 works far better than a trend rule. Survivorship bias here favors buy-and-hold; a real stock picker
 would also hold failures, where the rule would look better.
+
+## Follow-up: value + profitability (cheap stocks that are also profitable)
+
+This uses the Ken French 5×5 portfolios of US stocks, sorted independently on book-to-market (cheapness) and
+operating profitability, value-weighted and monthly from 1963. Portfolios are re-formed each June from
+the prior fiscal year. Combinations are cap-weighted. The test runs 1964–2022 with $5,000 each January,
+after assumed fees of 0.25%/yr (market 0.03%) (`scripts/value_profitability.py`,
+`outputs/value_profitability/report.md`).
+
+| Portfolio | Firms | vs market | XIRR (mkt 10.5%) | Worst drawdown (mkt −50%) | 20-yr windows beating market | 2007–2022 (mkt 8.7%) |
+|---|---|---|---|---|---|---|
+| Cheap + profitable (top 2 × top 2) | ~200 | +244% | 13.2% | −58% | 87% | 6.0% |
+| Cheap + most profitable (corner) | ~25 | +557% | 14.6% | −89% | 93% | 6.3% |
+| Cheap, any profitability | ~1,500 | +87% | 11.9% | −65% | 79% | 5.1% |
+| Value trap: cheap + unprofitable | ~1,050 | −3% | 10.4% | −68% | 58% | 3.9% |
+| Profitable, any price | ~1,100 | +35% | 11.2% | −48% | 88% (worst −5%) | 9.5% |
+| Junk growth: expensive + unprofitable | ~600 | −84% | 6.3% | −75% | 7% | 8.1% |
+
+![Return minus market by cheapness and profitability, 1964–2022](outputs/value_profitability/heatmap_1964_2022.png)
+
+**Results.**
+- **Adding profitability to value nearly doubled the value edge,** from about 2.1 to about 3.4 points a
+  year gross.
+- **Cheap but unprofitable stocks only matched the market.** Value traps are real.
+- **Expensive, unprofitable companies were the clearest loser:** −8 points a year in the corner cell,
+  trailing the market in 93% of 20-year windows. This is the only result still significant after a Holm
+  adjustment across the 6 portfolios (p = 0.03); cheap + profitable is borderline (t = 2.4, Holm p = 0.08).
+- **Profitability alone was the most consistent:** it beat the market in 88% of 20-year windows and
+  still did after 2007.
+
+**Caveats.**
+- **Like value, cheap + profitable lagged in 2007–2022** (6.0% vs 8.7%). In 2023–2025 (descriptive) it
+  beat the market, 26.2% vs 23.2%.
+- **The extreme corner holds about 25 stocks** and fell 89% at its worst.
+- **These are paper portfolios.** Real funds that screen on value and profitability charge 0.15–0.25% and
+  will not match exactly.
 
 ## Strategies that did not beat SPY after costs
 
