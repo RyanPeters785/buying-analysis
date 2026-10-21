@@ -255,6 +255,32 @@ usual argument for holding some of both rather than betting on either.
 
 ![US minus other markets, rolling 10 years](outputs/countries/rolling_10y_gap.png)
 
+## Follow-up: the X-day moving-average rule
+
+**Rule.** Each day at the close, if the price is below its X-day average, sell at the next open and hold
+T-bills (3-month T-bill yield, no fund fee). Buy back at the next open after a close above the average.
+All six settings, X = 20, 50, 100, 150, 200 and 250, are reported; none was selected
+(`scripts/sma_rule.py`, `outputs/sma_rule/report.md`).
+
+| X days | SPY 1994–2022: ending value (B&H $664k) | XIRR (8.9%) | Worst drawdown (−55%) | Beats random timing (value / Sharpe) | US market 1927–2022: vs B&H | Sharpe (0.43) | 20-yr windows beating B&H |
+|---|---|---|---|---|---|---|---|
+| 20 | $244k | 3.3% | −33% | 10% / 8% | −80% | 0.52 | 19% |
+| 50 | $286k | 4.2% | −34% | 14% / 25% | −69% | 0.56 | 29% |
+| 100 | $440k | 6.7% | −47% | 50% / 70% | −34% | 0.64 | 33% |
+| 150 | $382k | 5.9% | −32% | 27% / 57% | −13% | 0.65 | 33% |
+| 200 | $498k | 7.4% | −24% | 61% / 96% | −15% | 0.63 | 33% |
+| 250 | $468k | 7.0% | −25% | 42% / 94% | +7.5% | 0.63 | 43% |
+
+- **Short averages (20–50 days) fail.** They trade every 2–4 weeks, do worse than random timing, and fall
+  to 0.9–2.8% a year at 5× costs.
+- **Long averages (150–250 days) trade return for protection.**
+  - They roughly halve the worst drawdown: −24% vs −55% on SPY, and −40% vs −84% on the 1927–2022 market.
+  - They raise the Sharpe ratio in both datasets.
+  - They end with less money in most periods, behind buy-and-hold in about two-thirds of 20-year windows.
+- **The one win is noise.** The 250-day rule's +7.5% over 1927–2022 comes from the 1929–32 crash, and the
+  same setting lost 30% on SPY 1994–2022.
+- **2023–2025 (descriptive):** every setting trailed buy-and-hold, with 12–20% a year against 22%.
+
 ## Strategies that did not beat SPY after costs
 
 On ending value over their full development window: monthly and weekly DCA; all 12 buy-the-dip

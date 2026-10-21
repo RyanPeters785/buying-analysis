@@ -218,3 +218,20 @@ class RSI2(Allocator):
         if r > self.exit_rsi or x[-1] > sma(x, self.exit_sma):
             return {}
         return {self.asset: 1.0}
+
+
+class PriceVsSMA(Allocator):
+    """Daily: hold the asset while its close is above its ``n``-day simple moving average, else cash
+    (T-bills via the engine's cash yield). Signal at t's close, trade at t+1's open."""
+
+    def __init__(self, asset: int = SPY, n: int = 200):
+        self.asset, self.n = asset, n
+        self.assets = (asset,)
+        self.name = f"above_sma{n}d"
+
+    def allocation(self, ctx):
+        x = ctx.close(self.asset)
+        s = sma(x, self.n)
+        if np.isnan(s):
+            return None
+        return {self.asset: 1.0} if x[-1] > s else {}

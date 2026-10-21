@@ -150,3 +150,9 @@ def test_mean_reversion_truncation(real_md):
     from buying_analysis.strategies.meanrev import MeanReversion
 
     test_truncating_the_future_changes_nothing(real_md, lambda: MeanReversion(SPY, 20, 1.5, 0.0))
+
+
+def test_price_vs_sma_truncation(real_md):
+    from buying_analysis.strategies.timing import PriceVsSMA
+
+    test_truncating_the_future_changes_nothing(real_md, lambda: PriceVsSMA(SPY, 100))
