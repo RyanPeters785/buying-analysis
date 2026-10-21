@@ -135,6 +135,37 @@ Pre-market and intraday times were not testable (daily open and close data only)
 
 ![Price paid vs the week's average, by slot](outputs/day_of_week.png)
 
+## Follow-up: swing-trading assets that mean-revert
+
+The idea: find assets whose big moves tend to reverse, then buy their dips and sell the rebounds.
+`scripts/mean_reversion.py` does this in three pre-declared steps, with selection and design kept
+apart from the test period. Full output: `outputs/mean_reversion/report.md`.
+
+1. **Selection (1993–2007).** We measured the 10-day variance ratio for every asset with at least 5 years
+   of data (a ratio below 1 means moves tend to reverse) and picked the 5 most mean-reverting:
+   **XOM, CVX, WMT, JNJ, SPY** (VR 0.65–0.78). Four of them stay significant after a Holm adjustment
+   across 54 tests. Bond ETFs, gold and high-volatility tech stocks did not mean-revert.
+2. **Rule design (1993–2007).** We chose the best of 8 band rules by median Sharpe: buy when the price is
+   2 standard deviations below its 50-day average, sell when it returns to the average.
+3. **Frozen test (2008–2022).**
+
+| Asset | Swing strategy | Buy and hold same asset | SPY | Worst drawdown, swing vs hold | Time in market |
+|---|---|---|---|---|---|
+| WMT | $130k (6.6%/yr) | $179k (10.3%) | $195k (11.2%) | −16% vs −36% | 21% |
+| JNJ | $134k (7.0%) | $192k (11.1%) | $195k | −28% vs −35% | 18% |
+| CVX | $108k (4.4%) | $189k (10.9%) | $195k | −52% vs −56% | 24% |
+| XOM | $87k (1.8%) | $152k (8.4%) | $195k | −53% vs −63% | 28% |
+| SPY | $89k (2.1%) | $195k (11.2%) | $195k | −39% vs −53% | 18% |
+
+**Every pick lost to holding the same asset, and to SPY, at 1×, 2× and 5× costs.** The mean reversion
+itself mostly held up out of sample: all five still had VR below 1 in 2008–2022, and for 4 of 5, buying
+after a deep dip was followed by an above-average month (JNJ +3.5% against +0.8% normally). The strategy
+lost anyway because it was in the market only about 20% of the time. It captured the post-dip bounces but
+missed the ordinary upward drift on the other days, and over 15 years that drift was worth more. To profit
+from mean reversion you need to short the highs or lever up at the lows, and a long-only Roth can do
+neither. Even on the 1993–2007 selection period the rule beat holding on return for only one of the five
+(WMT).
+
 ## Strategies that did not beat SPY after costs
 
 On ending value over their full development window: monthly and weekly DCA; all 12 buy-the-dip

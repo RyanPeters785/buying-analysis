@@ -129,3 +129,24 @@ def test_labels_and_purge():
     assert list(y[:3]) == [0.0, 1.0, 1.0] and np.isnan(y[3:]).all()
     # with 6 sessions known (last index 5), samples t <= 2 have open[t+3] observed
     assert training_rows(6, 2) == 3
+
+
+# --- mean reversion --------------------------------------------------------------------------------------
+
+
+def test_variance_ratio_random_walk_vs_reverting():
+    from buying_analysis.strategies.meanrev import variance_ratio
+
+    rng = np.random.default_rng(5)
+    e = rng.normal(0, 0.01, 20000)
+    vr_rw, z_rw = variance_ratio(e, 10)
+    assert abs(vr_rw - 1) < 0.05 and abs(z_rw) < 2.5
+    rev = e[1:] - 0.4 * e[:-1]  # negatively autocorrelated returns
+    vr, z = variance_ratio(rev, 10)
+    assert vr < 0.8 and z < -10
+
+
+def test_mean_reversion_truncation(real_md):
+    from buying_analysis.strategies.meanrev import MeanReversion
+
+    test_truncating_the_future_changes_nothing(real_md, lambda: MeanReversion(SPY, 20, 1.5, 0.0))

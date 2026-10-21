@@ -79,8 +79,11 @@ def evaluate_timing(
     log: bool = True,
     phase: str = "dev",
     res=None,
+    null_asset: int = SPY,
 ) -> dict:
     """Strategy vs B1, N1 (exposure-matched) and N2 (random timing) on the same window and deposits.
+
+    N1/N2 hold ``null_asset`` (default SPY): set it to the traded asset for single-asset strategies.
 
     Returns summary metrics plus ``_res`` / ``_b1`` (engine results) and ``_n2`` (null summaries) for
     statistics and plots; underscore keys are not written to trials.csv.
@@ -93,12 +96,14 @@ def evaluate_timing(
     b1_res = run_one(eng, spy_buy_and_hold(), start, end, amount, frequency)
     b1 = summarize(b1_res)
     w = (
-        res.weights.get(SPY, pd.Series(0.0, index=res.daily.index))
+        res.weights.get(null_asset, pd.Series(0.0, index=res.daily.index))
         .reindex(res.daily.index)
         .fillna(0)
     )
-    exposure = float(w.mean()) if SPY in strategy.assets else m["time_in_market"]
-    n1 = summarize(run_one(eng, exposure_matched(SPY, exposure), start, end, amount, frequency))
+    exposure = float(w.mean()) if null_asset in strategy.assets else m["time_in_market"]
+    n1 = summarize(
+        run_one(eng, exposure_matched(null_asset, exposure), start, end, amount, frequency)
+    )
 
     seeds = range(n_random)
     if isinstance(strategy, SectorRotation):
@@ -110,7 +115,7 @@ def evaluate_timing(
         for s in seeds:
             rng = np.random.default_rng(s)
             sched = pd.Series(random_schedule(n, n_in, spells, rng), index=sess)
-            nulls.append(RandomTiming(SPY, sched, s))
+            nulls.append(RandomTiming(null_asset, sched, s))
     workers = min(len(nulls), os.cpu_count() or 1)
     with ProcessPoolExecutor(workers, initializer=_init,
                              initargs=(md, eng.costs, start, end, amount, frequency)) as ex:  # fmt: skip
