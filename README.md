@@ -22,7 +22,9 @@ uv run pytest                # tests
 ```bash
 uv run scripts/copy_data.py                                   # 2010-2025 CRSP panel + point-in-time macro file
 uv run --python 3.11 --group wrds scripts/fetch_crsp_history.py --wrds-username USER   # 1993-2009 (Duo push)
-uv run scripts/fetch_ken_french.py                            # free 1926+ market data (robustness check)
+uv run scripts/fetch_ken_french.py                            # free 1926+ market + size/value portfolios
+uv run --python 3.11 --group wrds scripts/fetch_country_etfs.py --wrds-username USER   # 24 country ETFs, 1996-2025
+uv run scripts/fetch_shiller.py                               # free Shiller monthly S&P data (CAPE signal)
 uv run scripts/validate_data.py                               # writes outputs/data_validation.md
 ```
 
@@ -35,6 +37,21 @@ uv run scripts/run_all.py            # validation, then every development experi
 uv run scripts/run_all.py --quick    # fewer random/bootstrap draws, to check the pipeline
 uv run scripts/run_all.py --lockbox  # the one-time 2023-2025 evaluation (see "Lockbox")
 ```
+
+Follow-up studies, each standalone (outputs in `outputs/<study>/`). These came after the lockbox was spent,
+so they use pre-declared settings, report full grids, and treat 2023-2025 as descriptive only.
+
+| Script | Question |
+|---|---|
+| `scripts/day_of_week.py` | Does the weekday / open vs close of a weekly DCA purchase matter? |
+| `scripts/mean_reversion.py` | Swing-trade assets that mean-revert (select 1993-2007, test 2008-2022) |
+| `scripts/sector_reversal.py` | Always-invested rotation into last month's worst sectors |
+| `scripts/factor_tilts.py` | Small-cap / value tilts, 1927-2022 (Ken French portfolios) |
+| `scripts/country_momentum.py` | Country momentum, US vs international switching, rolling US lead |
+| `scripts/sma_rule.py` | Daily X-day moving-average rule, out to T-bills |
+| `scripts/cape_timing.py` | Sell when CAPE is expensive (real-time percentile thresholds) |
+| `scripts/seasonality.py` | Returns by calendar day / month, Sell in May |
+| `scripts/valuation_scatter.py` | Trailing P/E and CAPE at purchase vs next-10-year return |
 
 ## Assumptions
 
@@ -83,7 +100,9 @@ missing from CRSP returns for HWM 2020-04-01 and DD 2019-06-03 (single stocks on
 |---|---|---|
 | CRSP daily stock file (`crsp.dsf_v2`) via WRDS | all prices, 1993-2025 | licensed; not redistributable |
 | FRED / ALFRED DGS3MO | cash yield (point-in-time) | public |
-| Ken French Data Library | 1926+ US market robustness check | free for research |
+| CRSP via WRDS: 24 US-listed country/region ETFs | country study, 1996-2025 | licensed; not redistributable |
+| Ken French Data Library | 1926+ US market, size x value portfolios | free for research |
+| Robert Shiller, `ie_data.xls` | monthly S&P earnings / CPI for CAPE (1871-2023) | free for research |
 | yfinance, FRED | validation only, never mixed into results | public |
 
 ## Layout
@@ -98,8 +117,9 @@ src/buying_analysis/
   stats.py       block bootstrap, Deflated Sharpe, Holm
   experiments.py null baselines, per-ticker runs, rolling windows, trials log, lockbox guard
   report.py      tables;  plots.py  charts
-  strategies/    benchmarks, deployment (lump sum, DCA), dip, timing, learned, nulls
-scripts/         copy_data, fetch_crsp_history, fetch_ken_french, validate_data, run_all
+  strategies/    benchmarks, deployment (lump sum, DCA), dip, timing, learned, meanrev, nulls
+scripts/         data: copy_data, fetch_crsp_history, fetch_country_etfs, fetch_ken_french, fetch_shiller,
+                 validate_data; main study: run_all; follow-ups: see the table under "Run"
 configs/default.yaml
 tests/
 ```

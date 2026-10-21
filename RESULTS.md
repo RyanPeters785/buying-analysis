@@ -19,6 +19,26 @@ exception, and it is driven by hindsight in the stock list. The trade-offs that 
 - **More active trading did worse.** RSI(2), dual momentum and the machine-learning swing model all
   trailed SPY, mainly from time out of the market, with costs adding to it.
 
+**Follow-up studies** (details further down) all point the same way. Being out of the market was the
+expensive part; signals were often real but rarely paid enough to cover it.
+
+| Question | Answer |
+|---|---|
+| Best weekday / time to buy? | Doesn't matter (about 0.005%/yr between slots); buy when the money arrives. |
+| Swing-trade assets that mean-revert? | The pattern held out of sample, but long-only swing trading lost to holding every asset. |
+| Rotate into last month's losing sectors? | Worse than random sector picks. |
+| Daily X-day moving-average rule (out to T-bills)? | 150–250 days roughly halves drawdowns but usually ends with less money; 20–50 days just loses. |
+| Sell when the market is expensive (CAPE)? | CAPE predicts 10-year returns (R² 0.44) but every timing rule lost to buy-and-hold. |
+| "Sell in May" / seasonality? | Sep–Oct is reliably weak, but selling half the year cost 63% of ending value. |
+| Rotate between countries, or US vs international? | Momentum beat random picks but not plain US stocks; the US lead is narrowing (+10.4 to +5.2 pts/yr). |
+| Hold small-cap / value instead? | **The only large long-run edge** (small value beat the market in 96% of 20-year windows since 1927), but it has lagged since 2007. |
+| What does today's valuation imply? | CAPE 31 (Sept 2023) historically meant about 4.5%/yr over the next decade, with a wide range (−4% to +8%). |
+
+**Practical reading.** Invest each contribution as soon as it arrives in a low-cost broad index fund and
+hold through downturns. The choices that mattered were *what* to hold (diversification across US and
+international, an optional small/value tilt) and whether you can sit through a 50% drop, not *when* to
+buy or sell. This is a backtest, not personal financial advice.
+
 ## Main results, 1994–2022 (SPY strategies)
 
 | Strategy | Ending value vs SPY | XIRR (SPY 8.9%) | Sharpe (SPY 0.45) | Worst drawdown (SPY −55%) | 95% CI, ending value vs SPY | DSR vs SPY |
