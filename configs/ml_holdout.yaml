@@ -1,0 +1,14 @@
+# Pre-registered ML holdout list (approved 2026-10-21, after the 1998-2015 dev phase and before any
+# 2016-2025 result was computed). Best dev setting of each approach, at 10 and 20 bps per side.
+# Evaluated exactly once: uv run scripts/ml_select.py --phase holdout
+configs:
+  - {model: factor_score,  horizon: 1, top_n: 50,  cost_bps: 10.0}
+  - {model: factor_score,  horizon: 1, top_n: 50,  cost_bps: 20.0}
+  - {model: ridge,         horizon: 3, top_n: 50,  cost_bps: 10.0}
+  - {model: ridge,         horizon: 3, top_n: 50,  cost_bps: 20.0}
+  - {model: random_forest, horizon: 1, top_n: 50,  cost_bps: 10.0}
+  - {model: random_forest, horizon: 1, top_n: 50,  cost_bps: 20.0}
+  - {model: xgboost,       horizon: 1, top_n: 100, cost_bps: 10.0}
+  - {model: xgboost,       horizon: 1, top_n: 100, cost_bps: 20.0}
+  - {model: lightgbm,      horizon: 1, top_n: 50,  cost_bps: 10.0}
+  - {model: lightgbm,      horizon: 1, top_n: 50,  cost_bps: 20.0}

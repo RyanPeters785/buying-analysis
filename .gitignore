@@ -5,3 +5,5 @@ __pycache__/
 outputs/*.log
 outputs/stock_eval/*
 !outputs/stock_eval/RIVN.md
+outputs/ml_dev.log
+outputs/ml_holdout.log
