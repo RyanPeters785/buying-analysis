@@ -39,6 +39,7 @@ expensive part; signals were often real but rarely paid enough to cover it.
 | Rotate between US stocks, international, bonds and gold? | No rule beat holding all four equally (2006–2022); it protected in 2008 but lagged 2010–2019. |
 | Hold low-volatility stocks instead of cutting exposure? | Yes: at the same volatility, calm stocks ended +58% vs the market, cutting exposure −45%; still worked after 2007. |
 | Combine low vol + value + momentum? | Steadiest tilt tested: Sharpe 0.58, worst 5-year lag only −13%, tied the market 2007–2022. |
+| Machine-learning stock ranking (top 1,000, point-in-time)? | Winners flipped between periods: factor score best 1998–2015 but worst 2016–2025; boosted trees beat SPY in 2016–2025 but the edge is thin and cost-sensitive. |
 | What does today's valuation imply? | CAPE 31 (Sept 2023) historically meant about 4.5%/yr over the next decade, with a wide range (−4% to +8%). |
 
 **Practical reading.** Invest each contribution as soon as it arrives in a low-cost broad index fund and
@@ -613,6 +614,50 @@ on each January deposit, 1964–2022, with costs as above and 1%/yr for momentum
   - it is the only combination that did not trail the market after 2007 (a tie at 8.7%)
 - **The trade-off is less upside** than 50/50 value + momentum (+188% vs +270%).
 - **In 2023–2025 (descriptive)** it earned 17.7% a year against 23.2%.
+
+## Follow-up: machine-learning stock selection (point-in-time top 1,000 US stocks)
+
+**Data and universe.** CRSP monthly data for every US common stock, plus Compustat annual fundamentals,
+1990–2025, pulled from WRDS. Each month the universe is the largest 1,000 stocks priced at $5 or more,
+selected *as of that date*. Stocks later delisted, acquired or bankrupt are included, so there is no
+survivorship bias.
+
+**Features (26).** Momentum, reversal, volatility, beta, size, turnover, technical signals, valuation,
+profitability, investment, accruals, leverage and R&D. Fundamentals are used only 6 months after
+fiscal year-end. Tests check the point-in-time rules against the raw data.
+
+**Models and portfolios.**
+- **Models:** a simple equal-weight factor score, ridge regression, random forest, LightGBM and XGBoost,
+  with hyperparameters fixed in advance. Each is refit every January on outcomes already realized; a
+  leakage test confirms that scrambling unrealized outcomes leaves predictions unchanged.
+- **Portfolios:** equal-weight top 50 or top 100, rebalanced monthly or quarterly, long-only, with 10 or
+  20 bps per side and $5,000 each year. Holdings that delist become cash.
+- **Process:** settings were compared on 1998–2015. The best of each approach was then pre-registered
+  (`configs/ml_holdout.yaml`) and run once on 2016–2025 (`scripts/ml_select.py`, `outputs/ml/`).
+
+| Approach (best dev setting) | Dev 1998–2015: vs SPY / XIRR (SPY 6.9%) | Dev IC (t) | **Holdout 2016–2025: vs SPY at 10 / 20 bps** | Holdout XIRR (SPY 15.4%) | Holdout Sharpe (SPY 0.89) | Holdout IC (t) |
+|---|---|---|---|---|---|---|
+| Factor score, monthly top 50 | **+51% / 10.8%** | 0.035 (3.1) | **−36% / −42%** | 7.6% | 0.58 | 0.016 (1.1) |
+| Ridge, quarterly top 50 | +16% / 8.4% | 0.008 (0.9) | −20% / −22% | 11.5% | 0.59 | 0.018 (2.3) |
+| Random forest, monthly top 50 | +12% / 8.0% | 0.029 (3.6) | −23% / −30% | 10.9% | 0.61 | 0.027 (2.6) |
+| XGBoost, monthly top 100 | +9% / 7.8% | 0.022 (2.3) | **+15% / +6%** | 17.9% | **0.98** | **0.036 (3.9)** |
+| LightGBM, monthly top 50 | +4% / 7.3% | 0.024 (2.4) | +12% / +1% | 17.4% | 0.87 | 0.031 (3.1) |
+| Equal-weight universe | +21% / 8.7% | | −24% | 10.7% | 0.61 | |
+
+![ML development period: best portfolios relative to SPY](outputs/ml/dev_relative_to_spy.png)
+
+**What happened.**
+- **The rankings flipped between periods.** The factor score won the development period by a wide margin
+  but came last in the holdout, with no ranking skill. Its development win was partly look-ahead by the
+  researcher: profitability, low volatility and asset growth were chosen using papers published after
+  1998.
+- **Boosted trees (XGBoost, LightGBM) did best in the holdout.** They learn from the data each year and
+  had the strongest ranking skill. XGBoost beat SPY with a higher Sharpe and a smaller drawdown, even
+  though 2016–2025 punished equal weighting: the equal-weight universe lost 24% to SPY as a few
+  mega-caps led.
+- **The edge is thin.** It roughly halves or vanishes at 20 bps, turnover is about 13× a year, and the
+  best deflated Sharpe vs SPY is 0.33. No model beat SPY reliably across both periods after realistic
+  costs.
 
 ## Strategies that did not beat SPY after costs
 

@@ -24,6 +24,7 @@ uv run scripts/copy_data.py                                   # 2010-2025 CRSP p
 uv run --python 3.11 --group wrds scripts/fetch_crsp_history.py --wrds-username USER   # 1993-2009 (Duo push)
 uv run scripts/fetch_ken_french.py                            # free 1926+ market + size/value portfolios
 uv run --python 3.11 --group wrds scripts/fetch_country_etfs.py --wrds-username USER   # 24 country ETFs, 1996-2025
+uv run --python 3.11 --group wrds scripts/fetch_ml_data.py --wrds-username USER   # ML universe + Compustat
 uv run scripts/fetch_shiller.py                               # free Shiller monthly S&P data (CAPE signal)
 uv run scripts/validate_data.py                               # writes outputs/data_validation.md
 ```
@@ -59,6 +60,7 @@ so they use pre-declared settings, report full grids, and treat 2023-2025 as des
 | `scripts/multi_asset_momentum.py` | Rotate between SPY / EFA / IEF / GLD by relative momentum (2006-2022) |
 | `scripts/low_volatility.py` | Low-volatility stocks vs market + T-bills at the same volatility (1964-2022) |
 | `scripts/factor_combo.py` | Low vol + value + momentum combinations (1964-2022) |
+| `scripts/ml_select.py` | ML stock selection on a point-in-time top-1000 universe (dev 1998-2015, one-time holdout 2016-2025) |
 | `scripts/evaluate_stock.py` | Place one stock in the momentum / cheapness / profitability buckets (descriptive) |
 | `scripts/screen_cheap_profitable.py` | Screen S&P 500 / 1500 holdings for cheap + profitable stocks (descriptive) |
 
