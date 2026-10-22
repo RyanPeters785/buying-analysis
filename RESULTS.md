@@ -35,6 +35,7 @@ expensive part; signals were often real but rarely paid enough to cover it.
 | Hold small-cap / value instead? | **The only large long-run edge** (small value beat the market in 96% of 20-year windows since 1927), but it has lagged since 2007. |
 | Cheap **and** profitable stocks? | Nearly doubled the value edge (13.2% vs 10.5%/yr since 1964); cheap-but-unprofitable only matched the market; lagged 2007–2022. |
 | Buy last year's winners (momentum)? | **Strongest long-run effect** (top 10%: 15.5% vs 10.5%/yr since 1927, t = 5.4), but flat vs the market since about 2000; losers lost money over 95 years. |
+| Combine value and momentum 50/50? | Smoothest tilt tested: most money in both versions and value's worst 5-year lag cut from −41% to −19%, but still behind the market 2007–2022. |
 | What does today's valuation imply? | CAPE 31 (Sept 2023) historically meant about 4.5%/yr over the next decade, with a wide range (−4% to +8%). |
 
 **Practical reading.** Invest each contribution as soon as it arrives in a low-cost broad index fund and
@@ -503,6 +504,35 @@ year (`scripts/stock_momentum.py`, `outputs/stock_momentum/report.md`).
 
 **Caveat.** Real momentum funds face higher turnover costs than this estimate, and since 2013 they have
 tracked the market more closely than these paper portfolios.
+
+## Follow-up: value + momentum combined (50/50)
+
+This splits each account between cheap stocks and recent winners, rebalanced to 50/50 when each January
+deposit lands. It uses Ken French value-weighted portfolios with cost drag of 0.25%/yr for value and
+1%/yr for momentum (`scripts/value_momentum.py`, `outputs/value_momentum/report.md`). There are two
+versions, fixed in advance:
+- **Large-cap (1927–2022):** large value plus large-company winners.
+- **Quality (1964–2022):** cheap + profitable plus the top 20% momentum stocks.
+
+| Version | Plan | vs market | XIRR (mkt 10.5%) | Sharpe | Worst 5 yrs vs market | Worst 20-yr window | 2007–2022 (mkt 8.7%) |
+|---|---|---|---|---|---|---|---|
+| Large-cap | Value only | +511% | 12.8% | 0.44 | −41% | −43% | 6.5% |
+| Large-cap | Momentum only | +393% | 12.5% | 0.54 | −21% | −17% | 8.0% |
+| Large-cap | **50/50** | **+551%** | **12.9%** | 0.51 | **−19%** | −23% | 7.5% |
+| Quality | Value only | +244% | 13.2% | 0.51 | −48% | −46% | 6.0% |
+| Quality | Momentum only | +189% | 12.8% | 0.53 | −24% | −16% | 8.0% |
+| Quality | **50/50** | **+270%** | **13.4%** | **0.57** | −23% | −21% | 7.3% |
+
+![Large-cap value, momentum and 50/50 relative to the market](outputs/value_momentum/relative_to_market.png)
+
+**Results.**
+- **The two sleeves offset each other.** Their monthly excess returns are negatively correlated (−0.27
+  large-cap, −0.15 quality).
+- **The 50/50 mix ended with the most money in both versions** and roughly halved value's worst 5-year
+  losing streak. This is the clearest diversification benefit in the project.
+- **It still trailed the market over 2007–2022.** Value lagged and momentum's edge faded, and combining
+  two weak factors did not fix that. In 2023–2025 (descriptive) it roughly matched the market (21–22% vs
+  23%).
 
 ## Strategies that did not beat SPY after costs
 
