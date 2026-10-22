@@ -3,3 +3,5 @@ data/
 __pycache__/
 *.parquet
 outputs/*.log
+outputs/stock_eval/*
+!outputs/stock_eval/RIVN.md
