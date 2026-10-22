@@ -56,6 +56,7 @@ so they use pre-declared settings, report full grids, and treat 2023-2025 as des
 | `scripts/value_profitability.py` | Cheap + profitable stocks (Ken French 5x5 BM x OP portfolios, 1964-2022) |
 | `scripts/stock_momentum.py` | 12-1 month momentum winners vs the market (Ken French, 1927-2022) |
 | `scripts/value_momentum.py` | 50/50 value + momentum mixes (large-cap 1927-2022, quality 1964-2022) |
+| `scripts/multi_asset_momentum.py` | Rotate between SPY / EFA / IEF / GLD by relative momentum (2006-2022) |
 | `scripts/evaluate_stock.py` | Place one stock in the momentum / cheapness / profitability buckets (descriptive) |
 | `scripts/screen_cheap_profitable.py` | Screen S&P 500 / 1500 holdings for cheap + profitable stocks (descriptive) |
 

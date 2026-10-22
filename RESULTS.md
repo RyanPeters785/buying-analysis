@@ -36,6 +36,7 @@ expensive part; signals were often real but rarely paid enough to cover it.
 | Cheap **and** profitable stocks? | Nearly doubled the value edge (13.2% vs 10.5%/yr since 1964); cheap-but-unprofitable only matched the market; lagged 2007–2022. |
 | Buy last year's winners (momentum)? | **Strongest long-run effect** (top 10%: 15.5% vs 10.5%/yr since 1927, t = 5.4), but flat vs the market since about 2000; losers lost money over 95 years. |
 | Combine value and momentum 50/50? | Smoothest tilt tested: most money in both versions and value's worst 5-year lag cut from −41% to −19%, but still behind the market 2007–2022. |
+| Rotate between US stocks, international, bonds and gold? | No rule beat holding all four equally (2006–2022); it protected in 2008 but lagged 2010–2019. |
 | What does today's valuation imply? | CAPE 31 (Sept 2023) historically meant about 4.5%/yr over the next decade, with a wide range (−4% to +8%). |
 
 **Practical reading.** Invest each contribution as soon as it arrives in a low-cost broad index fund and
@@ -533,6 +534,34 @@ versions, fixed in advance:
 - **It still trailed the market over 2007–2022.** Value lagged and momentum's edge faded, and combining
   two weak factors did not fix that. In 2023–2025 (descriptive) it roughly matched the market (21–22% vs
   23%).
+
+## Follow-up: multi-asset momentum (US stocks, international, bonds, gold)
+
+This rotates monthly between SPY, EFA, IEF and GLD on relative performance, run in the daily engine
+(next-open fills, 2 bps, T+1), 2006–2022, with $5,000 each January. The grid is top 1 or top 2 assets ×
+3-, 6- or 12-month lookback, plus a 12-month top-1 rule with a T-bill filter. All settings are reported
+(`scripts/multi_asset_momentum.py`, `outputs/multi_asset_momentum/report.md`).
+
+| Strategy | XIRR | vs equal weight of the 4 | Sharpe | Worst drawdown | Beats random rotations (value / Sharpe) |
+|---|---|---|---|---|---|
+| Top 1, 3 / 6 / 12 months | 4.4% / 5.5% / 2.9% | −13% / −3% / −24% | 0.40 / 0.46 / 0.26 | −27% to −36% | 30–62% / 40–80% |
+| Top 1, 12 months + T-bill filter | 3.6% | −19% | 0.29 | −30% | 38% / 48% |
+| Top 2, 3 / 6 / 12 months | 5.5% / 5.0% / 5.6% | −3% / −7% / −2% | 0.55 / 0.50 / 0.51 | −26% to −28% | 45–57% / 79–90% |
+| Equal weight, all 4 (monthly) | 5.8% | — | 0.50 | −30% | |
+| 60/40 SPY/IEF | 7.4% | +18% | 0.57 | −32% | |
+| SPY | 10.5% | +60% | 0.46 | −55% | |
+
+- **No rotation rule beat simply holding all four assets,** and on ending value they were no better
+  than random picks.
+- **The top-2 versions had a better Sharpe than 79–90% of random rotations,** but that did not turn into
+  more money.
+- **Rotation helped in 2006–2009** (9–16% a year vs SPY's −1%) by moving to bonds and gold, then lagged
+  badly in 2010–2019 (2–7% vs 13%).
+- **The classic 12-month top-1 rule was the weakest.** It spent 39% of the time in gold, usually after
+  gold's run.
+- **In 2023–2025 (descriptive) rotation earned 24–40% a year against 22%,** driven by gold's rally.
+  This shows how period-dependent these results are.
+- **Caveat:** only 17 years of data, with one major crash.
 
 ## Strategies that did not beat SPY after costs
 

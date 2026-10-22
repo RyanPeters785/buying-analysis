@@ -156,3 +156,11 @@ def test_price_vs_sma_truncation(real_md):
     from buying_analysis.strategies.timing import PriceVsSMA
 
     test_truncating_the_future_changes_nothing(real_md, lambda: PriceVsSMA(SPY, 100))
+
+
+def test_asset_momentum_truncation(real_md):
+    from buying_analysis.strategies.timing import AssetMomentum
+
+    test_truncating_the_future_changes_nothing(
+        real_md, lambda: AssetMomentum([SPY, IEF, SECTORS[0]], k=1, lookback=6, absolute=True)
+    )

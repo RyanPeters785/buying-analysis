@@ -235,3 +235,30 @@ class PriceVsSMA(Allocator):
         if np.isnan(s):
             return None
         return {self.asset: 1.0} if x[-1] > s else {}
+
+
+class AssetMomentum(SectorRotation):
+    """Multi-asset relative momentum: equal weight the top ``k`` assets by ``lookback``-month total return
+    (no skip month). With ``absolute=True`` an asset is only held if its return beat T-bills over the same
+    window; otherwise its share stays in cash."""
+
+    def __init__(
+        self, assets, k: int = 1, lookback: int = 12, absolute: bool = False, name: str = ""
+    ):
+        super().__init__(k=k, lookback=lookback, skip=0, universe=assets)
+        self.absolute = absolute
+        self.name = name or f"asset_mom_top{k}_{lookback}m" + ("_abs" if absolute else "")
+
+    def allocation(self, ctx):
+        sc = self.scores(ctx)
+        if len(sc) < len(self.assets):  # wait until every asset has a full lookback
+            return None
+        top = sorted(sc, key=sc.get, reverse=True)[: self.k]
+        if self.absolute:
+            me = month_end_positions(ctx)
+            a, b = me[-self.lookback - 1], me[-1]
+            rf = np.nan_to_num(ctx.rf()[a:b])
+            days = (ctx.sessions[a + 1 : b + 1] - ctx.sessions[a:b]).days.to_numpy()
+            bill = float(np.prod(1 + rf * days / 365) - 1)
+            top = [p for p in top if sc[p] > bill]
+        return {p: 1.0 / self.k for p in top}
