@@ -90,6 +90,12 @@ URL_MOM6 = BASE + "6_Portfolios_ME_Prior_12_2_CSV.zip"
 OUT_MOM6 = "ff_6_size_momentum_monthly.parquet"
 
 
+URL_VAR = BASE + "Portfolios_Formed_on_VAR_CSV.zip"
+OUT_VAR = "ff_variance_monthly.parquet"  # sorted on 60-day return variance, re-formed monthly
+URL_BETA = BASE + "Portfolios_Formed_on_BETA_CSV.zip"
+OUT_BETA = "ff_beta_monthly.parquet"  # sorted on 60-month beta, re-formed each June
+
+
 def fetch_blocks(url: str, blocks: dict[str, str]) -> pd.DataFrame:
     """Generic reader for Ken French monthly block files: {block title: field} -> long frame
     (date, cell, col_index (1-based, file order), fields...). Returns are converted to decimal."""
@@ -162,12 +168,26 @@ def main() -> None:
         f"momentum: 10 deciles {mom10['date'].min():%Y-%m} → {mom10['date'].max():%Y-%m}; "
         f"6 size x momentum {mom6['date'].min():%Y-%m} → {mom6['date'].max():%Y-%m}"
     )
+    for url, out_name in ((URL_VAR, OUT_VAR), (URL_BETA, OUT_BETA)):
+        d = fetch_blocks(
+            url,
+            {
+                "Value Weighted Returns -- Monthly": "ret",
+                "Number of Firms in Portfolios": "n_firms",
+            },
+        )
+        d.to_parquet(RAW_DIR / out_name, index=False)
+        print(
+            f"{out_name}: {d['date'].min():%Y-%m} → {d['date'].max():%Y-%m}, cells {d['cell'].nunique()}"
+        )
     p25 = fetch_25()
     p25.to_parquet(RAW_DIR / OUT25, index=False)
     print(
         f"25 BM x OP portfolios: {p25['date'].nunique()} months {p25['date'].min():%Y-%m} → {p25['date'].max():%Y-%m}"
     )
-    write_manifest({OUT_MOM10: f"Ken French Data Library ({URL_MOM10.rsplit('/', 1)[-1]}, value-weighted, monthly)",
+    write_manifest({OUT_VAR: f"Ken French Data Library ({URL_VAR.rsplit('/', 1)[-1]}, value-weighted, monthly)",
+                    OUT_BETA: f"Ken French Data Library ({URL_BETA.rsplit('/', 1)[-1]}, value-weighted, monthly)",
+                    OUT_MOM10: f"Ken French Data Library ({URL_MOM10.rsplit('/', 1)[-1]}, value-weighted, monthly)",
                     OUT_MOM6: f"Ken French Data Library ({URL_MOM6.rsplit('/', 1)[-1]}, value-weighted, monthly)",
                     OUT25: f"Ken French Data Library ({URL25.rsplit('/', 1)[-1]}, value-weighted, monthly)",
                     OUT: f"Ken French Data Library ({URL.rsplit('/', 1)[-1]})",

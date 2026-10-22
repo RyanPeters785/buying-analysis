@@ -37,6 +37,8 @@ expensive part; signals were often real but rarely paid enough to cover it.
 | Buy last year's winners (momentum)? | **Strongest long-run effect** (top 10%: 15.5% vs 10.5%/yr since 1927, t = 5.4), but flat vs the market since about 2000; losers lost money over 95 years. |
 | Combine value and momentum 50/50? | Smoothest tilt tested: most money in both versions and value's worst 5-year lag cut from −41% to −19%, but still behind the market 2007–2022. |
 | Rotate between US stocks, international, bonds and gold? | No rule beat holding all four equally (2006–2022); it protected in 2008 but lagged 2010–2019. |
+| Hold low-volatility stocks instead of cutting exposure? | Yes: at the same volatility, calm stocks ended +58% vs the market, cutting exposure −45%; still worked after 2007. |
+| Combine low vol + value + momentum? | Steadiest tilt tested: Sharpe 0.58, worst 5-year lag only −13%, tied the market 2007–2022. |
 | What does today's valuation imply? | CAPE 31 (Sept 2023) historically meant about 4.5%/yr over the next decade, with a wide range (−4% to +8%). |
 
 **Practical reading.** Invest each contribution as soon as it arrives in a low-cost broad index fund and
@@ -562,6 +564,55 @@ This rotates monthly between SPY, EFA, IEF and GLD on relative performance, run 
 - **In 2023–2025 (descriptive) rotation earned 24–40% a year against 22%,** driven by gold's rally.
   This shows how period-dependent these results are.
 - **Caveat:** only 17 years of data, with one major crash.
+
+## Follow-up: low-volatility stocks vs reducing market exposure
+
+This uses Ken French value-weighted portfolios sorted on each stock's 60-day volatility (re-formed
+monthly) and on 60-month beta (re-formed each June), 1964–2022, with $5,000 each January and costs of
+0.25%/yr (market 0.03%). The fair comparison holds the market plus T-bills at the same volatility as the
+low-vol portfolio. The stock share is set monthly from prior volatility only and averaged 79%
+(`scripts/low_volatility.py`, `outputs/low_volatility/report.md`).
+
+| Approach | vs market | XIRR (mkt 10.5%) | Sharpe (mkt 0.42) | Volatility (mkt 15.6%) | Worst drawdown (mkt −50%) | 20-yr windows beating market | 2007–2022 (mkt 8.7%) |
+|---|---|---|---|---|---|---|---|
+| Calmest 20% of stocks | **+58%** | 11.5% | 0.55 | 12.2% | −43% | 88% | **11.2%** |
+| Calmest 10% | +21% | 10.9% | 0.52 | 11.8% | −39% | 54% | 10.6% |
+| Lowest-beta 20% | +7% | 10.6% | 0.50 | 12.3% | −44% | 54% | 7.4% |
+| Market + T-bills at the same volatility | **−45%** | 9.2% | 0.40 | 12.5% | −39% | 0% | 7.1% |
+| Most volatile 20% | −95% | 3.2% | 0.11 | 27.9% | −88% | 0% | 0.2% |
+
+At the same volatility, picking calm stocks ended 58% *ahead* of the market, while owning less of the
+market ended 45% behind. Low-vol stocks fell 8% in 2000–02 (market −45%), 37% in 2008–09 (−50%) and
+13% in 2022 (−25%). Unlike value and momentum, low vol kept working after 2007. It lags strong rallies:
+11% a year in 2023–2025 (descriptive) against 23%. More extreme versions (calmest 10%, lowest beta) were
+weaker. Real funds (e.g. USMV, SPLV) lean toward utilities, staples and healthcare, and have become
+popular since about 2011.
+
+## Follow-up: low volatility + value + momentum (1/3 each)
+
+This combines the calmest 20%, cheap + profitable, and the top 20% momentum sleeves, rebalanced to target
+on each January deposit, 1964–2022, with costs as above and 1%/yr for momentum
+(`scripts/factor_combo.py`, `outputs/factor_combo/report.md`).
+
+| Plan | vs market | XIRR | Sharpe | Volatility | Worst 5 yrs vs market | Worst 20-yr window | Beat market (20-yr windows) | 2007–2022 |
+|---|---|---|---|---|---|---|---|---|
+| Low vol only | +58% | 11.5% | 0.55 | 12.2% | −31% | −20% | 88% | 11.2% |
+| Value only | +244% | 13.2% | 0.51 | 19.1% | −48% | −46% | 87% | 6.0% |
+| Momentum only | +189% | 12.8% | 0.53 | 18.3% | −24% | −16% | 92% | 8.0% |
+| 50/50 value + momentum | +270% | 13.4% | 0.57 | 17.2% | −23% | −21% | 87% | 7.3% |
+| 50/50 low vol + value | +150% | 12.5% | 0.56 | 14.8% | −23% | −19% | 89% | 8.8% |
+| **1/3 each** | +188% | 12.8% | **0.58** | 15.1% | **−13%** | **−11%** | **91%** | 8.7% |
+
+**Results.**
+- **The sleeves mostly offset each other.** Momentum's excess returns are negatively correlated with low
+  vol (−0.20) and value (−0.15); low vol and value are only weakly related (+0.12).
+- **The three-way mix is the steadiest factor portfolio tested:**
+  - the highest Sharpe (0.58), at about market volatility
+  - its worst 5-year lag against the market is roughly half the next best (−13%)
+  - its worst 20-year window is −11%
+  - it is the only combination that did not trail the market after 2007 (a tie at 8.7%)
+- **The trade-off is less upside** than 50/50 value + momentum (+188% vs +270%).
+- **In 2023–2025 (descriptive)** it earned 17.7% a year against 23.2%.
 
 ## Strategies that did not beat SPY after costs
 
