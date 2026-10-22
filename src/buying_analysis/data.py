@@ -99,6 +99,18 @@ def sha256(path: Path) -> str:
     return h.hexdigest()
 
 
+DATE_COLS = (
+    "session",
+    "observation_date",
+    "date",
+    "mthcaldt",
+    "month",
+    "datadate",
+    "namedt",
+    "linkdt",
+)
+
+
 def write_manifest(sources: dict[str, str]) -> Path:
     """Rewrite ``data/MANIFEST.md`` describing every parquet in ``data/raw``.
 
@@ -114,14 +126,15 @@ def write_manifest(sources: dict[str, str]) -> Path:
         "| file | source | copied/fetched | rows | date range | sha256 |",
         "|---|---|---|---|---|---|",
     ]
-    for f in sorted(RAW_DIR.glob("*.parquet")):
+    for f in sorted(RAW_DIR.rglob("*.parquet")):
+        name = f.relative_to(RAW_DIR).as_posix()
         df = pd.read_parquet(f)
-        dcol = next(c for c in ("session", "observation_date", "date") if c in df)
-        rng = f"{df[dcol].min():%Y-%m-%d} → {df[dcol].max():%Y-%m-%d}"
-        src, when = sources.get(f.name), date.today().isoformat()
+        dcol = next((c for c in DATE_COLS if c in df), None)
+        rng = f"{df[dcol].min():%Y-%m-%d} → {df[dcol].max():%Y-%m-%d}" if dcol else "n/a"
+        src, when = sources.get(name), date.today().isoformat()
         if src is None:
-            src, when = old.get(f.name, ("unknown", "unknown"))
-        lines.append(f"| {f.name} | {src} | {when} | {len(df):,} | {rng} | `{sha256(f)}` |")
+            src, when = old.get(name, ("unknown", "unknown"))
+        lines.append(f"| {name} | {src} | {when} | {len(df):,} | {rng} | `{sha256(f)}` |")
     MANIFEST.write_text("\n".join(lines) + "\n")
     return MANIFEST
 
