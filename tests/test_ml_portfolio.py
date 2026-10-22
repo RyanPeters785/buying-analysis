@@ -95,3 +95,21 @@ def test_walk_forward_ignores_unrealized_targets(model, horizon):
     q.loc[later_feats, "mom_12_1"] = 99.0  # the future beyond the prediction year
     again = walk_forward(q, model, horizon, 2000, 2000, train_start="1995-01-31")
     np.testing.assert_allclose(base["score"].to_numpy(), again["score"].to_numpy())
+
+
+def test_per_stock_cost_map():
+    r = _rets()
+    t0 = r.index[0]
+    cmap = {t0: pd.Series({1: 50.0, 2: 10.0})}
+    a = simulate({t0: pd.Series({1: 0.5, 2: 0.5})}, r, t0, r.index[1], cost_bps=0.0, amount=1000.0, cost_map=cmap)
+    assert a["cost"].iloc[0] == pytest.approx(500 * 0.005 + 500 * 0.001)
+
+
+def test_costs_reduce_the_monthly_return_not_just_the_balance():
+    r = _rets()
+    t0 = r.index[0]
+    tg = {t0: pd.Series({1: 1.0})}
+    free = simulate(tg, r, t0, r.index[1], cost_bps=0.0, amount=1000.0)
+    paid = simulate(tg, r, t0, r.index[1], cost_bps=10.0, amount=1000.0)
+    assert free["ret"].iloc[0] == pytest.approx(0.01)
+    assert paid["ret"].iloc[0] == pytest.approx(999.0 * 1.01 / 1000.0 - 1)

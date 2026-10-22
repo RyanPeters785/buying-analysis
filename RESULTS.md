@@ -40,6 +40,7 @@ expensive part; signals were often real but rarely paid enough to cover it.
 | Hold low-volatility stocks instead of cutting exposure? | Yes: at the same volatility, calm stocks ended +58% vs the market, cutting exposure −45%; still worked after 2007. |
 | Combine low vol + value + momentum? | Steadiest tilt tested: Sharpe 0.58, worst 5-year lag only −13%, tied the market 2007–2022. |
 | Machine-learning stock ranking (top 1,000, point-in-time)? | Winners flipped between periods: factor score best 1998–2015 but worst 2016–2025; boosted trees beat SPY in 2016–2025 but the edge is thin and cost-sensitive. |
+| Long-only Gu-Kelly-Xiu (paper: Sharpe ~2.5 long-short)? | Best long-only after costs: Sharpe 0.80 vs SPY 0.72 (boosted trees, no microcaps), not significant or consistent; equal-weighted microcap versions collapse after costs. |
 | What does today's valuation imply? | CAPE 31 (Sept 2023) historically meant about 4.5%/yr over the next decade, with a wide range (−4% to +8%). |
 
 **Practical reading.** Invest each contribution as soon as it arrives in a low-cost broad index fund and
@@ -635,14 +636,14 @@ fiscal year-end. Tests check the point-in-time rules against the raw data.
 - **Process:** settings were compared on 1998–2015. The best of each approach was then pre-registered
   (`configs/ml_holdout.yaml`) and run once on 2016–2025 (`scripts/ml_select.py`, `outputs/ml/`).
 
-| Approach (best dev setting) | Dev 1998–2015: vs SPY / XIRR (SPY 6.9%) | Dev IC (t) | **Holdout 2016–2025: vs SPY at 10 / 20 bps** | Holdout XIRR (SPY 15.4%) | Holdout Sharpe (SPY 0.89) | Holdout IC (t) |
+| Approach (best dev setting) | Dev 1998–2015: vs SPY / XIRR (SPY 6.9%) | Dev IC (t) | **Holdout 2016–2025: vs SPY at 10 / 20 bps** | Holdout XIRR (SPY 15.4%) | Holdout Sharpe at 10 / 20 bps (SPY 0.89) | Holdout IC (t) |
 |---|---|---|---|---|---|---|
-| Factor score, monthly top 50 | **+51% / 10.8%** | 0.035 (3.1) | **−36% / −42%** | 7.6% | 0.58 | 0.016 (1.1) |
-| Ridge, quarterly top 50 | +16% / 8.4% | 0.008 (0.9) | −20% / −22% | 11.5% | 0.59 | 0.018 (2.3) |
-| Random forest, monthly top 50 | +12% / 8.0% | 0.029 (3.6) | −23% / −30% | 10.9% | 0.61 | 0.027 (2.6) |
-| XGBoost, monthly top 100 | +9% / 7.8% | 0.022 (2.3) | **+15% / +6%** | 17.9% | **0.98** | **0.036 (3.9)** |
-| LightGBM, monthly top 50 | +4% / 7.3% | 0.024 (2.4) | +12% / +1% | 17.4% | 0.87 | 0.031 (3.1) |
-| Equal-weight universe | +21% / 8.7% | | −24% | 10.7% | 0.61 | |
+| Factor score, monthly top 50 | **+51% / 10.8%** | 0.035 (3.1) | **−36% / −42%** | 7.6% | 0.49 / 0.40 | 0.016 (1.1) |
+| Ridge, quarterly top 50 | +16% / 8.4% | 0.008 (0.9) | −20% / −22% | 11.5% | 0.57 / 0.54 | 0.018 (2.3) |
+| Random forest, monthly top 50 | +12% / 8.0% | 0.029 (3.6) | −23% / −30% | 10.9% | 0.53 / 0.45 | 0.027 (2.6) |
+| XGBoost, monthly top 100 | +9% / 7.8% | 0.022 (2.3) | **+15% / +6%** | 17.9% | **0.91** / 0.84 | **0.036 (3.9)** |
+| LightGBM, monthly top 50 | +4% / 7.3% | 0.024 (2.4) | +12% / +1% | 17.4% | 0.79 / 0.71 | 0.031 (3.1) |
+| Equal-weight universe | +21% / 8.7% | | −24% | 10.7% | 0.60 | |
 
 ![ML development period: best portfolios relative to SPY](outputs/ml/dev_relative_to_spy.png)
 
@@ -652,12 +653,70 @@ fiscal year-end. Tests check the point-in-time rules against the raw data.
   researcher: profitability, low volatility and asset growth were chosen using papers published after
   1998.
 - **Boosted trees (XGBoost, LightGBM) did best in the holdout.** They learn from the data each year and
-  had the strongest ranking skill. XGBoost beat SPY with a higher Sharpe and a smaller drawdown, even
-  though 2016–2025 punished equal weighting: the equal-weight universe lost 24% to SPY as a few
-  mega-caps led.
-- **The edge is thin.** It roughly halves or vanishes at 20 bps, turnover is about 13× a year, and the
-  best deflated Sharpe vs SPY is 0.33. No model beat SPY reliably across both periods after realistic
-  costs.
+  had the strongest ranking skill. At 10 bps, XGBoost beat SPY slightly on Sharpe (0.91 vs 0.89) and
+  had a smaller drawdown, even though 2016–2025 punished equal weighting: the equal-weight universe lost
+  24% to SPY as a few mega-caps led.
+- **The edge is thin.** At 20 bps XGBoost's Sharpe falls below SPY's (0.84), turnover is about 13× a
+  year, and the best deflated Sharpe vs SPY is 0.17. No model beat SPY reliably across both periods
+  after realistic costs.
+- **Correction (2026-10-22).** The first version of this section overstated after-cost Sharpe ratios.
+  The portfolio simulator deducted costs from the balance but not from the monthly returns used for
+  Sharpe and related statistics; ending values and XIRR were unaffected. The metrics were recomputed
+  from the same pre-registered holdout predictions; nothing was retrained or re-selected.
+
+## Follow-up: long-only replication of Gu, Kelly & Xiu (2020)
+
+The paper reports an out-of-sample Sharpe near 2.5 for a **long-short**, **equal-weighted** decile
+portfolio that **includes microcaps** and **ignores costs**. This tests what a long-only Roth investor
+could capture (`scripts/gkx_replication.py`, `src/buying_analysis/ml/gkx.py`, `outputs/gkx/report.md`).
+
+**Design (with departures from the paper).**
+- **Universe:** every US common stock each month (about 4,900; 58% are microcaps below the NYSE 20th size
+  percentile).
+- **Inputs:**
+  - 42 characteristics (paper: 94), ranked to [−1, 1]
+  - sector dummies
+  - 7 macro predictors (paper: 8; the default spread is missing because FRED blocked downloads)
+  - all characteristic × macro interactions
+- **Target:** next-month excess return.
+- **Walk-forward scheme:** train 1993→Y−6, validate Y−5→Y−1, test Y, with annual refits for test years
+  2003–2025.
+- **Sampling:** training samples up to 1,000 stocks a month (compute limit).
+- **Models:** OLS-3 (size, value, momentum; Huber), elastic net (Huber), boosted trees (LightGBM,
+  Huber), and a 32-16-8 neural network (scikit-learn; L2 penalty, 3-seed ensemble, no batch norm).
+- **Portfolios:** long-only top decile, monthly, equal- or value-weighted, all stocks or excluding
+  microcaps.
+- **Costs:** per side by size (75 / 30 / 15 / 10 bps for micro / small / mid / large).
+- **Overlap:** 2016–2025 overlaps the earlier ML study, so it was not unseen.
+
+| Model | IC all stocks (t) | IC no microcaps (t) |
+|---|---|---|
+| Boosted trees | 0.090 (11.1) | 0.030 (3.8) |
+| Elastic net | 0.088 (10.2) | 0.027 (2.8) |
+| OLS-3 | 0.076 (12.1) | 0.015 (2.2) |
+| Neural network | 0.004 (0.9) | −0.004 (−0.7) |
+
+| Long-only top decile, 2003–2025 | Before costs vs SPY | **After costs vs SPY** | After-cost Sharpe (SPY 0.72) | Worst drawdown (SPY −51%) | 36-month windows with Sharpe > SPY | DSR vs SPY |
+|---|---|---|---|---|---|---|
+| Boosted trees, no microcaps, value-weighted | +25% | **+18%** | **0.80** | −43% | 67% | 0.30 |
+| Boosted trees, all stocks, value-weighted | +16% | +10% | 0.78 | −43% | 65% | 0.16 |
+| OLS-3, all stocks, value-weighted | +1% | −8% | 0.69 | −52% | 38% | 0.04 |
+| Elastic net, no microcaps, value-weighted | −23% | −35% | 0.64 | −38% | 54% | 0.00 |
+| Elastic net, all stocks, equal-weighted | −18% | −50% | 0.48 | −50% | 27% | 0.00 |
+| Neural network, all stocks, equal-weighted | −8% | −72% | 0.28 | −65% | 18% | 0.00 |
+
+**Results.**
+- **Ranking skill is real, but concentrated in microcaps.** IC is about three times higher with
+  microcaps.
+- **The paper-style equal-weighted portfolios collapse after costs.** They trade about 10× a year,
+  and microcap spreads absorb the edge.
+- **The best long-only version** (boosted trees, mid and large caps, value-weighted) earned a Sharpe of
+  0.80 against SPY's 0.72. That is not statistically significant (t = 1.35) and not consistent: Sharpe
+  0.52 vs 0.31 in 2003–2009, 0.90 vs 0.99 in 2010–2015, and 0.90 vs 0.85 in 2016–2025.
+- **The neural network learned nothing useful.** That is a limitation of this simplified implementation,
+  not evidence against the paper's network.
+- **A long-only, after-cost investor gets nowhere near a 2.5 Sharpe.** Most of the published result
+  depends on shorting, microcaps and zero costs.
 
 ## Strategies that did not beat SPY after costs
 

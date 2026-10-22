@@ -25,9 +25,12 @@ def return_matrix() -> pd.DataFrame:
 
 
 def simulate(targets: dict[pd.Timestamp, pd.Series], rets: pd.DataFrame, start: pd.Timestamp, end: pd.Timestamp,
-             cost_bps: float = 10.0, amount: float = 5000.0) -> pd.DataFrame:  # fmt: skip
+             cost_bps: float = 10.0, amount: float = 5000.0,
+             cost_map: dict[pd.Timestamp, pd.Series] | None = None, default_bps: float = 75.0) -> pd.DataFrame:  # fmt: skip
     """``targets`` maps rebalance month-end -> target weights (permno -> weight, summing to 1).
 
+    Costs: ``cost_bps`` per side for every stock, or, with ``cost_map``, a per-stock rate (bps per side) at each
+    month-end; stocks missing from the map (e.g. holdings that left the universe) are charged ``default_bps``.
     The holding period after month-end t earns the returns of month t+1. Returns one row per holding month.
     """
     months = rets.index[(rets.index >= start) & (rets.index <= end)]
@@ -40,23 +43,32 @@ def simulate(targets: dict[pd.Timestamp, pd.Series], rets: pd.DataFrame, start: 
         dep = amount if (t.month == 12 or i == 0) else 0.0
         cash += dep
         value = cash + hold.sum()
-        cost = 0.0
+        cost, trade = 0.0, 0.0
         if t in targets or dep:
             w = targets.get(t)
             if w is None:  # deposit without a rebalance: keep current mix, add the cash pro rata
                 w = hold / hold.sum() if hold.sum() > 0 else None
             if w is not None:
                 new = w * value
-                trade = new.sub(hold, fill_value=0).abs().sum()
-                cost = trade * c
+                traded = new.sub(hold, fill_value=0).abs()
+                trade = traded.sum()
+                if cost_map is not None:
+                    bps = (
+                        cost_map.get(t, pd.Series(dtype=float))
+                        .reindex(traded.index)
+                        .fillna(default_bps)
+                    )
+                    cost = float((traded * bps).sum()) / 1e4
+                else:
+                    cost = trade * c
                 scale = (value - cost) / value
                 hold, cash = new * scale, 0.0
         r = rets.loc[nxt].reindex(hold.index).fillna(0.0)  # missing next month = delisted -> cash
-        before = cash + hold.sum()
+        before = value  # account value after the deposit and *before* costs, so costs reduce the return
         hold = hold * (1 + r)
         hold = hold[hold.abs() > 1e-9]
         after = cash + hold.sum()
-        turnover = 0.0 if value <= 0 else (cost / c) / value if c > 0 else 0.0
+        turnover = 0.0 if value <= 0 or not (t in targets or dep) else trade / value
         rows.append(
             (nxt, dep, after, after / before - 1 if before > 0 else 0.0, cost, turnover, len(hold))
         )

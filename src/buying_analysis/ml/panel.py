@@ -31,6 +31,11 @@ PRICE_FEATURES = ["mom_12_1", "mom_6_1", "mom_3_1", "rev_1", "ltrev_36_12", "vol
 FUND_FEATURES = ["bm", "ep", "sp", "cfp", "dy", "op", "roa", "gp_at", "asset_growth", "accruals", "leverage",
                  "rd_sale"]  # fmt: skip
 FEATURES = PRICE_FEATURES + FUND_FEATURES
+EXTRA_FEATURES = ["chmom", "dolvol", "ill", "std_turn", "chcsho", "betasq", "idiovol", "age", "rd_mve", "sgr",
+                  "cash", "currat", "egr", "roe", "invest"]  # fmt: skip
+GKX_FEATURES = (
+    FEATURES + EXTRA_FEATURES + ["indmom"]
+)  # indmom is added cross-sectionally (see add_indmom)
 
 
 def month_end(s: pd.Series) -> pd.Series:
@@ -49,7 +54,8 @@ def common_stock_mask(msf: pd.DataFrame, names: pd.DataFrame) -> pd.Series:
         & m["primaryexch"].isin(["N", "A", "Q"])  # fmt: skip
     out = pd.Series(ok.fillna(False).to_numpy(bool), index=m["index"]).sort_index()
     sic = pd.Series(m["siccd"].to_numpy(), index=m["index"]).sort_index()
-    return out, sic
+    exch = pd.Series(m["primaryexch"].to_numpy(), index=m["index"]).sort_index()
+    return out, sic, exch
 
 
 def sic_group(sic: pd.Series) -> pd.Series:
@@ -67,7 +73,12 @@ def fundamentals_by_permno(funda: pd.DataFrame, link: pd.DataFrame) -> pd.DataFr
     ps = f["pstkrv"].fillna(f["pstkl"]).fillna(f["pstk"]).fillna(0)
     f["be"] = se - ps + f["txditc"].fillna(0)
     f = f.sort_values(["gvkey", "datadate"])
-    f["at_lag"] = f.groupby("gvkey")["at"].shift(1)
+    g = f.groupby("gvkey")
+    f["at_lag"] = g["at"].shift(1)
+    f["sale_lag"] = g["sale"].shift(1)
+    f["be_lag"] = g["be"].shift(1)
+    f["ppinv"] = f["ppent"].fillna(0) + f["invt"].fillna(0)
+    f["ppinv_lag"] = g["ppinv"].shift(1)
     lk = link.dropna(subset=["lpermno"]).copy()
     lk["linkenddt"] = lk["linkenddt"].fillna(pd.Timestamp("2100-01-01"))
     lk["permno"] = lk["lpermno"].astype("int64")
@@ -79,7 +90,9 @@ def fundamentals_by_permno(funda: pd.DataFrame, link: pd.DataFrame) -> pd.DataFr
     return m.drop_duplicates(["permno", "avail"], keep="last")
 
 
-def build(top_n: int = 1000, min_price: float = 5.0) -> pd.DataFrame:
+def build(top_n: int | None = 1000, min_price: float = 5.0, extra: bool = False) -> pd.DataFrame:
+    """Panel rows for the universe at each month-end. ``top_n=None`` keeps every eligible common stock;
+    ``extra=True`` adds the GKX-style characteristics (EXTRA_FEATURES) and NYSE size buckets."""
     msf = pd.read_parquet(ML_DIR / "crsp_msf.parquet")
     names = pd.read_parquet(ML_DIR / "crsp_names.parquet")
     dvol = pd.read_parquet(ML_DIR / "crsp_dvol.parquet")
@@ -88,8 +101,9 @@ def build(top_n: int = 1000, min_price: float = 5.0) -> pd.DataFrame:
 
     msf["mthcaldt"] = month_end(msf["mthcaldt"])
     msf = msf.drop_duplicates(["permno", "mthcaldt"], keep="last").reset_index(drop=True)
-    common, sic = common_stock_mask(msf, names)
+    common, sic, exch = common_stock_mask(msf, names)
     msf["common"], msf["sic"] = common, sic
+    msf["nyse"] = (exch == "N").astype(float)
     msf["prc"] = msf["mthprc"].astype(float).abs()
     msf["mcap"] = msf["prc"] * msf["shrout"].astype(float)  # $ thousands
 
@@ -154,6 +168,10 @@ def build(top_n: int = 1000, min_price: float = 5.0) -> pd.DataFrame:
     # targets: missing future months (delisted with no further rows, or data gaps) count as 0 = cash, so a
     # stock never silently drops out of a portfolio; only the last months of the sample are unknown (NaN)
     nxt = [ret.shift(-k).fillna(0.0) for k in (1, 2, 3)]
+    if extra:
+        feats |= extra_features(
+            ret, retx, mcap, prc, vol, shr, mkt, feats, fwide, fm, me, be_pos, at
+        )
     fwd1 = nxt[0].copy()
     fwd3 = (1 + nxt[0]) * (1 + nxt[1]) * (1 + nxt[2]) - 1
     fwd1.iloc[-1:] = np.nan
@@ -162,13 +180,23 @@ def build(top_n: int = 1000, min_price: float = 5.0) -> pd.DataFrame:
     # universe at t
     eligible = (wide("common").reindex_like(ret) > 0) & ret.notna() & (prc.reindex_like(ret) >= min_price) \
         & mcap.notna()  # fmt: skip
-    rank = mcap.where(eligible).rank(axis=1, ascending=False)
-    in_univ = rank <= top_n
+    if top_n is None:
+        in_univ = eligible
+    else:
+        in_univ = mcap.where(eligible).rank(axis=1, ascending=False) <= top_n
 
     long = in_univ.stack()
     long = long[long].index.to_frame(index=False)
     long.columns = ["date", "permno"]
     cols = {"mcap": mcap, "ret": ret, "ret_fwd1": fwd1, "ret_fwd3": fwd3, **feats}
+    if extra:  # NYSE breakpoints of market cap at t (eligible NYSE stocks only)
+        nyse_cap = mcap.where(eligible & (wide("nyse").reindex_like(ret) > 0))
+        bps = {q: nyse_cap.quantile(q, axis=1) for q in (0.2, 0.5, 0.8)}
+        bucket = 1 + (mcap.ge(bps[0.2], axis=0)).astype(float) + (mcap.ge(bps[0.5], axis=0)).astype(float) \
+            + (mcap.ge(bps[0.8], axis=0)).astype(float)  # fmt: skip
+        cols["size_bucket"] = bucket.where(
+            mcap.notna()
+        )  # 1 micro (<20th), 2 small, 3 mid, 4 large (>80th)
     for name, w in cols.items():
         long[name] = (
             w.stack(future_stack=True)
@@ -185,3 +213,39 @@ def spy_monthly() -> pd.DataFrame:
     msf = pd.read_parquet(ML_DIR / "crsp_msf.parquet")
     s = msf[msf["permno"] == SPY].assign(date=lambda d: month_end(d["mthcaldt"]))
     return s.set_index("date")[["mthret"]].astype(float).rename(columns={"mthret": "spy"})
+
+
+def extra_features(ret, retx, mcap, prc, vol, shr, mkt, feats, fwide, fm, me, be_pos, at) -> dict:
+    """GKX-style characteristics beyond the base set; all use data through t (fundamentals lagged)."""
+    lr = np.log1p(ret)
+    prior = np.expm1(lr.shift(7).rolling(6, min_periods=6).sum())  # t-12 .. t-7
+    dollar = vol.reindex_like(ret) * prc.reindex_like(ret)
+    turn = vol.reindex_like(ret) / shr
+    resid_var = (
+        ret.rolling(36, min_periods=24).var()
+        - feats["beta_36"] ** 2 * mkt.rolling(36, min_periods=24).var().values[:, None]
+    )
+    return {
+        "chmom": feats["mom_6_1"] - prior,
+        "dolvol": np.log(dollar.where(dollar > 0)),
+        "ill": (ret.abs() / dollar.where(dollar > 0)).rolling(3, min_periods=2).mean(),
+        "std_turn": turn.rolling(12, min_periods=6).std(),
+        "chcsho": shr / shr.shift(12) - 1,
+        "betasq": feats["beta_36"] ** 2,
+        "idiovol": np.sqrt(resid_var.clip(lower=0)),
+        "age": ret.notna().cumsum().where(ret.notna()),
+        "rd_mve": fwide(fm["xrd"].fillna(0)) / me,
+        "sgr": fwide(fm["sale"] / fm["sale_lag"] - 1),
+        "cash": fwide(fm["che"]) / at.where(at > 0),
+        "currat": fwide(fm["act"] / fm["lct"].where(fm["lct"] > 0)),
+        "egr": fwide(fm["be"] / fm["be_lag"].where(fm["be_lag"] > 0) - 1),
+        "roe": fwide(fm["ib"]) / be_pos,
+        "invest": fwide((fm["ppinv"] - fm["ppinv_lag"]) / fm["at_lag"].where(fm["at_lag"] > 0)),
+    }  # fmt: skip
+
+
+def add_indmom(panel: pd.DataFrame) -> pd.DataFrame:
+    """Industry momentum: average 12-1 momentum of the stock's sector that month (cross-sectional, at t)."""
+    panel = panel.copy()
+    panel["indmom"] = panel.groupby(["date", "sector"])["mom_12_1"].transform("mean")
+    return panel

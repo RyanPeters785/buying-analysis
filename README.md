@@ -61,6 +61,7 @@ so they use pre-declared settings, report full grids, and treat 2023-2025 as des
 | `scripts/low_volatility.py` | Low-volatility stocks vs market + T-bills at the same volatility (1964-2022) |
 | `scripts/factor_combo.py` | Low vol + value + momentum combinations (1964-2022) |
 | `scripts/ml_select.py` | ML stock selection on a point-in-time top-1000 universe (dev 1998-2015, one-time holdout 2016-2025) |
+| `scripts/gkx_replication.py` | Long-only Gu-Kelly-Xiu replication on the full CRSP universe (2003-2025) |
 | `scripts/evaluate_stock.py` | Place one stock in the momentum / cheapness / profitability buckets (descriptive) |
 | `scripts/screen_cheap_profitable.py` | Screen S&P 500 / 1500 holdings for cheap + profitable stocks (descriptive) |
 
